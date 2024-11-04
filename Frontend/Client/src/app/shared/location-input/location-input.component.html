@@ -1,0 +1,35 @@
+<div class="form-label-group dropdown" style="width: 100%;">
+  <label>{{ label }}</label>
+  <input
+    [ngClass]="
+      controlDir && controlDir.control && controlDir.control.touched
+        ? !controlDir.control.valid
+          ? 'is-invalid'
+          : 'is-valid'
+        : null
+    "
+    (input)="onInputChange($event.target)"
+    (blur)="onTouched()"
+    (focus)="onInputChange($event.target)"
+    #input
+    id="pickup-location"
+    class="form-control"
+    placeholder="{{ placeholder }}"
+    type="text"
+    [matTooltip]="getErrorMessage()"
+    matTooltipPosition="below"
+    matTooltipClass="error-tooltip"
+    autocomplete="off"
+  />
+
+  <div
+    *ngIf="controlDir?.control?.status == 'PENDING'"
+    class="fa fa-spinner fa-spin loader"
+  ></div>
+
+  <div
+    #dropdown
+    id="myDropdown"
+    class="dropdown-content"
+  ></div>
+</div>

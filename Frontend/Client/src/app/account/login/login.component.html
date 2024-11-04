@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center mt-5 padding-x-30 ">
+  <div class="card dymanic-min-width">
+    <div class="card-body">
+      <div class="title">{{ "account.login.title" | translate }}</div>
+      <div class="mt-4 text-on-same-row">
+        <div class="simple-text">
+          {{ "account.login.no-account" | translate }}
+        </div>
+        <a class="ms-2 black-link-text" routerLink="/register">
+          {{ "account.login.create-account" | translate }}
+        </a>
+      </div>
+      <form class="mt-4" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="input-title mb-3">
+          {{ "account.login.email" | translate }}
+        </div>
+        <app-text-input
+          formControlName="email"
+          [label]="'Email Address'"
+        ></app-text-input>
+
+        <div class="input-title mt-3 mb-3">
+          {{ "account.login.password" | translate }}
+        </div>
+        <app-text-input
+          formControlName="password"
+          [label]="'Password'"
+          [type]="'password'"
+        ></app-text-input>
+
+        <div class="class d-grid">
+          <button
+            [disabled]="loginForm.invalid"
+            class="btn btn-lg btn-success btn-block button-dynamic-text"
+            style="color: #ffffff; background-color: #019c41"
+            type="submit"
+          >
+            {{ "account.login.title" | translate }}
+          </button>
+        </div>
+        <div
+          *ngIf="this.loginForm.errors?.['notFound']"
+          class="invalid-text mt-2"
+        >
+          {{ "Unauthorized: Please check your credentials." }}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

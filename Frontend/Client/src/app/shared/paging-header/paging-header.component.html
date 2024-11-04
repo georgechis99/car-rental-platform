@@ -1,0 +1,14 @@
+<div class="results-header">
+  <div class="header-text" *ngIf="cityName">{{ cityName }}: </div>
+  <div class="header-text" *ngIf="totalCount > 1">
+      {{ totalCount }}
+      {{ "shared.paging-header.results-available" | translate }}
+  </div>
+  <div class="header-text" *ngIf="totalCount > 0 && totalCount<=1">
+    {{ totalCount }}
+    {{ "shared.paging-header.result-available" | translate }}
+  </div>
+  <div class="header-text" *ngIf="totalCount === 0 || !totalCount">
+    {{ "shared.paging-header.zero-cars-available" | translate }}
+  </div>
+</div>

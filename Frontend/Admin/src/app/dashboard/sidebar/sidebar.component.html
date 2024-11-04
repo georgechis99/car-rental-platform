@@ -1,0 +1,139 @@
+<div class="d-flex pt-3 bg-white sidebar-container">
+  <ul class="nav nav-pills flex-column sidebar-items mt-3">
+    <li class="nav-item active card mb-3">
+      <a
+        routerLink="/dashboard/calendar"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link link-dark"
+      >
+        <img
+          class="cursor-pointer me-2"
+          src="/assets/images/dashboard-sidebar-bookings.png"
+          style="height: 25px; width: auto"
+        />
+        {{ "dashboard.sidebar.my-bookings" | translate }}
+      </a>
+    </li>
+    <li class="nav-item card mb-3">
+      <a
+        routerLink="/dashboard/car-inventory"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link link-dark"
+      >
+        <img
+          class="cursor-pointer me-2"
+          src="/assets/images/dashboard-sidebar-bookings.png"
+          style="height: 25px; width: auto"
+        />
+        {{ "dashboard.sidebar.my-cars" | translate }}
+      </a>
+    </li>
+    <li class="nav-item card mb-3">
+      <a
+        routerLink="/dashboard/price-filters"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link link-dark"
+      >
+        <img
+          class="cursor-pointer me-2"
+          src="/assets/images/dashboard-sidebar-pricing-filters.png"
+          style="height: 25px; width: auto"
+        />
+        {{ "dashboard.sidebar.price-filters" | translate }}
+      </a>
+    </li>
+    <li class="nav-item card mb-3">
+      <a
+        routerLink="/dashboard/deposit-settings"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link link-dark"
+      >
+        <img
+          class="cursor-pointer me-2"
+          src="/assets/images/dashboard-sidebar-deposit-settings.png"
+          style="height: 25px; width: auto"
+        />
+        {{ "dashboard.sidebar.deposit-settings" | translate }}
+      </a>
+    </li>
+    <!-- <li class="nav-item active card mb-3">
+      <a
+        routerLink="/dashboard/unavailable-cars"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link link-dark"
+      >
+        <img
+          class="cursor-pointer me-2"
+          src="/assets/images/dashboard-sidebar-unavailabile-cars.png"
+          style="height: 25px; width: auto"
+        />
+        {{ "dashboard.sidebar.unavailable-cars" | translate }}
+      </a>
+    </li> -->
+    <li class="nav-item card mb-3">
+      <a
+        routerLink="/dashboard/billings"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link link-dark"
+      >
+        <img
+          class="cursor-pointer me-2"
+          src="/assets/images/dashboard-sidebar-billings.png"
+          style="height: 25px; width: auto"
+        />
+        {{ "dashboard.sidebar.billings" | translate }}
+      </a>
+    </li>
+    <li class="nav-item card mb-3">
+      <a
+        routerLink="/dashboard/locations"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link link-dark"
+      >
+        <img
+          class="cursor-pointer me-2"
+          src="/assets/images/dashboard-sidebar-locations.png"
+          style="height: 25px; width: auto"
+        />
+        {{ "dashboard.sidebar.locations" | translate }}
+      </a>
+    </li>
+    <li class="nav-item card mb-3">
+      <a
+        routerLink="/dashboard/insurances"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link link-dark"
+      >
+        <img
+          class="cursor-pointer me-2"
+          src="/assets/images/dashboard-sidebar-insurance-settings.png"
+          style="height: 25px; width: auto"
+        />
+        {{ "dashboard.sidebar.insurances" | translate }}
+      </a>
+    </li>
+    <li class="nav-item card mb-3">
+      <a
+        routerLink="/dashboard/settings"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link link-dark"
+      >
+        <img
+          class="cursor-pointer me-2"
+          src="/assets/images/dashboard-sidebar-settings.png"
+          style="height: 25px; width: auto"
+        />
+        {{ "dashboard.sidebar.settings" | translate }}
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,258 @@
+.main-title{
+  font-family: "Inter";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.main-description{
+  font-family: "Inter",sans-serif;
+  font-size: 24px;
+  font-variation-settings: 'wght' 200;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color:#696969;
+}
+
+.title{
+    font-family: Inter;
+    font-size: 40px;
+    text-align: left;
+}
+
+.subtitle{
+    font-family: Inter;
+    font-size: 24px;
+    text-align: left;
+    color: #696969;
+}
+
+.green-border{
+    border-color: #019C41 !important;
+    border-radius: 8px !important;
+    border-width: 2px !important;
+}
+
+.title-steps{
+    font-family: Inter;
+    font-size: 20px;
+    color:#1A202C;
+}
+
+.text-steps{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    color:#696969;
+}
+
+.details-text{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.text-sub-title{
+    font-family: Inter;
+    font-size: 14px;
+    color:#696969;
+}
+
+.checkbox-option-text{
+    font-family: Inter;
+    font-size: 16px;
+}
+
+.required-checkboxes-container{
+  margin-top: 50px;
+  padding-left: 25px;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.green-button{
+  background-color: #019C41;
+  color: #FFFFFF;
+  border-radius: 8px;
+  max-width: 338px;
+  min-width: 250px;
+  width:auto;
+  max-height: 60px;
+  min-height: 60px;
+  height:auto;
+  font-family: Inter;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.floating-container{
+  position:sticky;
+  top: 0; 
+  left: 0;
+}
+
+.centered-button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.vehicle-name-text{
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  color: #1A202C;
+}
+
+.reviews-score-text{
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #596780;
+}
+
+.summary-title{
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  color: #1A202C;
+}
+
+.summary-subtitle{
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal !important;
+  text-align: left;
+  color:#696969;
+}
+
+// CSS For custom green checkbox without tick in the middle.
+.checkbox-container input[type="checkbox"] {
+    margin-right: 20px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+  background-color: #019C41;
+  border-color: #019C41;
+}
+
+.custom-checkbox label {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.custom-checkbox input[type="checkbox"] + label {
+  visibility: hidden;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label {
+  visibility: visible;
+}
+// End of CSS for custom green checkbox without tick in the middle.
+
+
+@media (max-width: 991px){
+  .main-title{
+      font-size: 60px;
+      line-height: 72px;
+  }
+
+  .main-description{
+      font-size: 40px;
+      line-height: 42px;
+  }
+
+  .title-steps{
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .text-steps{
+    font-size: 23px;
+    line-height: 25px;
+  }
+
+  .text-sub-title{
+    font-size: 35px;
+    line-height: 38px;
+  }
+
+  .details-text{
+    font-size: 35px;
+    line-height: 38px;
+  }
+
+  .checkbox-option-text{
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+  }
+
+  .green-button{
+    font-size: 40px;
+    line-height: 42px;
+    max-width:none;
+    min-width:none;
+    width:100%;
+    max-height: none;
+    min-height: none;
+    height:auto;
+  }
+
+  .summary-title{
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .summary-subtitle{
+    font-size: 35px;
+    line-height: 38px;
+  }
+
+  .vehicle-name-text{
+    font-size: 40px;
+    line-height: 42px;
+  }
+
+  .reviews-score-text{
+    font-size: 35px;
+    line-height: 38px;
+  }
+}

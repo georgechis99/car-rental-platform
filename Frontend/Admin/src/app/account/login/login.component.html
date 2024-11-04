@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center landing-page-container mt-4">
+  <div class="col-sm-6 col-md-6 col-lg-4 m-4">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <h1 class="mb-3 font-weight-normal">{{ "account.login.title" | translate }}</h1>
+        <h6 class="mb-3 font-weight-normal">{{ "account.login.subtitle" | translate }}</h6>
+      </div>
+
+      <app-text-input
+        formControlName="email"
+        [label]="'account.login.email-label' | translate"
+      ></app-text-input>
+
+      <app-text-input
+        formControlName="password"
+        [label]="'account.login.password-label' | translate"
+        [type]="'password'"
+      ></app-text-input>
+
+      <div class="d-grid">
+        <button
+          [disabled]="loginForm.invalid"
+          class="btn btn-lg btn-success btn-block"
+          style="color: #ffffff"
+          type="submit"
+        >
+        {{ "account.login.login-button" | translate }}
+        </button>
+      </div>
+
+      <div *ngIf="this.loginForm.errors?.['notFound']" class="invalid-text mt-2">
+        {{'Unauthorized: Please check your credentials.'}}
+      </div>
+    </form>
+  </div>
+  <div class="ms-5 col-lg-4 d-none d-lg-block">
+    <span
+      ><img
+        class="cursor-pointer"
+        src="/assets/images/admin-login.png"
+        alt="admin-login-img"
+        style="height: 400px; border-radius: 10px"
+      />
+    </span>
+  </div>
+</div>

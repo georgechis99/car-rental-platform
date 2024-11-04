@@ -1,0 +1,6 @@
+<mat-form-field class="filter-deals-datepicker" appearance="fill">
+  <mat-label>{{placeholder}}</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker touchUi #picker class="custom-datepicker"></mat-datepicker>
+</mat-form-field>

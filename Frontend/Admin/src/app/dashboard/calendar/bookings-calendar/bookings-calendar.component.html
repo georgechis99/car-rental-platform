@@ -1,0 +1,3 @@
+<div class="bookings-calendar mb-5" [class.disabled]="isCalendarDisabled">
+  <mat-calendar class="custom-calendar" [dateClass]="dateClass" [selected]="selectedDate" (selectedChange)="onSelect($event)"></mat-calendar>
+</div>

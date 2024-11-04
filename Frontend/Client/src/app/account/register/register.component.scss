@@ -1,0 +1,189 @@
+#rowsContainer{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.title{
+  color: var(--secondary-500, #1A202C);
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: -1.08px;
+}
+
+.text-on-same-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.input-title{
+  color: var(--secondary-500, #1A202C);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+}
+
+.black-link-text{
+  color: black;
+}
+
+.content-column {
+  flex: 1; /* Take remaining space */
+}
+
+.position-relative {
+  position: relative;
+}
+
+.image-text {
+  width: 100%;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  color: #FFF;
+  font-family: Figtree;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: -0.6px;
+  text-align: center;
+  z-index: 1;
+}
+
+.custom-img{
+  border-radius: 8px;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+// CSS For custom green checkbox without tick in the middle.
+.checkbox-container input[type="checkbox"] {
+  margin-right: 20px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #ccc;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+background-color: #019C41;
+border-color: #019C41;
+}
+
+.custom-checkbox label {
+display: inline-block;
+width: 24px;
+height: 24px;
+background-color: white;
+border: 2px solid #ccc;
+border-radius: 4px;
+}
+
+.custom-checkbox input[type="checkbox"] + label {
+visibility: hidden;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label {
+visibility: visible;
+}
+// End of CSS for custom green checkbox without tick in the middle.
+
+@media (max-width: 450px)
+{
+  .image-text{
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .button-dynamic-text{
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  .custom-img{
+    max-height: 400px;
+    border-radius: 24px;
+  }
+
+  .title{
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 72px;
+  }
+
+  .simple-text{
+      font-size: 40px;
+      line-height: 42px;
+  }
+
+  .black-link-text{
+      font-size: 40px;
+      line-height: 42px;
+  }
+
+  .input-title{
+      font-size: 30px;
+      line-height: 32px;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+  }
+
+  .checkbox-option-text {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .image-text{
+    top:80%;
+  }
+
+  .custom-img{
+    max-height:650px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1499px) {
+  .image-text{
+    top:85%;
+  }
+
+  .custom-img{
+    max-height:650px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .image-text{
+    top:87%;
+  }
+
+  .custom-img{
+    max-height:650px;
+  }
+}

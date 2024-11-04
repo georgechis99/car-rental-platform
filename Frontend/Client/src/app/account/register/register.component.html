@@ -1,0 +1,217 @@
+<div class="d-lg-none">
+  <div class="mt-2" id="rowsContainer">
+    <div class="card" style="border-radius: 24px;">
+      <div
+        class="card-body"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        "
+      >
+        <div class="row">
+          <div class="title">
+            {{ "account.register.title" | translate }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="mt-4 text-on-same-row">
+            <div class="simple-text">
+              {{ "account.register.have-account" | translate }}
+            </div>
+            <a class="ms-2 black-link-text" routerLink="/login">
+              {{ "account.register.sign-in" | translate }}
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <form class="mt-4" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="input-title mb-3">
+              {{ "account.register.email" | translate }}
+            </div>
+            <app-text-input
+              formControlName="email"
+              [label]="'Email Address'"
+            ></app-text-input>
+
+            <div class="input-title mb-3">
+              {{ "account.register.password" | translate }}
+            </div>
+            <app-text-input
+              formControlName="password"
+              [label]="'Password'"
+              [type]="'password'"
+            ></app-text-input>
+          </form>
+        </div>
+
+        <div class="row">
+          <div class="checkbox-container mt-4 ms-1" style="display: flex">
+            <div class="custom-checkbox">
+              <input
+                type="checkbox"
+                id="terms-and-conditions-checkbox"
+                [(ngModel)]="termsAndConditionsCheckbox"
+                (change)="termsAndConditionsCheckboxChanged($event)"
+              />
+            </div>
+            <div class="checkbox-option-text">
+              {{
+                "account.register.terms-and-conditions-checkbox-text"
+                  | translate
+              }}
+            </div>
+          </div>
+          <div class="checkbox-container mt-4 ms-1" style="display: flex">
+            <div class="custom-checkbox">
+              <input
+                type="checkbox"
+                id="marketing-deals-checkbox"
+                [(ngModel)]="marketingCheckbox"
+                (change)="marketingCheckboxChanged($event)"
+              />
+            </div>
+            <div class="checkbox-option-text">
+              {{ "account.register.marketing-deals-text" | translate }}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="class d-grid mt-4">
+            <button
+              [disabled]="registerForm.invalid"
+              class="btn btn-lg btn-success button-dynamic-text"
+              style="color: #ffffff; background-color: #019c41"
+              type="submit"
+              (click)="onSubmit()"
+            >
+              {{ "account.register.button-text" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 position-relative" style="display:flex; justify-content: center;">
+      <img
+        src="assets/images/sign-up-img.png"
+        class="custom-img"
+        alt="sign-up-img"
+      />
+      <div class="image-text">
+        {{ "account.register.image-text" | translate }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-none d-lg-block">
+  <div
+    class="mt-5"
+    id="columnsContainer"
+    style="display: flex; justify-content: space-evenly"
+  >
+    <div class="col-4 card">
+      <div
+        class="card-body"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        "
+      >
+        <div class="row">
+          <div class="title">
+            {{ "account.register.title" | translate }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="mt-4 text-on-same-row">
+            <div class="simple-text">
+              {{ "account.register.have-account" | translate }}
+            </div>
+            <a class="ms-2 black-link-text" routerLink="/login">
+              {{ "account.register.sign-in" | translate }}
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <form class="mt-4" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="input-title mb-3">
+              {{ "account.register.email" | translate }}
+            </div>
+            <app-text-input
+              formControlName="email"
+              [label]="'Email Address'"
+            ></app-text-input>
+
+            <div class="input-title mb-3">
+              {{ "account.register.password" | translate }}
+            </div>
+            <app-text-input
+              formControlName="password"
+              [label]="'Password'"
+              [type]="'password'"
+            ></app-text-input>
+          </form>
+        </div>
+
+        <div class="row">
+          <div class="checkbox-container mt-4 ms-1" style="display: flex">
+            <div class="custom-checkbox">
+              <input
+                type="checkbox"
+                id="terms-and-conditions-checkbox"
+                [(ngModel)]="termsAndConditionsCheckbox"
+                (change)="termsAndConditionsCheckboxChanged($event)"
+              />
+            </div>
+            <div class="checkbox-option-text">
+              {{
+                "account.register.terms-and-conditions-checkbox-text"
+                  | translate
+              }}
+            </div>
+          </div>
+          <div class="checkbox-container mt-4 ms-1" style="display: flex">
+            <div class="custom-checkbox">
+              <input
+                type="checkbox"
+                id="marketing-deals-checkbox"
+                [(ngModel)]="marketingCheckbox"
+                (change)="marketingCheckboxChanged($event)"
+              />
+            </div>
+            <div class="checkbox-option-text">
+              {{ "account.register.marketing-deals-text" | translate }}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="class d-grid mt-4">
+            <button
+              [disabled]="registerForm.invalid"
+              class="btn btn-lg btn-success"
+              style="color: #ffffff; background-color: #019c41"
+              type="submit"
+              (click)="onSubmit()"
+            >
+              {{ "account.register.button-text" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 position-relative">
+      <img
+        src="assets/images/sign-up-img.png"
+        class="custom-img"
+        alt="sign-up-img"
+      />
+      <div class="image-text">
+        {{ "account.register.image-text" | translate }}
+      </div>
+    </div>
+  </div>
+</div>

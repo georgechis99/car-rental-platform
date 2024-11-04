@@ -1,0 +1,39 @@
+<h2 class="">
+  {{ "booking.driver-details.title" | translate }}
+</h2>
+
+<p class="text-secondary">{{ "booking.driver-details.enter-details" | translate }}</p>
+
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+  <app-text-input
+    formControlName="firstName"
+    [label]="'First Name'"
+  ></app-text-input>
+
+  <app-text-input
+    formControlName="lastName"
+    [label]="'Last Name'"
+  ></app-text-input>
+
+  <app-text-input
+    formControlName="email"
+    [label]="'Email Address'"
+  ></app-text-input>
+
+  <app-text-input
+    formControlName="phoneNumber"
+    [label]="'Phone Number (+1 123456789)'"
+    [type]="'tel'"
+  ></app-text-input>
+
+  <div class="class d-grid">
+    <button
+      [disabled]="bookingForm.invalid"
+      class="btn btn-lg btn-success btn-block"
+      style="color: #ffffff"
+      type="submit"
+    >
+      Book Now
+    </button>
+  </div>
+</form>

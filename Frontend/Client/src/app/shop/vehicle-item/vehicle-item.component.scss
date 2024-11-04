@@ -1,0 +1,175 @@
+.customer-rating {
+  border: solid;
+  border-radius: 5%;
+  background-color: blue;
+  color: white;
+  height: 30px;
+  width: 30px;
+}
+
+.text-right {
+  text-align: end;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.custom-border{
+  border: solid 1px;
+  border-radius: 5px;
+}
+
+.align-image-center-xy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vehicle-name{
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.review-score-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #019C41;
+  border-radius: 8px;
+}
+
+.review-average-opinion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.number-of-days-text{
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-end;
+  padding-bottom: 4px;
+  padding-left: 3px !important;
+  padding-right: 0px !important;
+  color: rgba(0, 0, 0, 0.50);
+  font-family: Figtree;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.price-text{
+  color: #000;
+  font-family: "Figtree",sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 38.4px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.card{
+  padding: 5px !important;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center; /* Optional: vertically center content */
+}
+
+.old-price {
+  font-family: Figtree;
+  font-size: 22px;
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.50);
+}
+
+.discount-percentage {
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 0px 4px;
+  font-family: Figtree;
+  font-size: 18px;
+  color: #019C41;
+}
+
+.details-text{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+@media (max-width: 991px){
+  .vehicle-name{
+    font-size: 40px;
+    line-height: 42px;
+  }
+
+  .price-text{
+    font-size: 60px;
+    line-height: 72px;
+  }
+
+  .old-price{
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .discount-percentage{
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .number-of-days-text{
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .body-heading-semi-bold{
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .details-text{
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .review-score-text{
+    font-size: 50px;
+    line-height: 55px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .review-average-opinion{
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .view-deal-dymanic-text{
+    font-size: 60px;
+    line-height: 72px;
+    border-radius: 18px;
+  }
+}

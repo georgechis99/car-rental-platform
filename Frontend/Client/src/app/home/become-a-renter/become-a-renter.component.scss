@@ -1,0 +1,142 @@
+.main-container{
+    padding-left: 108px;
+    padding-right: 108px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.flex-row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.title{
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px;
+}
+
+.custom-button{
+    background-color: #019C41; 
+    width: 70%;
+    max-height: 80px;
+}
+
+.description{
+    color: #0F0F0F;
+    font-family: "Figtree",sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -0.6px;
+}
+
+.after-registration-description{
+    color: #0F0F0F;
+    font-family: Figtree;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -0.6px;
+}
+
+.align-content-column-center{
+    display:flex; 
+    flex-direction:column; 
+    justify-content: center;
+}
+
+.padding-left-100{
+    padding-left: 100px;
+}
+
+.padding-right-100{
+    padding-right: 100px;
+}
+
+.personal-information-title{
+    color: var(--secondary-500, #1A202C);
+    font-family: "Inter",sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.6px;
+}
+
+.personal-information-description{
+    color: #696969;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 21px;
+    letter-spacing: -0.28px;
+}
+
+.input-field-label{
+    color: var(--secondary-500, #1A202C);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+}
+
+.custom-button{
+    background-color: #019C41; 
+    width: 100%;
+    max-height: 80px;
+}
+
+.slim-borders-information-container{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: var(--primary-0, #FFF);
+}
+
+@media (max-width: 991px){
+    .title{
+        font-size: 60px;
+        line-height: 72px;
+    }
+
+    .description{
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+    .personal-information-title{
+        font-size: 50px;
+        line-height: 52px;
+    }
+
+    .personal-information-description{
+        font-size: 40px;
+        line-height: 42px;
+    }
+    
+    .input-field-label{
+        font-size: 35px;
+        line-height: 37px;
+    }
+
+    .custom-button{
+        font-size: 40px;
+        line-height: 42px;
+    }
+}

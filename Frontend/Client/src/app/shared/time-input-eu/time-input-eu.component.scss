@@ -1,0 +1,35 @@
+.rounded-select {
+  border-radius: 5px; /* Adjust the value to control the roundness */
+  border: 1px solid #ccc; /* Add a border */
+  padding: 8px; /* Add some padding for spacing */
+}
+
+#time-picker {
+  max-width: 150px;
+}
+
+input {
+  box-sizing: border-box;
+  outline: 0;
+  position: relative;
+  width: 100%;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.form-control.is-valid {
+  background-image: none;
+  padding-right: 12px;
+}
+

@@ -1,0 +1,67 @@
+<h2 class="mb-3">{{ "dashboard.sidebar.unavailable-cars" | translate }}</h2>
+
+<form [formGroup]="unavailableCarsForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-4">
+      <label>{{ "dashboard.filter-bookings.pick-car" | translate }}</label>
+      <select class="form-select mb-4" formControlName="vehicleId">
+        <option value="" hidden>
+          {{ "dashboard.filter-bookings.vrn" | translate }}
+        </option>
+        <option *ngFor="let detail of vehicleDetails" [value]="detail.value">
+          {{ detail.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <h5 class="mb-3">
+    {{ "dashboard.unavailable-cars.select-dates" | translate }}
+  </h5>
+
+  <div class="card p-4 col-lg-9 col-md-12 mb-4">
+    <div class="row">
+      <div class="col-3">
+        <app-date-input
+          formControlName="startDate"
+          [label]="'shared.date-input.from-placeholder' | translate"
+          [minDate]="getCurrentDate()"
+        ></app-date-input>
+      </div>
+      <div class="col-3">
+        <app-time-input
+          formControlName="startTime"
+          [label]="'shared.time-input.start-placeholder' | translate"
+        ></app-time-input>
+      </div>
+      <div class="col-3">
+        <app-date-input
+          formControlName="endDate"
+          [label]="'shared.date-input.to-placeholder' | translate"
+          [minDate]="minStartDate"
+        ></app-date-input>
+      </div>
+
+      <div class="col-3">
+        <app-time-input
+          formControlName="endTime"
+          [label]="'shared.time-input.end-placeholder' | translate"
+        ></app-time-input>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <label>{{ "dashboard.filter-bookings.pick-car" | translate }}</label>
+      <select class="form-select mb-4" formControlName="vehicleId">
+        <option value="" hidden>
+          {{ "dashboard.filter-bookings.vrn" | translate }}
+        </option>
+        <option *ngFor="let reason of selectReasonValues" [value]="reason.value">
+          {{ reason.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+</form>

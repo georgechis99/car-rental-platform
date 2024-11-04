@@ -1,0 +1,318 @@
+<div class="filter-deals-container">
+  <form [formGroup]="filterDealsForm" (ngSubmit)="onSubmit()">
+    <div class="row mt-2 d-flex align-items-center d-xl-none">
+      <div class="d-block d-sm-none">
+        <div class="row">
+          <app-location-input
+            formControlName="location"
+            [placeholder]="'shared.location-input.placeholder' | translate"
+            [label]="'shared.location-input.pickup-label' | translate"
+          ></app-location-input>
+        </div>
+
+        <div class="row">
+          <div class="col-7">
+            <app-date-input
+              formControlName="pickupDate"
+              [label]="'shared.date-input.pickup-placeholder' | translate"
+              [minDate]="getCurrentDate()"
+            ></app-date-input>
+            <!-- <app-date-input-ngx formControlName="pickupDate" [label]="'shared.date-input.pickup-placeholder' | translate"
+            [minDate]="getCurrentDate()"></app-date-input-ngx> -->
+          </div>
+
+          <div class="col-5">
+            <!-- <app-time-input id="time-input" formControlName="pickupTime"
+              [label]="'shared.time-input.pickup-placeholder' | translate"></app-time-input> -->
+            <app-time-input-eu
+              [label]="'shared.time-input.pickup-placeholder' | translate"
+              id="time-input"
+              formControlName="pickupTime"
+            ></app-time-input-eu>
+          </div>
+        </div>
+
+        <ng-container *ngIf="isDifferentDropoffLocation">
+          <div class="row">
+            <app-location-input
+              formControlName="dropoffLocation"
+              [placeholder]="'shared.location-input.placeholder' | translate"
+              [label]="'shared.location-input.dropoff-label' | translate"
+            ></app-location-input>
+          </div>
+        </ng-container>
+
+        <div class="row">
+          <div class="col-7">
+            <app-date-input
+              formControlName="dropoffDate"
+              [label]="'shared.date-input.dropoff-placeholder' | translate"
+              [minDate]="minDropoffDate"
+            ></app-date-input>
+            <!-- <app-date-input-ngx formControlName="dropoffDate" [label]="'shared.date-input.dropoff-placeholder' | translate"
+            [minDate]="minDropoffDate"></app-date-input-ngx> -->
+          </div>
+
+          <div class="col-5">
+            <!-- <app-time-input id="time-input" formControlName="dropoffTime"
+              [label]="'shared.time-input.dropoff-placeholder' | translate"></app-time-input> -->
+            <app-time-input-eu
+              [label]="'shared.time-input.dropoff-placeholder' | translate"
+              id="time-input"
+              formControlName="dropoffTime"
+            ></app-time-input-eu>
+          </div>
+        </div>
+
+        <div class="checkbox-container mt-2" style="display: flex">
+          <div class="custom-checkbox">
+            <input
+              type="checkbox"
+              id="different-dropoff"
+              name="different-dropoff"
+              [checked]="isDifferentDropoffLocation"
+              (change)="onDifferentDropoffLocationChange($event)"
+            />
+          </div>
+          <div class="checkbox-option-text">
+            {{ "home.filter-deals.different-dropoff-location" | translate }}
+          </div>
+        </div>
+
+        <div class="col mt-4" style="text-align: center">
+          <button
+            class="btn btn-success"
+            type="submit"
+            style="width: 75%; background-color: #019c41"
+            [disabled]="filterDealsForm.invalid"
+          >
+            {{ "search-button" | translate }}
+          </button>
+        </div>
+      </div>
+
+      <div class="d-none d-sm-block">
+        <div class="row">
+          <app-location-input
+            formControlName="location"
+            [placeholder]="'shared.location-input.placeholder' | translate"
+            [label]="'shared.location-input.pickup-label' | translate"
+          ></app-location-input>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <app-date-input
+              formControlName="pickupDate"
+              [label]="'shared.date-input.pickup-placeholder' | translate"
+              [minDate]="getCurrentDate()"
+            ></app-date-input>
+            <!-- <app-date-input-ngx
+              formControlName="pickupDate"
+              [label]="'shared.date-input.pickup-placeholder' | translate"
+              [minDate]="getCurrentDate()"
+            ></app-date-input-ngx> -->
+          </div>
+
+          <div class="col-4">
+            <!-- <app-time-input id="time-input" formControlName="pickupTime"
+              [label]="'shared.time-input.pickup-placeholder' | translate"></app-time-input> -->
+            <app-time-input-eu
+              [label]="'shared.time-input.pickup-placeholder' | translate"
+              id="time-input"
+              formControlName="pickupTime"
+            ></app-time-input-eu>
+          </div>
+        </div>
+
+        <ng-container *ngIf="isDifferentDropoffLocation">
+          <div class="row">
+            <app-location-input
+              formControlName="dropoffLocation"
+              [placeholder]="'shared.location-input.placeholder' | translate"
+              [label]="'shared.location-input.dropoff-label' | translate"
+            ></app-location-input>
+          </div>
+        </ng-container>
+
+        <div class="row">
+          <div class="col">
+            <app-date-input
+              formControlName="dropoffDate"
+              [label]="'shared.date-input.dropoff-placeholder' | translate"
+              [minDate]="minDropoffDate"
+            ></app-date-input>
+            <!-- <app-date-input-ngx
+              formControlName="dropoffDate"
+              [label]="'shared.date-input.dropoff-placeholder' | translate"
+              [minDate]="minDropoffDate"
+            ></app-date-input-ngx> -->
+          </div>
+
+          <div class="col-4">
+            <!-- <app-time-input id="time-input" formControlName="dropoffTime"
+              [label]="'shared.time-input.dropoff-placeholder' | translate"></app-time-input> -->
+            <app-time-input-eu
+              [label]="'shared.time-input.dropoff-placeholder' | translate"
+              id="time-input"
+              formControlName="dropoffTime"
+            ></app-time-input-eu>
+          </div>
+        </div>
+
+        <div class="checkbox-container mt-2" style="display: flex">
+          <div class="custom-checkbox">
+            <input
+              type="checkbox"
+              id="different-dropoff"
+              name="different-dropoff"
+              [checked]="isDifferentDropoffLocation"
+              (change)="onDifferentDropoffLocationChange($event)"
+            />
+          </div>
+          <div class="checkbox-option-text">
+            {{ "home.filter-deals.different-dropoff-location" | translate }}
+          </div>
+        </div>
+
+        <div class="col mt-4" style="text-align: center">
+          <button
+            class="btn btn-success custom-button-text"
+            type="submit"
+            style="width: 75%; background-color: #019c41"
+            [disabled]="filterDealsForm.invalid"
+          >
+            {{ "search-button" | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-2 d-flex align-items-center d-none d-xl-block">
+      <div class="row">
+        <div class="col-{{ isDifferentDropoffLocation ? 2 : 3 }}">
+          <app-location-input
+            formControlName="location"
+            [placeholder]="'shared.location-input.placeholder' | translate"
+            [label]="'shared.location-input.pickup-label' | translate"
+          ></app-location-input>
+        </div>
+
+        <div class="col-2">
+          <app-date-input
+            formControlName="pickupDate"
+            [label]="'shared.date-input.pickup-placeholder' | translate"
+            [minDate]="getCurrentDate()"
+          ></app-date-input>
+          <!-- <app-date-input-ngx
+            formControlName="pickupDate"
+            [label]="'shared.date-input.pickup-placeholder' | translate"
+            [minDate]="getCurrentDate()"
+          ></app-date-input-ngx> -->
+        </div>
+
+        <ng-container *ngIf="isDifferentDropoffLocation">
+          <div class="col-1" style="width: 12%; flex: 0 0 12%; max-width: 12%">
+            <!-- <app-time-input id="time-input" formControlName="pickupTime"
+              [label]="'shared.time-input.pickup-placeholder' | translate"></app-time-input> -->
+            <app-time-input-eu
+              [label]="'shared.time-input.pickup-placeholder' | translate"
+              id="time-input"
+              formControlName="pickupTime"
+            ></app-time-input-eu>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="!isDifferentDropoffLocation">
+          <div class="col-2">
+            <!-- <app-time-input id="time-input" formControlName="pickupTime"
+              [label]="'shared.time-input.pickup-placeholder' | translate"></app-time-input> -->
+            <app-time-input-eu
+              [label]="'shared.time-input.pickup-placeholder' | translate"
+              id="time-input"
+              formControlName="pickupTime"
+            ></app-time-input-eu>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="isDifferentDropoffLocation">
+          <div class="col-2">
+            <app-location-input
+              formControlName="dropoffLocation"
+              [placeholder]="'shared.location-input.placeholder' | translate"
+              [label]="'shared.location-input.dropoff-label' | translate"
+            ></app-location-input>
+          </div>
+        </ng-container>
+
+        <div class="col-2">
+          <app-date-input
+            formControlName="dropoffDate"
+            [label]="'shared.date-input.dropoff-placeholder' | translate"
+            [minDate]="minDropoffDate"
+          ></app-date-input>
+          <!-- <app-date-input-ngx
+            formControlName="dropoffDate"
+            [label]="'shared.date-input.dropoff-placeholder' | translate"
+            [minDate]="minDropoffDate"
+          ></app-date-input-ngx> -->
+        </div>
+
+        <ng-container *ngIf="isDifferentDropoffLocation">
+          <div class="col-1" style="width: 12%; flex: 0 0 12%; max-width: 12%">
+            <!-- <app-time-input id="time-input" formControlName="dropoffTime"
+              [label]="'shared.time-input.dropoff-placeholder' | translate"></app-time-input> -->
+            <app-time-input-eu
+              [label]="'shared.time-input.dropoff-placeholder' | translate"
+              id="time-input"
+              formControlName="dropoffTime"
+            ></app-time-input-eu>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="!isDifferentDropoffLocation">
+          <div class="col-2">
+            <!-- <app-time-input id="time-input" formControlName="dropoffTime"
+              [label]="'shared.time-input.dropoff-placeholder' | translate"></app-time-input> -->
+            <app-time-input-eu
+              [label]="'shared.time-input.dropoff-placeholder' | translate"
+              id="time-input"
+              formControlName="dropoffTime"
+            ></app-time-input-eu>
+          </div>
+        </ng-container>
+
+        <div
+          class="col-1 mt-4"
+          [ngClass]="!isDifferentDropoffLocation ? 'ps-0' : ''"
+        >
+          <button
+            class="btn btn-success custom-button-text"
+            type="submit"
+            style="background-color: #019c41"
+            [disabled]="filterDealsForm.invalid"
+          >
+            {{ "search-button" | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-none d-xl-block">
+      <div class="checkbox-container mt-2" style="display: flex">
+        <div class="custom-checkbox">
+          <input
+            type="checkbox"
+            id="different-dropoff"
+            name="different-dropoff"
+            [checked]="isDifferentDropoffLocation"
+            (change)="onDifferentDropoffLocationChange($event)"
+          />
+        </div>
+        <div class="checkbox-option-text">
+          {{ "home.filter-deals.different-dropoff-location" | translate }}
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

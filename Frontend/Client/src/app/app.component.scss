@@ -1,0 +1,18 @@
+html, body {
+  height: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-container {
+  margin-top: 110px;
+}
+
+footer {
+  margin-top: auto;
+}
+

@@ -1,0 +1,137 @@
+.card{
+    border-radius: 1em;
+}
+
+#pickup-location:focus {
+  border-color: green;
+  box-shadow: none;
+}
+
+.filter-deals-container {
+  margin-top: 0px;
+}
+
+// CSS For custom green checkbox without tick in the middle.
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+width: 15px;
+height: 15px;
+border: 2px solid #ccc;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+margin-top: 5px;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+background-color: #019C41;
+border-color: #019C41;
+}
+
+.custom-checkbox label {
+display: inline-block;
+width: 24px;
+height: 24px;
+background-color: white;
+border: 2px solid #ccc;
+border-radius: 4px;
+}
+
+.custom-checkbox input[type="checkbox"] + label {
+visibility: hidden;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label {
+visibility: visible;
+}
+
+.checkbox-option-text{
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 26px;
+}
+// End of CSS for custom green checkbox without tick in the middle.
+
+
+@media only screen and (max-width: 575.98px) {
+  .custom-checkbox input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+  }
+  .checkbox-option-text{
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .custom-button-text{
+    font-size: 35px;
+  }
+}
+
+
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .custom-checkbox input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    margin-top: 4px;
+  }
+  .checkbox-option-text{
+    font-size: 25px;
+    line-height: 26px;
+  }
+  .custom-button-text{
+    font-size: 35px;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .custom-checkbox input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    margin-top: 4px;
+  }
+  .checkbox-option-text{
+    font-size: 25px;
+    line-height: 26px;
+  }
+  .custom-button-text{
+    font-size: 30px;
+  }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .custom-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+  }
+  .checkbox-option-text{
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .custom-button-text{
+    font-size: 25px;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .custom-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+  }
+  .checkbox-option-text{
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

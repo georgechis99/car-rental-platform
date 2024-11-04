@@ -1,0 +1,50 @@
+.location-datetime{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#696969;
+}
+
+.location-name{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#000000;
+}
+
+.title{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    color:#1A202C;
+}
+
+@media (max-width: 991px){
+    .title{
+        font-size: 50px;
+        line-height: 55px;
+    }
+
+    .location-name{
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+    .location-datetime{
+        font-size: 35px;
+        line-height: 37px;
+    }
+
+    .dymamic-size-img{
+        height: 100px !important;
+    }
+}

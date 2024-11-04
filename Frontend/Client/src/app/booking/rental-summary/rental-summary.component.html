@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="row">
+    <div class="summary-title">
+      {{ "booking.rental-summary.title" | translate }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="summary-subtitle">
+      {{ "booking.rental-summary.subtitle" | translate }}
+    </div>
+  </div>
+  <div class="row mt-5">
+      <img
+            src="{{ vehicle.pictureUrl }}"
+            alt="{{ vehicle.vehicleModel }}"
+            class="img-fluid"
+            style="max-height: 50px; width: auto;"
+          />
+    <div class="col ms-2">
+      <div class="row vehicle-name-text">
+        {{vehicle.vehicleBrand}} {{vehicle.vehicleModel}}
+      </div>
+      <div class="row reviews-score-text mt-2">
+        {{this.vehicle.reviewsScore}}/10
+      </div>
+    </div>
+  </div>
+  <div class="row ms-2 mt-5" style="width:95%;" >
+    <hr>
+  </div>
+  
+  <div class="px-4">
+    <app-price-breakdown
+      [vehicle]="vehicle"
+      [vehicleParams]="vehicleParams"
+      [_priceAddition]="0"
+      [forBookingPage]="true"
+    ></app-price-breakdown>
+  </div>
+</div>

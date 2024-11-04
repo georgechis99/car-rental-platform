@@ -1,0 +1,29 @@
+// regular style toast
+@import 'ngx-toastr/toastr';
+
+
+body {
+  margin: 0;
+  font-family: "Figtree", sans-serif; /* Disable horizontal scrolling */
+  overflow-x: hidden;
+}
+input:focus {
+  border-color: #28a745 !important;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;
+}
+
+select:focus {
+  border-color: #28a745 !important;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;
+}
+
+input[type="checkbox"] {
+  accent-color: #28a745 !important;
+}
+
+.toast-container {
+  position: fixed !important;
+  bottom: 80px !important; /* Adjust this value as needed */
+  right: 20px !important; /* Adjust this value as needed */
+  z-index: 1000 !important; /* Adjust this value as needed to ensure it's above other content */
+}

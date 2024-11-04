@@ -1,0 +1,56 @@
+.form-control.is-valid {
+  background-image: none;
+  padding-right: 12px;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  display: block;
+  color: #333;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown on input focus or dropdown focus */
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  label{
+    font-size: 30px;
+  }
+
+  input{
+    font-size: 20px !important;
+  }
+}
+

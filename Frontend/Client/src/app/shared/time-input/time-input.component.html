@@ -1,0 +1,20 @@
+
+<label>{{ label }}</label>
+<input
+  [ngClass]="
+    controlDir && controlDir.control && controlDir.control.touched
+      ? !controlDir.control.valid
+        ? 'is-invalid'
+        : 'is-valid'
+      : null
+  "
+  (input)="onChange(input.value)"
+  (blur)="onTouched()"
+  #input
+  id="time-picker"
+  class="form-control"
+  type="time"
+  [matTooltip]="getErrorMessage()"
+  matTooltipPosition="below"
+  matTooltipClass="error-tooltip"
+/>

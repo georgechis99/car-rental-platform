@@ -1,0 +1,461 @@
+<div class="container px-0" *ngIf="!bookingSucceeded">
+  <div class="row">
+    <div class="mb-1 main-title">
+      {{ "booking.create-booking.title" | translate }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3 main-description">
+      {{ "booking.create-booking.subtitle" | translate }}
+    </div>
+  </div>
+  <div class="row">
+    <!-- Left side of screen -->
+    <div class="col">
+      <!-- Booking Location Summary Card -->
+      <div class="card">
+        <div class="card-body my-3 px-4 py-3">
+          <app-pickup-dropoff-summary
+            [vehicleParams]="vehicleParams"
+          ></app-pickup-dropoff-summary>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+        <!-- Driver details Card -->
+        <div class="card shadow-sm mt-4">
+          <div class="card-body mt-3 mb-1 px-4 py-3">
+            <div class="row">
+              <div class="col title-steps">
+                {{ "booking.driver-details.title" | translate }}
+              </div>
+              <div class="col text-steps" style="text-align: right">
+                {{ "booking.steps" | translate : { current: 1, total: 5 } }}
+              </div>
+            </div>
+
+            <div class="text-sub-title mt-1 mb-4">
+              {{ "booking.driver-details.enter-details" | translate }}
+            </div>
+
+            <div class="mb-4">
+              <div class="details-text mb-1">
+                {{ "booking.driver-details.first-name" | translate }}
+              </div>
+              <app-text-input
+                class="mt-5"
+                formControlName="firstName"
+                [label]="'First Name'"
+              ></app-text-input>
+            </div>
+
+            <div class="mb-4">
+              <div class="details-text mb-1">
+                {{ "booking.driver-details.last-name" | translate }}
+              </div>
+              <app-text-input
+                formControlName="lastName"
+                [label]="'Last Name'"
+              ></app-text-input>
+            </div>
+
+            <div class="mb-4">
+              <div class="details-text mb-1">
+                {{ "booking.driver-details.email" | translate }}
+              </div>
+              <app-text-input
+                formControlName="email"
+                [label]="'Email Address'"
+              ></app-text-input>
+            </div>
+
+            <div>
+              <div class="details-text mb-1">
+                {{ "booking.driver-details.phone-number" | translate }}
+              </div>
+              <app-text-input
+                formControlName="phoneNumber"
+                [label]="'Phone Number (+1 123456789)'"
+                [type]="'tel'"
+              ></app-text-input>
+            </div>
+          </div>
+        </div>
+
+        <!-- Invoice details Card -->
+        <div class="card shadow-sm mt-4">
+          <div class="card-body my-3 px-4 py-3">
+            <div class="row">
+              <div class="col title-steps">
+                {{ "booking.invoice-details.title" | translate }}
+              </div>
+              <div class="col text-steps" style="text-align: right">
+                {{ "booking.steps" | translate : { current: 2, total: 5 } }}
+              </div>
+            </div>
+
+            <div class="text-sub-title mt-1">
+              {{ "booking.invoice-details.sub-title" | translate }}
+            </div>
+
+            <div class="checkbox-container mt-4" style="display: flex">
+              <div class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  id="checkbox-invoice"
+                  formControlName="wantInvoiceCheckbox"
+                />
+              </div>
+              <div class="checkbox-option-text">
+                {{
+                  "booking.invoice-details.yes-invoice-checkbox-text"
+                    | translate
+                }}
+              </div>
+            </div>
+
+            <div
+              class="mt-4 invoice-details-container"
+              *ngIf="this.bookingForm.value.wantInvoiceCheckbox == true"
+            >
+              <div class="mb-4">
+                <div class="details-text mb-3">
+                  {{ "booking.invoice-details.name-of-firm" | translate }}
+                </div>
+                <app-text-input
+                  class="mt-5"
+                  formControlName="companyName"
+                  [label]="'Name of the Firm'"
+                ></app-text-input>
+              </div>
+
+              <div class="mb-4">
+                <div class="details-text mb-3">
+                  {{ "booking.invoice-details.cui" | translate }}
+                </div>
+                <app-text-input
+                  class="mt-5"
+                  formControlName="CUI"
+                  [label]="'Firm Identification Number'"
+                  type="number"
+                ></app-text-input>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- Insurance Options Card -->
+      <div class="card shadow-sm mt-4">
+        <div class="card-body my-3 px-4 py-3">
+          <div class="row">
+            <div class="col title-steps">
+              {{ "booking.insurance-options.title" | translate }}
+            </div>
+            <div class="col text-steps" style="text-align: right">
+              {{ "booking.steps" | translate : { current: 3, total: 5 } }}
+            </div>
+          </div>
+
+          <div class="text-sub-title mt-1">
+            {{ "booking.insurance-options.sub-title" | translate }}
+          </div>
+
+          <div *ngIf="this.fullInsuranceExists">
+            <div class="checkbox-container mt-4" style="display: flex">
+              <div class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  id="full-insurance-checkbox"
+                  [(ngModel)]="fullInsuranceCheckbox"
+                  (change)="fullInsuranceCheckboxChange($event)"
+                />
+              </div>
+              <div class="checkbox-option-text">
+                {{
+                  "booking.insurance-options.full-insurance-text" | translate
+                }}
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="this.limitedInsuranceExists">
+            <div class="checkbox-container mt-4" style="display: flex">
+              <div class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  id="limited-insurance-checkbox"
+                  [(ngModel)]="limitedInsuranceCheckbox"
+                  (change)="limitedInsuranceCheckboxChange($event)"
+                />
+              </div>
+              <div class="checkbox-option-text">
+                {{
+                  "booking.insurance-options.limited-insurance-text" | translate
+                }}
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="this.noInsuranceExists">
+            <div class="checkbox-container mt-4" style="display: flex">
+              <div class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  id="no-insurance-checkbox"
+                  [(ngModel)]="noInsuranceCheckbox"
+                  (change)="noInsuranceCheckboxChange($event)"
+                />
+              </div>
+              <div class="checkbox-option-text">
+                {{ "booking.insurance-options.no-insurance-text" | translate }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Services Card -->
+      <div class="card shadow-sm mt-4">
+        <div class="card-body my-3 px-4 py-3">
+          <div class="row">
+            <div class="col title-steps">
+              {{ "booking.additional-services.title" | translate }}
+            </div>
+            <div class="col text-steps" style="text-align: right">
+              {{ "booking.steps" | translate : { current: 4, total: 5 } }}
+            </div>
+          </div>
+
+          <div class="text-sub-title mt-1">
+            {{ "booking.additional-services.sub-title" | translate }}
+          </div>
+
+          <div class="checkbox-container mt-4" style="display: flex">
+            <div class="custom-checkbox">
+              <input
+                type="checkbox"
+                id="checkbox-bayb-seat"
+                [(ngModel)]="babySeatCheckbox"
+                (change)="babySeatCheckboxChanged($event)"
+              />
+            </div>
+            <div class="checkbox-option-text">
+              {{ "booking.additional-services.baby-seat" | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Method Card -->
+      <div class="card shadow-sm mt-4">
+        <div class="card-body my-3 px-4 py-3">
+          <div class="row">
+            <div class="col title-steps">
+              {{ "booking.payment-method.title" | translate }}
+            </div>
+            <div class="col text-steps" style="text-align: right">
+              {{ "booking.steps" | translate : { current: 5, total: 5 } }}
+            </div>
+          </div>
+
+          <div class="text-sub-title mt-1">
+            {{ "booking.payment-method.sub-title" | translate }}
+          </div>
+
+          <div class="checkbox-container mt-4" style="display: flex">
+            <div class="custom-checkbox">
+              <input
+                type="checkbox"
+                id="cash-checkbox"
+                [(ngModel)]="cashCheckbox"
+                (change)="cashCheckboxChanged($event)"
+              />
+            </div>
+            <div class="checkbox-option-text">
+              {{ "booking.payment-method.cash-checkbox-text" | translate }}
+            </div>
+          </div>
+
+          <div class="checkbox-container mt-4" style="display: flex">
+            <div class="custom-checkbox">
+              <input
+                type="checkbox"
+                id="card-checkbox"
+                [(ngModel)]="cardCheckbox"
+                (change)="cardCheckboxChanged($event)"
+              />
+            </div>
+            <div class="checkbox-option-text">
+              {{ "booking.payment-method.card-checkbox-text" | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Price Breakdown Right side of screen -->
+    <div class="col-5 d-none d-lg-block">
+      <div class="">
+        <div *ngIf="vehicle">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div class="row">
+                <div class="summary-title">
+                  {{ "booking.rental-summary.title" | translate }}
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="summary-subtitle">
+                  {{ "booking.rental-summary.subtitle" | translate }}
+                </div>
+              </div>
+              <div class="row mt-5">
+                <img
+                  src="{{ vehicle.pictureUrl }}"
+                  alt="{{ vehicle.vehicleModel }}"
+                  class="img-fluid"
+                  style="max-height: 100px; width: auto"
+                />
+                <div class="col ms-2">
+                  <div class="row vehicle-name-text">
+                    {{ vehicle.vehicleBrand }} {{ vehicle.vehicleModel }}
+                  </div>
+                  <div class="row reviews-score-text mt-2">
+                    {{ vehicle.reviewsScore }}/10
+                  </div>
+                </div>
+              </div>
+              <div class="row ms-2 mt-5" style="width: 95%">
+                <hr />
+              </div>
+
+              <div class="px-2">
+                <app-price-breakdown
+                  [vehicle]="vehicle"
+                  [vehicleParams]="vehicleParams"
+                  [_priceAddition]="0"
+                  [_insuranceCost]="0"
+                  [forBookingPage]="true"
+                  [insuranceOption]="chosenInsuraceOption"
+                ></app-price-breakdown>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Price Breakdown Small Screen -->
+  <div class="d-lg-none">
+    <div class="card shadow-sm mt-4" *ngIf="this.vehicle">
+      <div class="card-body my-3 px-4 py-3">
+        <div class="row">
+          <div class="summary-title">
+            {{ "booking.rental-summary.title" | translate }}
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="summary-subtitle">
+            {{ "booking.rental-summary.subtitle" | translate }}
+          </div>
+        </div>
+        <div class="row mt-5">
+          <img
+            src="{{ vehicle.pictureUrl }}"
+            alt="{{ vehicle.vehicleModel }}"
+            class="img-fluid"
+            style="max-height: 100px; width: auto"
+          />
+          <div class="col ms-2">
+            <div class="row vehicle-name-text">
+              {{ vehicle.vehicleBrand }} {{ vehicle.vehicleModel }}
+            </div>
+            <div class="row reviews-score-text mt-2">
+              {{ vehicle.reviewsScore }}/10
+            </div>
+          </div>
+        </div>
+        <div class="row ms-2 mt-5" style="width: 95%">
+          <hr class="px-0" />
+        </div>
+
+        <div class="px-2">
+          <app-price-breakdown
+            [vehicle]="vehicle"
+            [vehicleParams]="vehicleParams"
+            [_priceAddition]="0"
+            [_insuranceCost]="0"
+            [forBookingPage]="true"
+            [insuranceOption]="chosenInsuraceOption"
+          ></app-price-breakdown>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Required Container -->
+    <div class="center-container">
+      <div class="required-checkboxes-container">
+        <div class="checkbox-container mt-4" style="display: flex">
+          <div class="custom-checkbox">
+            <input
+              type="checkbox"
+              id="21-years-checkbox"
+              [(ngModel)]="ageVerificationCheckbox"
+              (change)="ageCheckboxChanged($event)"
+            />
+          </div>
+          <div class="checkbox-option-text">
+            {{ "booking.required.21-years-checkbox-text" | translate }}
+          </div>
+        </div>
+
+        <div class="checkbox-container mt-4" style="display: flex">
+          <div class="custom-checkbox">
+            <input
+              type="checkbox"
+              id="terms-and-conditions-checkbox"
+              [(ngModel)]="termsAndConditionsCheckbox"
+              (change)="termsAndConditionsCheckboxChanged($event)"
+            />
+          </div>
+          <div class="checkbox-option-text">
+            {{
+              "booking.required.terms-and-conditions-checkbox-text" | translate
+            }}
+          </div>
+        </div>
+
+        <div class="checkbox-container mt-4" style="display: flex">
+          <div class="custom-checkbox">
+            <input
+              type="checkbox"
+              id="marketing-deals-checkbox"
+              [(ngModel)]="marketingCheckbox"
+              (change)="marketingCheckboxChanged($event)"
+            />
+          </div>
+          <div class="checkbox-option-text">
+            {{ "booking.required.marketing-deals-text" | translate }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="centered-button-container">
+      <button
+        [disabled]="bookingForm.invalid"
+        class="btn btn-sucess btn-block green-button"
+        type="submit"
+        (click)="onSubmit()"
+      >
+        {{ "booking.create-booking.submit-button" | translate }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="bookingSucceeded">
+  <app-booking-succeeded [booking]="bookingCreated"></app-booking-succeeded>
+</ng-container>

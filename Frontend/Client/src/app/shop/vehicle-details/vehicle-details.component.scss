@@ -1,0 +1,104 @@
+.title{
+  font-family: "Inter";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.description{
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-variation-settings: "wght" 200;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #696969;
+}
+
+.body-heading-semi-bold {
+  font-family: "Figtree", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.description-text{
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.centered-div{
+  display: flex;
+  justify-content: center;
+}
+
+.parent-width{
+  width: 100%;
+}
+
+.background-color-green{
+  background: #019C41;
+}
+
+.text-color-green{
+  color: #019C41;
+}
+
+.extra-information-title{
+  font-family: "Inter";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.dynamic-button-text{
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+@media (max-width: 991px){
+  .title{
+    font-size: 60px;
+    line-height: 72px;
+  }
+
+  .description{
+    font-size: 40px;
+    line-height: 42px;
+  }
+
+  .extra-information-title{
+    font-size: 60px;
+    line-height: 72px;
+  }
+
+  .body-heading-semi-bold{
+    font-size: 35px;
+    line-height: 60px;
+  }
+
+  .dynamic-svg-size{
+    width: 40px;
+    height: 40px;
+  }
+
+  .description-text{
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .dynamic-button-text{
+    font-size: 40px;
+    line-height: 42px;
+  }
+}

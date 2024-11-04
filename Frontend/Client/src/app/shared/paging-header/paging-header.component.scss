@@ -1,0 +1,19 @@
+.restult-header{
+    display: flex; 
+    flex-wrap: wrap;
+}
+.header-text{
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    display: inline-block; 
+    margin-left: 10px;
+}
+
+@media (max-width:991px){
+    .header-text{
+        font-size: 30px;
+        margin-left: 0px;
+    }
+}

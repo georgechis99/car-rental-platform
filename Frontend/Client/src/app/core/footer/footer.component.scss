@@ -1,0 +1,112 @@
+.footer-container-black-bg {
+  background-color: black;
+  height: 300px;
+  margin-top: 100px;
+}
+
+.padded-container {
+  padding-top: 50px;
+  padding-left: 108px;
+  padding-right: 108px;
+}
+
+.body-heading-semi-bold-white {
+  font-family: "Figtree", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 35px;
+  color: white;
+}
+
+.body-text-extra-small-white {
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 14px;
+  color: white;
+}
+
+@media (max-width: 300px){
+  a {
+    font-size: x-small !important;
+    line-height: 12px !important;
+  }
+  span{
+    font-size: x-small !important;
+    line-height: 12px !important;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 449px) {
+  a {
+    font-size: small !important;
+    line-height: 12px !important;
+  }
+  span{
+    font-size: small !important;
+    line-height: 12px !important;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 575px) {
+  a {
+    font-size: medium !important;
+    line-height: 12px !important;
+  }
+  span{
+    font-size: medium !important;
+    line-height: 12px !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 649px) {
+  a {
+    font-size: medium !important;
+    line-height: 15px !important;
+
+  }
+  span{
+    font-size: medium !important;
+    line-height: 15px !important;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 767px) {
+  a {
+    font-size: x-large !important;
+    line-height: 23px !important;
+  }
+  span{
+    font-size: x-large !important;
+    line-height: 23px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  a {
+    font-size: x-large !important;
+    line-height: 25px !important;
+  }
+  span{
+    font-size: x-large !important;
+    line-height: 25px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  a {
+    font-size: x-large !important;
+  }
+  span{
+    font-size: x-large !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  a {
+    font-size: xx-large !important;
+  }
+  span{
+    font-size: xx-large !important;
+  }
+}

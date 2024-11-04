@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="row mb-3">
+    <div class="title">
+      {{ "booking.pickup-dropoff-summary.title" | translate }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="location-name">
+      {{ vehicleParams.pickupLocationName }}
+    </div>
+  </div>
+  <div class="row">
+    <p class="col location-datetime">
+      {{ vehicleParams.pickupDate | localizedDate }}
+    </p>
+  </div>
+  <div class="row my-3 pb-3">
+    <img
+      class="dymamic-size-img"
+      src="/assets/images/up-down-arrow.png"
+      alt="search-img"
+      style="height: 45px; width: auto"
+    />
+  </div>
+  <div class="row">
+    <div class="location-name">
+      {{ vehicleParams.dropoffLocationName }}
+    </div>
+  </div>
+  <div class="row">
+    <p class="col location-datetime">
+      {{ vehicleParams.dropoffDate | localizedDate }}
+    </p>
+  </div>
+</div>

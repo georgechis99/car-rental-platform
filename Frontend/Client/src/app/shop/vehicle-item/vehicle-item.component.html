@@ -1,0 +1,868 @@
+<div class="d-none d-lg-block">
+  <div class="card shadow-sm" *ngIf="vehicle">
+    <div class="card-body">
+      <div class="row mt-2" style="height: 10%">
+        <div class="col-8 offset-4">
+          <span
+            *ngIf="this.vehicle.reviewsScore >= 8"
+            class="me-2 pt-1 pb-2 px-2 rounded"
+            style="background-color: #030303; color: white"
+            >{{ "shop.vehicle-item.top-pick" | translate }}</span
+          >
+          <span
+            *ngIf="
+              this.vehicle.maxNumberOfPassengers >= 5 &&
+              this.vehicle.luggageCapacity >= 5
+            "
+            class="me-2 pt-1 pb-2 px-2 rounded"
+            style="background-color: #030303; color: white"
+            >{{ "shop.vehicle-item.ideal-for-families" | translate }}</span
+          >
+        </div>
+      </div>
+
+      <div class="row" style="height: 10%">
+        <div class="col-8 offset-4 mt-4">
+          <div class="row">
+            <div class="col-auto vehicle-name">
+              {{ vehicle.vehicleBrand }} {{ vehicle.vehicleModel }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3" style="height: 55%; overflow-y: hidden">
+        <div class="col-4">
+          <img
+            src="{{ vehicle.pictureUrl }}"
+            alt="{{ vehicle.vehicleModel }}"
+            class="img-fluid"
+            style="max-height: 300px; width: auto"
+          />
+        </div>
+        <div class="col-8">
+          <div class="row me-3">
+            <div class="col-6">
+              <div class="row" *ngIf="this.vehicle.discountPercentage > 0">
+                <div class="flex-container">
+                  <div class="old-price">
+                    {{ oldPrice | euroCurrency }}
+                  </div>
+                  <div class="ms-2 discount-percentage">
+                    -{{ this.vehicle.discountPercentage }}% Discount
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-1 mb-2">
+                <div class="flex-container">
+                  <div class="price-text">
+                    {{ priceForPeriod | euroCurrency }}
+                  </div>
+                  <div class="ms-1 pt-1 mt-2 number-of-days-text">
+                    / {{ bookingPeriodDaysNumber }}
+                    {{ "shop.vehicle-item.days" | translate }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 d-flex flex-column align-items-end">
+              <span class="mt-auto">
+                <svg
+                  class="me-3 mb-2"
+                  width="24"
+                  height="26"
+                  viewBox="0 0 24 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                    stroke="#019C41"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="body-heading-semi-bold">{{
+                  "shop.vehicle-details.free-cancellation" | translate
+                }}</span>
+              </span>
+            </div>
+          </div>
+
+          <div
+            class="card shadow-sm mt-2 border-0 me-3"
+            style="background-color: #f5f5f5; width: auto; height: auto"
+          >
+            <div class="card-body p-2">
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <ellipse
+                        cx="4.64866"
+                        cy="5.00004"
+                        rx="1.66667"
+                        ry="1.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <ellipse
+                        cx="10.482"
+                        cy="5.00004"
+                        rx="1.66667"
+                        ry="1.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <ellipse
+                        cx="16.3153"
+                        cy="5.00004"
+                        rx="1.66667"
+                        ry="1.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <ellipse
+                        cx="4.64866"
+                        cy="15"
+                        rx="1.66667"
+                        ry="1.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <ellipse
+                        cx="10.482"
+                        cy="15"
+                        rx="1.66667"
+                        ry="1.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.64866 6.66663V13.3333"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.482 6.66663V13.3333"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16.3153 6.66663V8.33329C16.3153 9.25377 15.5691 9.99996 14.6487 9.99996H4.64867"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="row mt-1" style="justify-content: center">
+                    {{ this.vehicle.transmissionType }}
+                  </div>
+                </div>
+                <div class="col" style="justify-content: center">
+                  <div class="row">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5282 9.16667H13.3615C14.282 9.16667 15.0282 9.91286 15.0282 10.8333V13.3333C15.0282 14.0237 15.5878 14.5833 16.2782 14.5833C16.9685 14.5833 17.5282 14.0237 17.5282 13.3333V7.5L15.0282 5"
+                        stroke="black"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.19485 16.6667V5.00004C4.19485 4.07957 4.94105 3.33337 5.86152 3.33337H10.8615C11.782 3.33337 12.5282 4.07957 12.5282 5.00004V16.6667"
+                        stroke="black"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3.36151 16.6667H13.3615"
+                        stroke="black"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15.8615 5.83337V6.66671C15.8615 7.12694 16.2346 7.50004 16.6948 7.50004H17.5282"
+                        stroke="black"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.19485 9.16667H12.5282"
+                        stroke="black"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="row mt-1" style="justify-content: center">
+                    {{ this.vehicle.fuelType }}
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.241 1.66663V3.74996M10.241 1.66663C5.63861 1.66663 1.90765 5.39759 1.90765 9.99996M10.241 1.66663C14.8434 1.66663 18.5743 5.39759 18.5743 9.99996M10.241 16.25V18.3333M10.241 18.3333C14.8434 18.3333 18.5743 14.6023 18.5743 9.99996M10.241 18.3333C5.63861 18.3333 1.90765 14.6023 1.90765 9.99996M3.99099 9.99996H1.90765M18.5743 9.99996H16.491M16.1397 15.8986L14.6616 14.4205M4.34235 15.8986L5.82195 14.419M4.34235 4.16663L5.78939 5.61367M16.1397 4.16663L11.4909 8.74996M11.9077 9.99996C11.9077 10.9204 11.1615 11.6666 10.241 11.6666C9.32051 11.6666 8.57432 10.9204 8.57432 9.99996C8.57432 9.07949 9.32051 8.33329 10.241 8.33329C11.1615 8.33329 11.9077 9.07949 11.9077 9.99996Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    *ngIf="this.vehicle.baseMaxDistance > 0"
+                    class="row mt-1"
+                    style="justify-content: center"
+                  >
+                    {{
+                      "shop.vehicle-item.maxDistance"
+                        | translate
+                          : { distanceValue: this.vehicle.baseMaxDistance }
+                    }}
+                  </div>
+                  <div
+                    *ngIf="this.vehicle.baseMaxDistance <= 0"
+                    class="row mt-1"
+                    style="justify-content: center"
+                  >
+                    {{ "shop.vehicle-item.unlimited" | translate }}
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.9538 17.5V15.8333C18.9538 14.2801 17.8915 12.9751 16.4538 12.605M13.5371 2.7423C14.7587 3.23679 15.6205 4.43443 15.6205 5.83333C15.6205 7.23224 14.7587 8.42988 13.5371 8.92437M14.7871 17.5C14.7871 15.9469 14.7871 15.1703 14.5334 14.5577C14.1951 13.741 13.5462 13.092 12.7294 12.7537C12.1168 12.5 11.3403 12.5 9.78714 12.5H7.28714C5.734 12.5 4.95743 12.5 4.34486 12.7537C3.5281 13.092 2.87919 13.741 2.54087 14.5577C2.28714 15.1703 2.28714 15.9469 2.28714 17.5M11.8705 5.83333C11.8705 7.67428 10.3781 9.16667 8.53714 9.16667C6.69619 9.16667 5.20381 7.67428 5.20381 5.83333C5.20381 3.99238 6.69619 2.5 8.53714 2.5C10.3781 2.5 11.8705 3.99238 11.8705 5.83333Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="row mt-1" style="justify-content: center">
+                    {{ this.vehicle.maxNumberOfPassengers }}
+                    {{ "shop.vehicle-item.seats" | translate }}
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.7209 20H6.27907C1.9814 20 1.1814 18 0.976744 16.0558L0.27907 8.60463C0.176744 7.6279 0.148837 6.18604 1.11628 5.10697C1.95349 4.17674 3.33953 3.73022 5.34884 3.73022H14.6511C16.6697 3.73022 18.0558 4.18604 18.8837 5.10697C19.8511 6.18604 19.8232 7.6279 19.7209 8.61394L19.0232 16.0465C18.8186 18 18.0186 20 13.7209 20ZM5.34884 5.11627C3.77674 5.11627 2.69767 5.42325 2.14884 6.0372C1.69302 6.53953 1.54419 7.31162 1.66512 8.4651L2.36279 15.9163C2.52093 17.386 2.92093 18.6046 6.27907 18.6046H13.7209C17.0697 18.6046 17.479 17.386 17.6372 15.907L18.3349 8.4744C18.4558 7.31162 18.3069 6.53953 17.8511 6.0372C17.3023 5.42325 16.2232 5.11627 14.6511 5.11627H5.34884Z"
+                        fill="#0F0F0F"
+                      />
+                      <path
+                        d="M13.7207 5.11628C13.3393 5.11628 13.023 4.8 13.023 4.4186V3.67442C13.023 2.0186 13.023 1.39535 10.744 1.39535H9.25559C6.97653 1.39535 6.97653 2.0186 6.97653 3.67442V4.4186C6.97653 4.8 6.66025 5.11628 6.27885 5.11628C5.89746 5.11628 5.58118 4.8 5.58118 4.4186V3.67442C5.58118 2.03721 5.58118 0 9.25559 0H10.744C14.4184 0 14.4184 2.03721 14.4184 3.67442V4.4186C14.4184 4.8 14.1021 5.11628 13.7207 5.11628Z"
+                        fill="#0F0F0F"
+                      />
+                      <path
+                        d="M9.99979 14.4186C7.44165 14.4186 7.44165 12.8373 7.44165 11.8884V10.9303C7.44165 9.61865 7.75793 9.30237 9.06956 9.30237H10.93C12.2417 9.30237 12.5579 9.61865 12.5579 10.9303V11.8605C12.5579 12.8279 12.5579 14.4186 9.99979 14.4186ZM8.837 10.6977V10.9303V11.8884C8.837 12.8466 8.837 13.0233 9.99979 13.0233C11.1626 13.0233 11.1626 12.8745 11.1626 11.8791V10.9303C11.1626 10.8559 11.1626 10.7721 11.1626 10.6977C11.0882 10.6977 11.0044 10.6977 10.93 10.6977H9.06956C8.99514 10.6977 8.91142 10.6977 8.837 10.6977Z"
+                        fill="#0F0F0F"
+                      />
+                      <path
+                        d="M11.8598 12.5768C11.5156 12.5768 11.2086 12.3163 11.1714 11.9628C11.1249 11.5814 11.3947 11.2279 11.7761 11.1814C14.2319 10.8745 16.5854 9.94422 18.5668 8.50236C18.8737 8.2698 19.3109 8.34422 19.5435 8.6605C19.7668 8.96748 19.7016 9.40469 19.3854 9.63724C17.2086 11.2186 14.6412 12.2326 11.9435 12.5768C11.9156 12.5768 11.8877 12.5768 11.8598 12.5768Z"
+                        fill="#0F0F0F"
+                      />
+                      <path
+                        d="M8.13995 12.586C8.11206 12.586 8.08415 12.586 8.05624 12.586C5.50741 12.2976 3.02369 11.3674 0.874848 9.89765C0.558569 9.6837 0.474848 9.24649 0.688802 8.93021C0.902755 8.61393 1.33996 8.53021 1.65624 8.74416C3.61903 10.0837 5.8795 10.9302 8.20506 11.2C8.58646 11.2465 8.86553 11.5907 8.81902 11.9721C8.79111 12.3256 8.49343 12.586 8.13995 12.586Z"
+                        fill="#0F0F0F"
+                      />
+                    </svg>
+                  </div>
+                  <div class="row mt-1" style="justify-content: center">
+                    {{ this.vehicle.luggageCapacity }}
+                    {{ "shop.vehicle-item.bags" | translate }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <button
+              *ngIf="isSearchPage"
+              class="btn mt-auto btn-success"
+              style="background-color: #019c41; width: 30%"
+              (click)="onShowVehicleDetails()"
+            >
+              {{ "shop.vehicle-item.view-deal" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row ms-4" style="width: 95%">
+        <hr />
+      </div>
+
+      <div class="row ms-3" style="justify-content: space-between">
+        <div class="col">
+          <div class="row" style="vertical-align: middle">
+            <div class="review-score-text me-2">
+              {{ this.vehicle.reviewsScore }}
+            </div>
+            <div class="col review-average-opinion">
+              <div
+                class="row"
+                *ngIf="this.vehicle.reviewsScore >= 9.5"
+                style="text-align: start; font-weight: bold"
+              >
+                {{ "shop.vehicle-item.excellent" | translate }}
+              </div>
+              <div
+                class="row"
+                *ngIf="
+                  this.vehicle.reviewsScore < 9.5 &&
+                  this.vehicle.reviewsScore >= 8.5
+                "
+                style="text-align: start; font-weight: bold"
+              >
+                {{ "shop.vehicle-item.superb" | translate }}
+              </div>
+              <div
+                class="row"
+                *ngIf="
+                  this.vehicle.reviewsScore < 8.5 &&
+                  this.vehicle.reviewsScore >= 7.5
+                "
+                style="text-align: start; font-weight: bold"
+              >
+                {{ "shop.vehicle-item.good" | translate }}
+              </div>
+              <div
+                class="row"
+                *ngIf="
+                  this.vehicle.reviewsScore < 7.5 &&
+                  this.vehicle.reviewsScore >= 6.5
+                "
+                style="text-align: start; font-weight: bold"
+              >
+                {{ "shop.vehicle-item.average" | translate }}
+              </div>
+              <div
+                class="row"
+                *ngIf="this.vehicle.reviewsScore < 6.5"
+                style="text-align: start; font-weight: bold"
+              >
+                {{ "shop.vehicle-item.bad" | translate }}
+              </div>
+              <div class="row" *ngIf="this.numberOfReviews > 0">
+                {{ this.numberOfReviews }}
+                {{ "shop.vehicle-item.reviews" | translate }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="position: relative">
+          <div
+            class="btn custom-border"
+            style="position: absolute; top: 18%; right: 5%"
+            (click)="modalButtonClicked()"
+          >
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 31C24.25 31 31 24.25 31 16C31 7.75 24.25 1 16 1C7.75 1 1 7.75 1 16C1 24.25 7.75 31 16 31Z"
+                stroke="#292D32"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16 10V17.5"
+                stroke="#292D32"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.9918 22H16.0053"
+                stroke="#292D32"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span class="ms-2">{{
+              "shop.vehicle-item.important-information" | translate
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-lg-none">
+  <div class="card shadow-sm" *ngIf="vehicle">
+    <div class="card-body">
+      <div class="align-image-center-xy">
+        <img
+          src="{{ vehicle.pictureUrl }}"
+          alt="{{ vehicle.vehicleModel }}"
+          class="img-fluid"
+          style="width: auto"
+        />
+      </div>
+      <div class="row mt-2" style="padding-left: 12px;">
+        <span
+          *ngIf="this.vehicle.reviewsScore >= 8"
+          class="me-2 pt-1 pb-2 px-2 rounded"
+          style="background-color: #030303; color: white; max-width: min-content; white-space: nowrap;"
+          >{{ "shop.vehicle-item.top-pick" | translate }}</span
+        >
+        <span
+          *ngIf="
+            this.vehicle.maxNumberOfPassengers >= 5 &&
+            this.vehicle.luggageCapacity >= 5
+          "
+          class="me-2 pt-1 pb-2 px-2 rounded"
+          style="background-color: #030303; color: white; max-width: min-content; white-space: nowrap;"
+          >{{ "shop.vehicle-item.ideal-for-families" | translate }}</span
+        >
+      </div>
+
+      <div class="row mt-4">
+        <div class="vehicle-name">
+          {{ vehicle.vehicleBrand }} {{ vehicle.vehicleModel }}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row" *ngIf="this.vehicle.discountPercentage > 0">
+          <div class="flex-container">
+            <div class="old-price">
+              {{ oldPrice | euroCurrency }}
+            </div>
+            <div class="ms-2 discount-percentage">
+              -{{ this.vehicle.discountPercentage }}% Discount
+            </div>
+          </div>
+        </div>
+        <div class="row mt-1 mb-2">
+          <div class="flex-container">
+            <div class="price-text">
+              {{ priceForPeriod | euroCurrency }}
+            </div>
+            <div class="ms-1 pt-1 mt-2 number-of-days-text">
+              / {{ bookingPeriodDaysNumber }}
+              {{ "shop.vehicle-item.days" | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+          <div
+            class="card shadow-sm border-0"
+            style="background-color: #f5f5f5;"
+          >
+            <div class="card-body p-2">
+              <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                  <div class="row">
+                    <svg
+                      width="60"
+                      height="60"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <ellipse
+                        cx="4.64866"
+                        cy="5.00004"
+                        rx="1.66667"
+                        ry="1.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <ellipse
+                        cx="10.482"
+                        cy="5.00004"
+                        rx="1.66667"
+                        ry="1.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <ellipse
+                        cx="16.3153"
+                        cy="5.00004"
+                        rx="1.66667"
+                        ry="1.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <ellipse
+                        cx="4.64866"
+                        cy="15"
+                        rx="1.66667"
+                        ry="1.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <ellipse
+                        cx="10.482"
+                        cy="15"
+                        rx="1.66667"
+                        ry="1.66667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.64866 6.66663V13.3333"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.482 6.66663V13.3333"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16.3153 6.66663V8.33329C16.3153 9.25377 15.5691 9.99996 14.6487 9.99996H4.64867"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="row mt-1 details-text" style="justify-content: center">
+                    {{ this.vehicle.transmissionType }}
+                  </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6" style="justify-content: center">
+                  <div class="row">
+                    <svg
+                      width="60"
+                      height="60"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5282 9.16667H13.3615C14.282 9.16667 15.0282 9.91286 15.0282 10.8333V13.3333C15.0282 14.0237 15.5878 14.5833 16.2782 14.5833C16.9685 14.5833 17.5282 14.0237 17.5282 13.3333V7.5L15.0282 5"
+                        stroke="black"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.19485 16.6667V5.00004C4.19485 4.07957 4.94105 3.33337 5.86152 3.33337H10.8615C11.782 3.33337 12.5282 4.07957 12.5282 5.00004V16.6667"
+                        stroke="black"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3.36151 16.6667H13.3615"
+                        stroke="black"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15.8615 5.83337V6.66671C15.8615 7.12694 16.2346 7.50004 16.6948 7.50004H17.5282"
+                        stroke="black"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.19485 9.16667H12.5282"
+                        stroke="black"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="row mt-1 details-text" style="justify-content: center">
+                    {{ this.vehicle.fuelType }}
+                  </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                  <div class="row">
+                    <svg
+                      width="60"
+                      height="60"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.241 1.66663V3.74996M10.241 1.66663C5.63861 1.66663 1.90765 5.39759 1.90765 9.99996M10.241 1.66663C14.8434 1.66663 18.5743 5.39759 18.5743 9.99996M10.241 16.25V18.3333M10.241 18.3333C14.8434 18.3333 18.5743 14.6023 18.5743 9.99996M10.241 18.3333C5.63861 18.3333 1.90765 14.6023 1.90765 9.99996M3.99099 9.99996H1.90765M18.5743 9.99996H16.491M16.1397 15.8986L14.6616 14.4205M4.34235 15.8986L5.82195 14.419M4.34235 4.16663L5.78939 5.61367M16.1397 4.16663L11.4909 8.74996M11.9077 9.99996C11.9077 10.9204 11.1615 11.6666 10.241 11.6666C9.32051 11.6666 8.57432 10.9204 8.57432 9.99996C8.57432 9.07949 9.32051 8.33329 10.241 8.33329C11.1615 8.33329 11.9077 9.07949 11.9077 9.99996Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    *ngIf="this.vehicle.baseMaxDistance > 0"
+                    class="row mt-1 details-text"
+                    style="justify-content: center"
+                  >
+                    {{
+                      "shop.vehicle-item.maxDistance"
+                        | translate
+                          : { distanceValue: this.vehicle.baseMaxDistance }
+                    }}
+                  </div>
+                  <div
+                    *ngIf="this.vehicle.baseMaxDistance <= 0"
+                    class="row mt-1 details-text"
+                    style="justify-content: center"
+                  >
+                    {{ "shop.vehicle-item.unlimited" | translate }}
+                  </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                  <div class="row">
+                    <svg
+                      width="60"
+                      height="60"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.9538 17.5V15.8333C18.9538 14.2801 17.8915 12.9751 16.4538 12.605M13.5371 2.7423C14.7587 3.23679 15.6205 4.43443 15.6205 5.83333C15.6205 7.23224 14.7587 8.42988 13.5371 8.92437M14.7871 17.5C14.7871 15.9469 14.7871 15.1703 14.5334 14.5577C14.1951 13.741 13.5462 13.092 12.7294 12.7537C12.1168 12.5 11.3403 12.5 9.78714 12.5H7.28714C5.734 12.5 4.95743 12.5 4.34486 12.7537C3.5281 13.092 2.87919 13.741 2.54087 14.5577C2.28714 15.1703 2.28714 15.9469 2.28714 17.5M11.8705 5.83333C11.8705 7.67428 10.3781 9.16667 8.53714 9.16667C6.69619 9.16667 5.20381 7.67428 5.20381 5.83333C5.20381 3.99238 6.69619 2.5 8.53714 2.5C10.3781 2.5 11.8705 3.99238 11.8705 5.83333Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="row mt-1 details-text" style="justify-content: center">
+                    {{ this.vehicle.maxNumberOfPassengers }}
+                    {{ "shop.vehicle-item.seats" | translate }}
+                  </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12">
+                  <div class="row">
+                    <svg
+                      width="60"
+                      height="60"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.7209 20H6.27907C1.9814 20 1.1814 18 0.976744 16.0558L0.27907 8.60463C0.176744 7.6279 0.148837 6.18604 1.11628 5.10697C1.95349 4.17674 3.33953 3.73022 5.34884 3.73022H14.6511C16.6697 3.73022 18.0558 4.18604 18.8837 5.10697C19.8511 6.18604 19.8232 7.6279 19.7209 8.61394L19.0232 16.0465C18.8186 18 18.0186 20 13.7209 20ZM5.34884 5.11627C3.77674 5.11627 2.69767 5.42325 2.14884 6.0372C1.69302 6.53953 1.54419 7.31162 1.66512 8.4651L2.36279 15.9163C2.52093 17.386 2.92093 18.6046 6.27907 18.6046H13.7209C17.0697 18.6046 17.479 17.386 17.6372 15.907L18.3349 8.4744C18.4558 7.31162 18.3069 6.53953 17.8511 6.0372C17.3023 5.42325 16.2232 5.11627 14.6511 5.11627H5.34884Z"
+                        fill="#0F0F0F"
+                      />
+                      <path
+                        d="M13.7207 5.11628C13.3393 5.11628 13.023 4.8 13.023 4.4186V3.67442C13.023 2.0186 13.023 1.39535 10.744 1.39535H9.25559C6.97653 1.39535 6.97653 2.0186 6.97653 3.67442V4.4186C6.97653 4.8 6.66025 5.11628 6.27885 5.11628C5.89746 5.11628 5.58118 4.8 5.58118 4.4186V3.67442C5.58118 2.03721 5.58118 0 9.25559 0H10.744C14.4184 0 14.4184 2.03721 14.4184 3.67442V4.4186C14.4184 4.8 14.1021 5.11628 13.7207 5.11628Z"
+                        fill="#0F0F0F"
+                      />
+                      <path
+                        d="M9.99979 14.4186C7.44165 14.4186 7.44165 12.8373 7.44165 11.8884V10.9303C7.44165 9.61865 7.75793 9.30237 9.06956 9.30237H10.93C12.2417 9.30237 12.5579 9.61865 12.5579 10.9303V11.8605C12.5579 12.8279 12.5579 14.4186 9.99979 14.4186ZM8.837 10.6977V10.9303V11.8884C8.837 12.8466 8.837 13.0233 9.99979 13.0233C11.1626 13.0233 11.1626 12.8745 11.1626 11.8791V10.9303C11.1626 10.8559 11.1626 10.7721 11.1626 10.6977C11.0882 10.6977 11.0044 10.6977 10.93 10.6977H9.06956C8.99514 10.6977 8.91142 10.6977 8.837 10.6977Z"
+                        fill="#0F0F0F"
+                      />
+                      <path
+                        d="M11.8598 12.5768C11.5156 12.5768 11.2086 12.3163 11.1714 11.9628C11.1249 11.5814 11.3947 11.2279 11.7761 11.1814C14.2319 10.8745 16.5854 9.94422 18.5668 8.50236C18.8737 8.2698 19.3109 8.34422 19.5435 8.6605C19.7668 8.96748 19.7016 9.40469 19.3854 9.63724C17.2086 11.2186 14.6412 12.2326 11.9435 12.5768C11.9156 12.5768 11.8877 12.5768 11.8598 12.5768Z"
+                        fill="#0F0F0F"
+                      />
+                      <path
+                        d="M8.13995 12.586C8.11206 12.586 8.08415 12.586 8.05624 12.586C5.50741 12.2976 3.02369 11.3674 0.874848 9.89765C0.558569 9.6837 0.474848 9.24649 0.688802 8.93021C0.902755 8.61393 1.33996 8.53021 1.65624 8.74416C3.61903 10.0837 5.8795 10.9302 8.20506 11.2C8.58646 11.2465 8.86553 11.5907 8.81902 11.9721C8.79111 12.3256 8.49343 12.586 8.13995 12.586Z"
+                        fill="#0F0F0F"
+                      />
+                    </svg>
+                  </div>
+                  <div class="row mt-1 details-text" style="justify-content: center">
+                    {{ this.vehicle.luggageCapacity }}
+                    {{ "shop.vehicle-item.bags" | translate }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 mb-4" style="display: flex; flex-direction: row; justify-content: center;">
+            <button
+              *ngIf="isSearchPage"
+              class="btn btn-success view-deal-dymanic-text"
+              style="background-color: #019c41; width:90%;"
+              (click)="onShowVehicleDetails()"
+            >
+              {{ "shop.vehicle-item.view-deal" | translate }}
+            </button>
+          </div>
+      </div>
+
+      <div class="row">
+        <hr />
+      </div>
+
+      <div class="row ms-3" style="justify-content: space-between">
+        <div class="col">
+          <div class="row" style="vertical-align: middle">
+            <div class="review-score-text me-2">
+              {{ this.vehicle.reviewsScore }}
+            </div>
+            <div class="col review-average-opinion">
+              <div
+                class="row"
+                *ngIf="this.vehicle.reviewsScore >= 9.5"
+                style="text-align: start; font-weight: bold"
+              >
+                {{ "shop.vehicle-item.excellent" | translate }}
+              </div>
+              <div
+                class="row"
+                *ngIf="
+                  this.vehicle.reviewsScore < 9.5 &&
+                  this.vehicle.reviewsScore >= 8.5
+                "
+                style="text-align: start; font-weight: bold"
+              >
+                {{ "shop.vehicle-item.superb" | translate }}
+              </div>
+              <div
+                class="row"
+                *ngIf="
+                  this.vehicle.reviewsScore < 8.5 &&
+                  this.vehicle.reviewsScore >= 7.5
+                "
+                style="text-align: start; font-weight: bold"
+              >
+                {{ "shop.vehicle-item.good" | translate }}
+              </div>
+              <div
+                class="row"
+                *ngIf="
+                  this.vehicle.reviewsScore < 7.5 &&
+                  this.vehicle.reviewsScore >= 6.5
+                "
+                style="text-align: start; font-weight: bold"
+              >
+                {{ "shop.vehicle-item.average" | translate }}
+              </div>
+              <div
+                class="row"
+                *ngIf="this.vehicle.reviewsScore < 6.5"
+                style="text-align: start; font-weight: bold"
+              >
+                {{ "shop.vehicle-item.bad" | translate }}
+              </div>
+              <div class="row" *ngIf="this.numberOfReviews > 0">
+                {{ this.numberOfReviews }}
+                {{ "shop.vehicle-item.reviews" | translate }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="display:flex; flex-direction: row; justify-content: flex-end; align-items: center;">
+          <div
+            class="btn"
+            (click)="modalButtonClicked()"
+          >
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 31C24.25 31 31 24.25 31 16C31 7.75 24.25 1 16 1C7.75 1 1 7.75 1 16C1 24.25 7.75 31 16 31Z"
+                stroke="#292D32"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16 10V17.5"
+                stroke="#292D32"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.9918 22H16.0053"
+                stroke="#292D32"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

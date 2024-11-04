@@ -1,0 +1,53 @@
+.main-container{
+    padding-left: 108px;
+    padding-right: 108px;
+}
+
+.title{
+    //styleName: Title;
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.short-description{
+    //styleName: Body text;
+    font-family: Figtree;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.subtitle{
+    font-family: Figtree;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.subtitle-content{
+    white-space: pre-wrap;
+    font-family: Figtree;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-top:10px;
+}
+
+/*Media query for font sizes on mobile devices*/
+@media (max-width: 991px) {
+    .main-container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

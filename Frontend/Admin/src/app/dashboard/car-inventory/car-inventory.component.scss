@@ -1,0 +1,5 @@
+.form-blur {
+  filter: blur(2px); /* Apply the blur effect */
+  pointer-events: none; /* Disable click events on the blurred form */
+  opacity: 0.98; /* Optional: Reduce the opacity to make it more visually distinct */
+}

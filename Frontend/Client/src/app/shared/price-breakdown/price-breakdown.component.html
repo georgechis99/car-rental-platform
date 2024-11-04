@@ -1,0 +1,195 @@
+<div *ngIf="!forBookingPage">
+  <div class="main-title">
+    {{ "shop.vehicle-details.price-breakdown.title" | translate }}
+  </div>
+  <p class="main-description">
+    {{
+      "shop.vehicle-details.price-breakdown.price-change-information"
+        | translate
+    }}
+  </p>
+  <div class="row mt-3">
+    <div class="col-6 breakdown-price-text">
+      <p>{{ "shop.vehicle-details.price-breakdown.main-price" | translate }}</p>
+    </div>
+    <div class="col-6 d-flex justify-content-end breakdown-price">
+      <p>{{ priceForPeriod | euroCurrency }}</p>
+    </div>
+  </div>
+  <ng-container *ngIf="pickupDeliveryFee > 0">
+    <div class="row">
+      <div class="col-6">
+        <p class="mb-0 delivery-fee-text">
+          {{ "shop.vehicle-details.price-breakdown.pickup-fee" | translate }}
+        </p>
+      </div>
+      <div class="col-6 d-flex justify-content-end delivery-fee-text">
+        <p>{{ pickupDeliveryFee | euroCurrency }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <p class="small-text-red">
+        {{
+          "shop.vehicle-details.price-breakdown.pickup-fee-information"
+            | translate
+        }}
+      </p>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="dropoffDeliveryFee > 0">
+    <div class="row">
+      <div class="col-6">
+        <p class="delivery-fee-text">
+          {{ "shop.vehicle-details.price-breakdown.dropoff-fee" | translate }}
+        </p>
+      </div>
+      <div class="col-6 d-flex justify-content-end delivery-fee-text">
+        <p>{{ dropoffDeliveryFee | euroCurrency }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <p class="small-text-red">
+        {{
+          "shop.vehicle-details.price-breakdown.dropoff-fee-information"
+            | translate
+        }}
+      </p>
+    </div>
+  </ng-container>
+
+  <div class="row mt-1" *ngIf="vehicle.vehicleInsuranceDetails.length > 0">
+    <div class="col-6 breakdown-price-text">
+      <p>
+        {{ "shop.vehicle-details.price-breakdown.insurance-price" | translate }}
+      </p>
+    </div>
+    <div class="col-6 d-flex justify-content-end breakdown-price">
+      <p>{{ insuranceCost | euroCurrency }}</p>
+    </div>
+  </div>
+  <div class="row mt-1">
+    <div class="col-6 breakdown-price-text">
+      <p>
+        {{ "shop.vehicle-details.price-breakdown.deposit-price" | translate }}
+      </p>
+    </div>
+    <div class="col-6 d-flex justify-content-end breakdown-price">
+      <p>{{ depositCost | euroCurrency }}</p>
+    </div>
+  </div>
+  <div class="row mt-1 px-2">
+    <hr style="border: none; height: 1px; background-color: #242926" />
+  </div>
+  <div class="row mt-1">
+    <div class="col-6 total-price">
+      <b>
+        <p class="mb-0">
+          {{ "shop.vehicle-details.price-breakdown.total-price" | translate }}
+        </p>
+      </b>
+    </div>
+    <div class="col-6 d-flex justify-content-end total-price">
+      <b>
+        <p class="mb-0">{{ totalPrice | euroCurrency }}</p>
+      </b>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="forBookingPage">
+  <div class="row mt-3">
+    <div class="col-6 breakdown-price-text">
+      <p>{{ "shop.vehicle-details.price-breakdown.main-price" | translate }}</p>
+    </div>
+    <div class="col-6 d-flex justify-content-end breakdown-price">
+      <p>{{ priceForPeriod | euroCurrency }}</p>
+    </div>
+  </div>
+  <ng-container *ngIf="pickupDeliveryFee > 0">
+    <div class="row">
+      <div class="col-6">
+        <p class="mb-0 delivery-fee-text">
+          {{ "shop.vehicle-details.price-breakdown.pickup-fee" | translate }}
+        </p>
+      </div>
+      <div class="col-6 d-flex justify-content-end delivery-fee-text">
+        <p>{{ pickupDeliveryFee | euroCurrency }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <p class="small-text-red">
+        {{
+          "shop.vehicle-details.price-breakdown.pickup-fee-information"
+            | translate
+        }}
+      </p>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="dropoffDeliveryFee > 0">
+    <div class="row">
+      <div class="col-6 delivery-fee-text">
+        <p>
+          {{ "shop.vehicle-details.price-breakdown.dropoff-fee" | translate }}
+        </p>
+      </div>
+      <div class="col-6 d-flex justify-content-end delivery-fee-text">
+        <p>{{ dropoffDeliveryFee | euroCurrency }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <p class="small-text-red">
+        {{
+          "shop.vehicle-details.price-breakdown.dropoff-fee-information"
+            | translate
+        }}
+      </p>
+    </div>
+  </ng-container>
+  <div class="row mt-3" *ngIf="this.vehicle.vehicleInsuranceDetails.length > 0">
+    <div class="col-6 breakdown-price-text">
+      <p>
+        {{ "shop.vehicle-details.price-breakdown.insurance-price" | translate }}
+      </p>
+    </div>
+    <div class="col-6 d-flex justify-content-end breakdown-price">
+      <p>{{ insuranceCost | euroCurrency }}</p>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-6 breakdown-price-text">
+      <p>
+        {{ "shop.vehicle-details.price-breakdown.deposit-price" | translate }}
+      </p>
+    </div>
+    <div class="col-6 d-flex justify-content-end breakdown-price">
+      <p>{{ depositCost | euroCurrency }}</p>
+    </div>
+  </div>
+
+  <div class="promo-code-container mt-3">
+    <input
+      type="text"
+      placeholder="{{
+        'shop.vehicle-details.price-breakdown.promo-placeholder' | translate
+      }}"
+    />
+    <button class="mobile-responsive-text-size">
+      {{ "shop.vehicle-details.price-breakdown.apply-now" | translate }}
+    </button>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-6 total-price">
+      <b>
+        <p>
+          {{ "shop.vehicle-details.price-breakdown.total-price" | translate }}
+        </p>
+      </b>
+    </div>
+    <div class="col-6 d-flex justify-content-end total-price">
+      <b>
+        <p>{{ totalPrice | euroCurrency }}</p>
+      </b>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+<h2 class="mb-2">{{ "dashboard.sidebar.my-cars" | translate }}</h2>
+<p class="col-9 mb-4">
+  {{ "dashboard.my-cars.sub-title" | translate }}
+</p>
+<div class="row mt-4">
+  <div class="col-4">
+    <label>{{ "dashboard.my-cars.pick-car" | translate }}</label>
+    <select class="form-select mb-4" (change)="onVehicleSelected($event)">
+      <option value="" hidden>
+        {{ "dashboard.my-cars.vrn" | translate }}
+      </option>
+      <option *ngFor="let vrn of vehicleDetails" [value]="vrn.value">
+        {{ vrn.name }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<form
+  [formGroup]="carInventoryForm"
+  (ngSubmit)="onSubmit()"
+  [ngClass]="{ 'form-blur': this.isFormDisabled }"
+>
+  <div class="row mt-4">
+    <h4>{{ "dashboard.my-cars.edit-details" | translate }}</h4>
+  </div>
+  <div class="row mt-2">
+    <div class="col-4">
+      <label>{{ "dashboard.my-cars.status" | translate }}</label>
+      <select class="form-select mb-4" formControlName="status">
+        <option value="" hidden>
+          {{ "dashboard.my-cars.status" | translate }}
+        </option>
+        <option *ngFor="let status of carStatuses" [value]="status">
+          {{ status }}
+        </option>
+      </select>
+      <div class="row">
+        <app-text-input
+          formControlName="vrn"
+          [disabled]="carInventoryForm.disabled"
+          [label]="'dashboard.my-cars.vrn' | translate"
+        ></app-text-input>
+      </div>
+      <button
+        class="btn btn-success mt-3"
+        type="submit"
+        [disabled]="!this.isFormReadyForSubmit()"
+      >
+        {{ "save-button" | translate }}
+      </button>
+    </div>
+    <div class="col-3 ps-4 ms-4">
+      <label>{{ "dashboard.my-cars.brand" | translate }}</label>
+      <h6>{{ selectedVehicle ? selectedVehicle.vehicleBrand : "-" }}</h6>
+
+      <label>{{ "dashboard.my-cars.model" | translate }}</label>
+      <h6>{{ selectedVehicle ? selectedVehicle.vehicleModel : "-" }}</h6>
+
+      <label>{{ "dashboard.my-cars.manufacturing-date" | translate }}</label>
+      <h6>
+        {{
+          selectedVehicle
+            ? selectedVehicle.manufacturingDate.split("").slice(0, 4).join("")
+            : "-"
+        }}
+      </h6>
+
+      <label>{{ "dashboard.my-cars.transmission-type" | translate }}</label>
+      <h6>{{ selectedVehicle ? selectedVehicle.transmissionType : "-" }}</h6>
+
+      <label>{{ "dashboard.my-cars.fuel-type" | translate }}</label>
+      <h6>{{ selectedVehicle ? selectedVehicle.fuelType : "-" }}</h6>
+    </div>
+    <div class="col-3 ps-4">
+      <label>{{ "dashboard.my-cars.air-conditioning" | translate }}</label>
+      <h6>
+        {{
+          selectedVehicle
+            ? selectedVehicle.hasAirConditioning
+              ? "Yes"
+              : "No"
+            : "-"
+        }}
+      </h6>
+      <label>{{ "dashboard.my-cars.luggage-capacity" | translate }}</label>
+      <h6>
+        {{ selectedVehicle ? selectedVehicle.luggageCapacity.toString() : "-" }}
+      </h6>
+
+      <label>{{ "dashboard.my-cars.number-of-doors" | translate }}</label>
+      <h6>
+        {{ selectedVehicle ? selectedVehicle.numberOfDoors.toString() : "-" }}
+      </h6>
+
+      <label>{{
+        "dashboard.my-cars.max-number-of-passengers" | translate
+      }}</label>
+      <h6>
+        {{
+          selectedVehicle
+            ? selectedVehicle.maxNumberOfPassengers.toString()
+            : "-"
+        }}
+      </h6>
+    </div>
+  </div>
+</form>

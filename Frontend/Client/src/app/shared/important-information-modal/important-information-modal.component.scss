@@ -1,0 +1,90 @@
+.custom-border{
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modal-container{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.primary-title{
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.content-flex-start{
+    display:flex; 
+    justify-content: flex-start;
+}
+
+.content-flex-end{
+    display:flex; 
+    justify-content: flex-end;
+}
+
+.single-information{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.information-title{
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.information-description{
+    font-family: "Figtree", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.insurance-option{
+    color: #030303;
+    font-family: "Figtree", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+@media (max-width: 991px){
+    .primary-title{
+        font-size: 60px;
+        line-height: 72px;
+    }
+
+    .information-description{
+        font-size: 40px;
+        line-height: 42px;
+        margin-top: 10px;
+    }
+
+    .information-title{
+        font-size: 50px;
+        line-height: 52px;
+    }
+
+    .insurance-option{
+        font-size: 40px;
+        line-height: 42px;
+    }
+}

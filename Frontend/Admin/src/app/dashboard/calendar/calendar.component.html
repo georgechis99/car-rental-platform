@@ -1,0 +1,80 @@
+<h2 class="mb-2">{{ "dashboard.sidebar.my-bookings" | translate }}</h2>
+<p class="col-9 mb-4">
+  {{ "dashboard.calendar.sub-title" | translate }}
+</p>
+<app-filter-bookings
+  (filterBookingsSubmitted)="onFilterBookingsSubmitted($event)"
+></app-filter-bookings>
+<div class="row">
+  <div class="col-6">
+    <app-bookings-calendar
+      [bookings]="bookings"
+      [unavailableDates]="unavailableDates"
+      (onSelectedDate)="onSelectedDate($event)"
+    ></app-bookings-calendar>
+  </div>
+  <div class="col-6 mt-4">
+    <h5>
+      {{ "dashboard.calendar.booking-details-title" | translate }}
+    </h5>
+    <p>
+      {{ "dashboard.calendar.booking-details-text" | translate }}
+    </p>
+    <div class="card p-3" *ngIf="selectedBooking && hasEvents">
+      <div class="status-container mb-2">
+        <div class="status-content">
+          <span
+            class="status-indicator me-2"
+            [ngClass]="{
+              approved: selectedBooking.isApproved,
+              pending: !selectedBooking.isApproved
+            }"
+          ></span>
+
+          <span *ngIf="selectedBooking.isApproved" class="text-muted">
+            {{ "dashboard.calendar.booking-approved" | translate }}</span
+          >
+
+          <span *ngIf="!selectedBooking.isApproved" class="text-muted">
+            {{ "dashboard.calendar.booking-pending" | translate }}</span
+          >
+        </div>
+
+        <a *ngIf="!selectedBooking.isApproved" class="custom-approve" (click)="onApproveBooking()">
+          {{ "dashboard.calendar.approve-booking" | translate }}
+        </a>
+      </div>
+
+      <p class="mb-1">{{ selectedBooking.phoneNumber }}</p>
+      <p class="mb-1">{{ selectedBooking.userFullName }}</p>
+      <p class="mb-1">{{ selectedBooking.userEmail }}</p>
+      <p class="mb-1">{{ selectedBooking.pickupLocation }}</p>
+      <p class="mb-1">{{ selectedBooking.dropoffLocation }}</p>
+      <p class="mb-1">{{ selectedBooking.pickupDate }}</p>
+      <p class="mb-1">{{ selectedBooking.dropoffDate }}</p>
+
+      <a class="custom-danger" (click)="onBlockDate()">
+        {{ "dashboard.calendar.block-date" | translate }}
+      </a>
+    </div>
+
+    <div class="card p-3" *ngIf="selectedUnavailability && hasEvents">
+      <div class="status-container mb-2">
+        <div class="status-content">
+          <span class="status-indicator me-2 error"></span>
+          <span class="text-muted">
+            {{ "dashboard.calendar.booking-unavailable" | translate }}
+          </span>
+        </div>
+
+      </div>
+      <p class="mb-1">{{ selectedUnavailability.reason }}</p>
+      <p class="mb-1">{{ selectedUnavailability.startDate }}</p>
+      <p class="mb-1">{{ selectedUnavailability.endDate }}</p>
+    </div>
+
+    <h6 class="mt-4 text-muted" *ngIf="!hasEvents">
+      Selected date has no bookings.
+    </h6>
+  </div>
+</div>

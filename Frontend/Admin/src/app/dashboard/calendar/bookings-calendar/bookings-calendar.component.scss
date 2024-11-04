@@ -1,0 +1,37 @@
+.bookings-calendar {
+  width: 400px; // Adjust the width as needed
+  height: 400px; // Adjust the height as needed
+}
+
+.disabled {
+  filter: blur(2px); /* Apply the blur effect */
+  pointer-events: none; /* Disable click events on the blurred form */
+  opacity: 0.98; /* Optional: Reduce the opacity to make it more visually distinct */
+}
+
+:host ::ng-deep .highlight::before {
+  // position: absolute;
+  // top: 0px;
+  // height: 105%; /* Adjust the height of the highlight */
+  // border-radius: 4px; /* Use a border-radius of 50% to create a circle */
+  background-color: #28a745; /* Set the background color of the highlight */
+  z-index: -1; /* Set a negative z-index to place the highlight behind the date text */
+}
+
+:host ::ng-deep .unavailable::before {
+  // position: absolute;
+  // top: 0px;
+  // height: 105%;
+  // border-radius: 4px;
+  background-color: #dc3545; /* Set the background color for unavailable dates */
+  z-index: -1;
+}
+
+:host ::ng-deep .mat-calendar-body-label {
+  font-weight: bold;
+  color: black;
+}
+
+:host ::ng-deep .mat-calendar-body-selected {
+  background-color: rgb(53, 52, 52) !important; /* Set the desired background color for the selected button */
+}

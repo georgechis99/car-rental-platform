@@ -1,0 +1,1120 @@
+<div class="container px-0">
+  <div *ngIf="vehicle">
+    <div class="row">
+      <div class="row">
+        <div class="title">
+          {{ "shop.vehicle-details.title" | translate }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="description">
+          {{ "shop.vehicle-details.next-checkout" | translate }}
+        </div>
+      </div>
+
+      <div class="row pe-0">
+        <div class="col-12 pe-0">
+          <div class="card shadow-sm my-3">
+            <div class="card-body py-0">
+              <app-booking-details-card
+                [vehicleParams]="vehicleParams"
+              ></app-booking-details-card>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-none d-xl-block">
+        <div class="row pe-0">
+          <div class="col-9 mt-3">
+            <app-vehicle-item
+              [vehicle]="vehicle"
+              [vehicleParams]="vehicleParams"
+              [isSearchPage]="false"
+            ></app-vehicle-item>
+            <div class="information-container">
+              <div class="row mt-5">
+                <div class="col-12">
+                  <div class="extra-information-title">
+                    {{ "shop.vehicle-details.great-choice" | translate }}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <div class="row mt-2">
+                      <span>
+                        <svg
+                          class="me-3 mb-2 dynamic-svg-size"
+                          width="24"
+                          height="26"
+                          viewBox="0 0 24 26"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                            stroke="#019C41"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span class="body-heading-semi-bold"
+                          >{{
+                            "shop.vehicle-details.customer-rating" | translate
+                          }}: {{ this.vehicle.reviewsScore }} / 10</span
+                        >
+                      </span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="row mt-2">
+                      <span>
+                        <svg
+                          class="me-3 mb-2 dynamic-svg-size"
+                          width="24"
+                          height="26"
+                          viewBox="0 0 24 26"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                            stroke="#019C41"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span class="body-heading-semi-bold">{{
+                          "shop.vehicle-details.free-cancellation" | translate
+                        }}</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="row mt-2">
+                      <span>
+                        <svg
+                          class="me-3 mb-2 dynamic-svg-size"
+                          width="24"
+                          height="26"
+                          viewBox="0 0 24 26"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                            stroke="#019C41"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span class="body-heading-semi-bold">{{
+                          "shop.vehicle-details.easy-to-find" | translate
+                        }}</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="row mt-2">
+                      <span>
+                        <svg
+                          class="me-3 mb-2 dynamic-svg-size"
+                          width="24"
+                          height="26"
+                          viewBox="0 0 24 26"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                            stroke="#019C41"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span class="body-heading-semi-bold">{{
+                          "shop.vehicle-details.well-maintained" | translate
+                        }}</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-12">
+                  <div class="extra-information-title">
+                    {{"shop.vehicle-details.rental-conditions.title" | translate}}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mt-2">
+                  <span class="body-heading-semi-bold"
+                    >{{
+                      "shop.vehicle-details.rental-conditions.minimum-age.label"
+                        | translate
+                    }}
+                    :
+                  </span>
+                  <span class="body-heading-semi-bold"
+                    ><b>{{
+                      "shop.vehicle-details.rental-conditions.minimum-age.value"
+                        | translate
+                    }}</b></span
+                  >
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mt-2">
+                  <span class="body-heading-semi-bold"
+                    >{{
+                      "shop.vehicle-details.rental-conditions.drivers-licence.label"
+                        | translate
+                    }}
+                    :
+                  </span>
+                  <span class="body-heading-semi-bold"
+                    ><b>{{
+                      "shop.vehicle-details.rental-conditions.drivers-licence.value"
+                        | translate
+                    }}</b></span
+                  >
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mt-2">
+                  <span class="body-heading-semi-bold"
+                    >{{
+                      "shop.vehicle-details.rental-conditions.allowed-areas.label"
+                        | translate
+                    }}
+                    :
+                  </span>
+                  <span class="body-heading-semi-bold"
+                    ><b>{{
+                      "shop.vehicle-details.rental-conditions.allowed-areas.value"
+                        | translate
+                    }}</b></span
+                  >
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mt-2">
+                  <span class="body-heading-semi-bold"
+                    >{{
+                      "shop.vehicle-details.rental-conditions.fuel-policy.label"
+                        | translate
+                    }}
+                    :
+                  </span>
+                  <span class="body-heading-semi-bold"
+                    ><b>{{
+                      "shop.vehicle-details.rental-conditions.fuel-policy.value"
+                        | translate
+                    }}</b></span
+                  >
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mt-2">
+                  <span class="body-heading-semi-bold"
+                    >{{
+                      "shop.vehicle-details.rental-conditions.hygiene-policy.label"
+                        | translate
+                    }}
+                    :
+                  </span>
+                  <span class="body-heading-semi-bold"
+                    ><b>{{
+                      "shop.vehicle-details.rental-conditions.hygiene-policy.value"
+                        | translate
+                    }}</b></span
+                  >
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col-12">
+                  <div class="extra-information-title">
+                    {{ "shop.vehicle-details.included-in-price.title" | translate }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mt-2">
+                  <span>
+                    <svg
+                      class="me-3 mb-2 dynamic-svg-size"
+                      width="24"
+                      height="26"
+                      viewBox="0 0 24 26"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                        stroke="#019C41"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="body-heading-semi-bold">{{
+                      "shop.vehicle-details.included-in-price.free-cancellation"
+                        | translate
+                    }}</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mt-2" *ngIf="this.vehicle.baseMaxDistance > 0">
+                  <span>
+                    <svg
+                      class="me-3 mb-2 dynamic-svg-size"
+                      width="24"
+                      height="26"
+                      viewBox="0 0 24 26"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                        stroke="#019C41"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="body-heading-semi-bold"
+                      >{{
+                        "shop.vehicle-details.included-in-price.maximum-mileage-before-amount"
+                          | translate
+                      }}{{ this.vehicle.baseMaxDistance
+                      }}{{
+                        "shop.vehicle-details.included-in-price.maximum-mileage-after-amount"
+                          | translate
+                      }}</span
+                    >
+                  </span>
+                </div>
+                <div class="col mt-2" *ngIf="this.vehicle.baseMaxDistance <= 0">
+                  <span>
+                    <svg
+                      class="me-3 mb-2 dynamic-svg-size"
+                      width="24"
+                      height="26"
+                      viewBox="0 0 24 26"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                        stroke="#019C41"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="body-heading-semi-bold">{{
+                      "shop.vehicle-details.included-in-price.unlimited-mileage"
+                        | translate
+                    }}</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mt-2">
+                  <span>
+                    <svg
+                      class="me-3 mb-2 dynamic-svg-size"
+                      width="24"
+                      height="26"
+                      viewBox="0 0 24 26"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                        stroke="#019C41"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="body-heading-semi-bold">{{
+                      "shop.vehicle-details.included-in-price.theft-protection"
+                        | translate
+                    }}</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mt-2">
+                  <span>
+                    <svg
+                      class="me-3 mb-2 dynamic-svg-size"
+                      width="24"
+                      height="26"
+                      viewBox="0 0 24 26"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                        stroke="#019C41"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="body-heading-semi-bold">{{
+                      "shop.vehicle-details.included-in-price.collision-protection"
+                        | translate
+                    }}</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div
+              class="my-3"
+              style="
+                border: 1px solid #019c41;
+                border-radius: 8px;
+                padding: 15px;
+              "
+            >
+              <app-price-breakdown
+                [vehicle]="vehicle"
+                [vehicleParams]="vehicleParams"
+                [insuranceOption]="averageInsuranceOption"
+                [_priceAddition]="0"
+              ></app-price-breakdown>
+            </div>
+            <a
+              class="btn btn-success background-color-green parent-width mt-1"
+              (click)="continueToBook()"
+            >
+              {{ "shop.vehicle-details.continue-to-book" | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="d-xl-none">
+        <div class="row mt-3">
+          <app-vehicle-item
+            [vehicle]="vehicle"
+            [vehicleParams]="vehicleParams"
+            [isSearchPage]="false"
+          ></app-vehicle-item>
+        </div>
+        <div class="row pe-0 mt-3 ms-1 me-1">
+          <div
+            class="my-3"
+            style="border: 1px solid #019c41; border-radius: 8px; padding: 15px"
+          >
+            <app-price-breakdown
+              [vehicle]="vehicle"
+              [vehicleParams]="vehicleParams"
+              [_priceAddition]="0"
+            ></app-price-breakdown>
+          </div>
+          <a
+            class="btn btn-success background-color-green parent-width dynamic-button-text mt-1"
+            (click)="continueToBook()"
+          >
+            {{ "shop.vehicle-details.continue-to-book" | translate }}
+          </a>
+        </div>
+      </div>
+
+      <div class="d-xl-none">
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="extra-information-title">
+              {{ "shop.vehicle-details.great-choice" | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-none d-lg-block d-xl-none">
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="row mt-2">
+                <span>
+                  <svg
+                    class="me-3 mb-2 dynamic-svg-size"
+                    width="24"
+                    height="26"
+                    viewBox="0 0 24 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                      stroke="#019C41"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="body-heading-semi-bold"
+                    >{{ "shop.vehicle-details.customer-rating" | translate }}:
+                    {{ this.vehicle.reviewsScore }} / 10</span
+                  >
+                </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row mt-2">
+                <span>
+                  <svg
+                    class="me-3 mb-2 dynamic-svg-size"
+                    width="24"
+                    height="26"
+                    viewBox="0 0 24 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                      stroke="#019C41"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="body-heading-semi-bold">{{
+                    "shop.vehicle-details.free-cancellation" | translate
+                  }}</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row">
+              <div class="row mt-2">
+                <span>
+                  <svg
+                    class="me-3 mb-2 dynamic-svg-size"
+                    width="24"
+                    height="26"
+                    viewBox="0 0 24 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                      stroke="#019C41"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="body-heading-semi-bold">{{
+                    "shop.vehicle-details.easy-to-find" | translate
+                  }}</span>
+                </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row mt-2">
+                <span>
+                  <svg
+                    class="me-3 mb-2 dynamic-svg-size"
+                    width="24"
+                    height="26"
+                    viewBox="0 0 24 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                      stroke="#019C41"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="body-heading-semi-bold">{{
+                    "shop.vehicle-details.well-maintained" | translate
+                  }}</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row d-lg-none">
+        <div class="row">
+          <div class="row mt-2">
+            <span>
+              <svg
+                class="me-3 mb-2 dynamic-svg-size"
+                width="24"
+                height="26"
+                viewBox="0 0 24 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                  stroke="#019C41"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="body-heading-semi-bold"
+                >{{ "shop.vehicle-details.customer-rating" | translate }}:
+                {{ this.vehicle.reviewsScore }} / 10</span
+              >
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row mt-2">
+            <span>
+              <svg
+                class="me-3 mb-2 dynamic-svg-size"
+                width="24"
+                height="26"
+                viewBox="0 0 24 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                  stroke="#019C41"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="body-heading-semi-bold">{{
+                "shop.vehicle-details.free-cancellation" | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row mt-2">
+            <span>
+              <svg
+                class="me-3 mb-2 dynamic-svg-size"
+                width="24"
+                height="26"
+                viewBox="0 0 24 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                  stroke="#019C41"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="body-heading-semi-bold">{{
+                "shop.vehicle-details.easy-to-find" | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row mt-2">
+            <span>
+              <svg
+                class="me-3 mb-2 dynamic-svg-size"
+                width="24"
+                height="26"
+                viewBox="0 0 24 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                  stroke="#019C41"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="body-heading-semi-bold">{{
+                "shop.vehicle-details.well-maintained" | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-xl-none">
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="extra-information-title">
+              {{ "shop.vehicle-details.rental-conditions.title" | translate }}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mt-2">
+            <span class="body-heading-semi-bold"
+              >{{
+                "shop.vehicle-details.rental-conditions.minimum-age.label"
+                  | translate
+              }}
+              :
+            </span>
+            <span class="body-heading-semi-bold"
+              ><b>{{
+                "shop.vehicle-details.rental-conditions.minimum-age.value"
+                  | translate
+              }}</b></span
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mt-2">
+            <span class="body-heading-semi-bold"
+              >{{
+                "shop.vehicle-details.rental-conditions.drivers-licence.label"
+                  | translate
+              }}
+              :
+            </span>
+            <span class="body-heading-semi-bold"
+              ><b>{{
+                "shop.vehicle-details.rental-conditions.drivers-licence.value"
+                  | translate
+              }}</b></span
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mt-2">
+            <span class="body-heading-semi-bold"
+              >{{
+                "shop.vehicle-details.rental-conditions.allowed-areas.label"
+                  | translate
+              }}
+              :
+            </span>
+            <span class="body-heading-semi-bold"
+              ><b>{{
+                "shop.vehicle-details.rental-conditions.allowed-areas.value"
+                  | translate
+              }}</b></span
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mt-2">
+            <span class="body-heading-semi-bold"
+              >{{
+                "shop.vehicle-details.rental-conditions.fuel-policy.label"
+                  | translate
+              }}
+              :
+            </span>
+            <span class="body-heading-semi-bold"
+              ><b>{{
+                "shop.vehicle-details.rental-conditions.fuel-policy.value"
+                  | translate
+              }}</b></span
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mt-2">
+            <span class="body-heading-semi-bold"
+              >{{
+                "shop.vehicle-details.rental-conditions.hygiene-policy.label"
+                  | translate
+              }}
+              :
+            </span>
+            <span class="body-heading-semi-bold"
+              ><b>{{
+                "shop.vehicle-details.rental-conditions.hygiene-policy.value"
+                  | translate
+              }}</b></span
+            >
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="extra-information-title">
+              {{ "shop.vehicle-details.included-in-price.title" | translate }}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mt-2">
+            <span>
+              <svg
+                class="me-3 mb-2 dynamic-svg-size"
+                width="24"
+                height="26"
+                viewBox="0 0 24 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                  stroke="#019C41"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="body-heading-semi-bold">{{
+                "shop.vehicle-details.included-in-price.free-cancellation"
+                  | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mt-2" *ngIf="this.vehicle.baseMaxDistance > 0">
+            <span>
+              <svg
+                class="me-3 mb-2 dynamic-svg-size"
+                width="24"
+                height="26"
+                viewBox="0 0 24 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                  stroke="#019C41"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="body-heading-semi-bold"
+                >{{
+                  "shop.vehicle-details.included-in-price.maximum-mileage-before-amount"
+                    | translate
+                }}{{ this.vehicle.baseMaxDistance
+                }}{{
+                  "shop.vehicle-details.included-in-price.maximum-mileage-after-amount"
+                    | translate
+                }}</span
+              >
+            </span>
+          </div>
+          <div class="col mt-2" *ngIf="this.vehicle.baseMaxDistance <= 0">
+            <span>
+              <svg
+                class="me-3 mb-2 dynamic-svg-size"
+                width="24"
+                height="26"
+                viewBox="0 0 24 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                  stroke="#019C41"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="body-heading-semi-bold">{{
+                "shop.vehicle-details.included-in-price.unlimited-mileage"
+                  | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mt-2">
+            <span>
+              <svg
+                class="me-3 mb-2 dynamic-svg-size"
+                width="24"
+                height="26"
+                viewBox="0 0 24 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                  stroke="#019C41"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="body-heading-semi-bold">{{
+                "shop.vehicle-details.included-in-price.theft-protection"
+                  | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mt-2">
+            <span>
+              <svg
+                class="me-3 mb-2 dynamic-svg-size"
+                width="24"
+                height="26"
+                viewBox="0 0 24 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                  stroke="#019C41"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="body-heading-semi-bold">{{
+                "shop.vehicle-details.included-in-price.collision-protection"
+                  | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="extra-information-title">
+            {{ "shop.vehicle-details.insurance.title" | translate }}
+          </div>
+        </div>
+      </div>
+
+      <div class="description-text mt-2">
+        {{ "shop.vehicle-details.insurance.description" | translate }}
+      </div>
+
+      <div class="d-none d-lg-block">
+        <div
+          *ngIf="
+            this.noInsuranceExists == true ||
+            this.limitedInsuranceExists == true ||
+            this.fullInsuranceExists == true
+          "
+        >
+          <div class="row mt-5">
+            <div class="col-6 body-heading-semi-bold">
+              <div><b>
+                {{
+                  "shop.vehicle-details.insurance.table.questions.title"
+                    | translate
+                }}</b>
+              </div>
+            </div>
+            <div
+              *ngIf="this.noInsuranceExists == true"
+              class="col body-heading-semi-bold centered-div"
+              style="text-align: center"
+            >
+              <div>
+                <b>{{
+                  "shop.vehicle-details.insurance.table.no-insurance.title"
+                    | translate
+                }}</b>
+              </div>
+            </div>
+            <div
+              *ngIf="this.limitedInsuranceExists == true"
+              class="col body-heading-semi-bold centered-div"
+              style="text-align: center"
+            >
+              <div>
+                <b>{{
+                  "shop.vehicle-details.insurance.table.limited-insurance.title"
+                    | translate
+                }}</b>
+              </div>
+            </div>
+            <div
+              *ngIf="this.fullInsuranceExists == true"
+              class="col body-heading-semi-bold centered-div"
+              style="text-align: center"
+            >
+              <div>
+                <b>{{
+                  "shop.vehicle-details.insurance.table.full-insurance.title"
+                    | translate
+                }}</b>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <hr />
+            </div>
+          </div>
+
+          <ng-container
+            *ngFor="let insuranceOption of this.insuranceOptions; let i = index"
+          >
+            <div class="row mt-3">
+              <div class="col-6">
+                <span class="description-text">{{
+                  insuranceOption.description | translate
+                }}</span>
+              </div>
+              <div class="col centered-div" *ngIf="this.noInsuranceExists">
+                <svg
+                  *ngIf="insuranceOption.noInsurance"
+                  width="24"
+                  height="26"
+                  viewBox="0 0 24 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                    stroke="#019C41"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg
+                  *ngIf="!insuranceOption.noInsurance"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 22C4.93209 22 0 17.0679 0 11C0 4.93209 4.93209 0 11 0C17.0679 0 22 4.93209 22 11C22 17.0679 17.0679 22 11 22ZM11 1.53488C5.7814 1.53488 1.53488 5.7814 1.53488 11C1.53488 16.2186 5.7814 20.4651 11 20.4651C16.2186 20.4651 20.4651 16.2186 20.4651 11C20.4651 5.7814 16.2186 1.53488 11 1.53488Z"
+                    fill="#292D32"
+                  />
+                  <path
+                    d="M8.1035 14.6633C7.90908 14.6633 7.71467 14.5917 7.56118 14.4382C7.26444 14.1415 7.26444 13.6503 7.56118 13.3536L13.3528 7.56196C13.6496 7.26522 14.1407 7.26522 14.4375 7.56196C14.7342 7.8587 14.7342 8.34987 14.4375 8.64661L8.64582 14.4382C8.50257 14.5917 8.29791 14.6633 8.1035 14.6633Z"
+                    fill="#292D32"
+                  />
+                  <path
+                    d="M13.8952 14.6633C13.7007 14.6633 13.5063 14.5917 13.3528 14.4382L7.56118 8.64661C7.26444 8.34987 7.26444 7.8587 7.56118 7.56196C7.85792 7.26522 8.34908 7.26522 8.64582 7.56196L14.4375 13.3536C14.7342 13.6503 14.7342 14.1415 14.4375 14.4382C14.284 14.5917 14.0896 14.6633 13.8952 14.6633Z"
+                    fill="#292D32"
+                  />
+                </svg>
+              </div>
+              <div class="col centered-div" *ngIf="this.limitedInsuranceExists">
+                <svg
+                  *ngIf="insuranceOption.limitedInsurance"
+                  width="24"
+                  height="26"
+                  viewBox="0 0 24 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                    stroke="#019C41"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg
+                  *ngIf="!insuranceOption.limitedInsurance"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 22C4.93209 22 0 17.0679 0 11C0 4.93209 4.93209 0 11 0C17.0679 0 22 4.93209 22 11C22 17.0679 17.0679 22 11 22ZM11 1.53488C5.7814 1.53488 1.53488 5.7814 1.53488 11C1.53488 16.2186 5.7814 20.4651 11 20.4651C16.2186 20.4651 20.4651 16.2186 20.4651 11C20.4651 5.7814 16.2186 1.53488 11 1.53488Z"
+                    fill="#292D32"
+                  />
+                  <path
+                    d="M8.1035 14.6633C7.90908 14.6633 7.71467 14.5917 7.56118 14.4382C7.26444 14.1415 7.26444 13.6503 7.56118 13.3536L13.3528 7.56196C13.6496 7.26522 14.1407 7.26522 14.4375 7.56196C14.7342 7.8587 14.7342 8.34987 14.4375 8.64661L8.64582 14.4382C8.50257 14.5917 8.29791 14.6633 8.1035 14.6633Z"
+                    fill="#292D32"
+                  />
+                  <path
+                    d="M13.8952 14.6633C13.7007 14.6633 13.5063 14.5917 13.3528 14.4382L7.56118 8.64661C7.26444 8.34987 7.26444 7.8587 7.56118 7.56196C7.85792 7.26522 8.34908 7.26522 8.64582 7.56196L14.4375 13.3536C14.7342 13.6503 14.7342 14.1415 14.4375 14.4382C14.284 14.5917 14.0896 14.6633 13.8952 14.6633Z"
+                    fill="#292D32"
+                  />
+                </svg>
+              </div>
+              <div class="col centered-div" *ngIf="this.fullInsuranceExists">
+                <svg
+                  *ngIf="insuranceOption.fullInsurance"
+                  width="24"
+                  height="26"
+                  viewBox="0 0 24 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.7 12.5977L10.9 14.9173L15.85 9.69831M6.86714 3.10928C7.75136 3.03488 8.59079 2.66829 9.26592 2.06168C10.8414 0.646107 13.1586 0.646107 14.7341 2.06168C15.4092 2.66829 16.2486 3.03488 17.1329 3.10928C19.1963 3.28289 20.8348 5.01044 20.9994 7.18597C21.07 8.11823 21.4177 9.00327 21.993 9.71509C23.3357 11.3762 23.3357 13.8193 21.993 15.4804C21.4177 16.1922 21.07 17.0773 20.9994 18.0095C20.8348 20.1851 19.1963 21.9126 17.1329 22.0862C16.2486 22.1606 15.4092 22.5272 14.7341 23.1338C13.1586 24.5494 10.8414 24.5494 9.26592 23.1338C8.59079 22.5272 7.75136 22.1606 6.86714 22.0862C4.80374 21.9126 3.16523 20.1851 3.00056 18.0095C2.93 17.0773 2.5823 16.1922 2.00696 15.4804C0.664346 13.8193 0.664346 11.3762 2.00696 9.71509C2.5823 9.00327 2.93 8.11824 3.00056 7.18597C3.16523 5.01044 4.80374 3.28289 6.86714 3.10928Z"
+                    stroke="#019C41"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg
+                  *ngIf="!insuranceOption.fullInsurance"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 22C4.93209 22 0 17.0679 0 11C0 4.93209 4.93209 0 11 0C17.0679 0 22 4.93209 22 11C22 17.0679 17.0679 22 11 22ZM11 1.53488C5.7814 1.53488 1.53488 5.7814 1.53488 11C1.53488 16.2186 5.7814 20.4651 11 20.4651C16.2186 20.4651 20.4651 16.2186 20.4651 11C20.4651 5.7814 16.2186 1.53488 11 1.53488Z"
+                    fill="#292D32"
+                  />
+                  <path
+                    d="M8.1035 14.6633C7.90908 14.6633 7.71467 14.5917 7.56118 14.4382C7.26444 14.1415 7.26444 13.6503 7.56118 13.3536L13.3528 7.56196C13.6496 7.26522 14.1407 7.26522 14.4375 7.56196C14.7342 7.8587 14.7342 8.34987 14.4375 8.64661L8.64582 14.4382C8.50257 14.5917 8.29791 14.6633 8.1035 14.6633Z"
+                    fill="#292D32"
+                  />
+                  <path
+                    d="M13.8952 14.6633C13.7007 14.6633 13.5063 14.5917 13.3528 14.4382L7.56118 8.64661C7.26444 8.34987 7.26444 7.8587 7.56118 7.56196C7.85792 7.26522 8.34908 7.26522 8.64582 7.56196L14.4375 13.3536C14.7342 13.6503 14.7342 14.1415 14.4375 14.4382C14.284 14.5917 14.0896 14.6633 13.8952 14.6633Z"
+                    fill="#292D32"
+                  />
+                </svg>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+<div class="summary" [hidden]="showAppFilterDeals">
+  <div class="mobile-screen-hidden">
+    <div class="row" style="min-height: 120px;" >
+      <div class="col-11 d-flex">
+        <div class="row infromation-container">
+          <div class="col-5 centered-text">
+            <div class="row">
+              <h6 class="mb-0">
+                {{ vehicleParams.pickupLocationName }}
+              </h6>
+            </div>
+            <div class="row">
+              <h6 class="mb-0 text-muted">
+                {{ vehicleParams.pickupDate | localizedDate }}
+              </h6>
+            </div>
+          </div>
+          <div class="col-2 justify-content-center">
+            <div>
+              <img
+              src="/assets/images/up-down-arrow.png"
+              alt="search-img"
+              style="height: 45px; width: auto; cursor: pointer"
+              (click)="toggleContent()"
+            />
+            </div>
+          </div>
+          <div class="col-5 centered-text">
+            <div class="row ms-1">
+              <h6 class="mb-0">
+                {{ vehicleParams.dropoffLocationName }}
+              </h6>
+            </div>
+            <div class="row ms-1">
+              <h6 class="mb-0 text-muted">
+                {{ vehicleParams.dropoffDate | localizedDate }}
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-1 edit-button-container">
+        <button class="btn btn-outline-success background-color-green me-1" (click)="toggleContent()">
+          {{ "edit-button" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-screen-visible">
+    <div class="search-container mt-2">
+      <div class="row">
+        <div class="col mobile-edit-button-container">
+          <button class="btn btn-outline-success background-color-green mobile-edit-button" (click)="toggleContent()">
+            {{ "edit-button" | translate }}
+          </button>
+        </div>
+      </div>
+      <div class="row d-flex">
+        <div class="row infromation-container">
+          <div class="mt-3 centered-text">
+            <div class="row">
+              <h6 class="mb-0 mobile-location-text">
+                {{ vehicleParams.pickupLocationName }}
+              </h6>
+            </div>
+            <div class="row">
+              <h6 class="mb-0 text-muted mobile-datetime-text">
+                {{ vehicleParams.pickupDate | localizedDate }}
+              </h6>
+            </div>
+          </div>
+          <div class="row mt-3 justify-content-center">
+              <img
+              class="mobile-image-size"
+              src="/assets/images/up-down-arrow.png"
+              alt="search-img"
+              style="height: 45px; width: auto; cursor: pointer"
+              (click)="toggleContent()"
+            />
+          </div>
+          <div class="mt-3 centered-text mb-5">
+            <div class="row">
+              <h6 class="mb-0 mobile-location-text">
+                {{ vehicleParams.dropoffLocationName }}
+              </h6>
+            </div>
+            <div class="row">
+              <h6 class="mb-0 text-muted mobile-datetime-text">
+                {{ vehicleParams.dropoffDate | localizedDate }}
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" [hidden]="!showAppFilterDeals">
+  <div class="row justify-content-end"> 
+    <button
+      type="button"
+      class="btn-close mt-3"
+      aria-label="Close"
+      (click)="toggleContent()"
+    ></button>
+  </div>
+  <div class="row">
+    <app-filter-deals
+      [vehicleParams]="vehicleParams"
+      (filterDealsSubmitted)="filterDeals()"
+      class="py-0 ps-3 pe-0"
+    ></app-filter-deals>
+  </div>
+  
+</div>

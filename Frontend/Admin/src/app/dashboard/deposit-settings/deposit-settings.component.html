@@ -1,0 +1,105 @@
+<h2 class="mb-3">{{ "dashboard.sidebar.deposit-settings" | translate }}</h2>
+<p class="col-9 mb-4">
+  {{ "dashboard.deposit-settings.sub-header" | translate }}
+</p>
+<div class="row mt-4">
+  <div class="col-4">
+    <label>{{ "dashboard.my-cars.pick-car" | translate }}</label>
+    <select class="form-select mb-4" (change)="onVehicleSelected($event)">
+      <option value="" hidden>
+        {{ "dashboard.my-cars.vrn" | translate }}
+      </option>
+      <option *ngFor="let vrn of vehicleDetails" [value]="vrn.value">
+        {{ vrn.name }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<form
+  [formGroup]="depositSettingsForm"
+  (ngSubmit)="onSubmit()"
+  [ngClass]="{ 'form-blur': this.isFormDisabled }"
+>
+  <div class="row mt-3">
+    <div class="row">
+      <div formArrayName="vehicleInsuranceDetails">
+        <div
+          *ngFor="
+            let vehicleInsuranceDetail of vehicleInsuranceDetails.controls;
+            let i = index
+          "
+        >
+        <div [formGroupName]="i">
+          <div class="row">
+            <div class="col-2">
+              <h6>
+                {{
+                  translateInsuranceType(
+                    vehicleInsuranceDetail.value.insuranceType.name
+                  )
+                }}
+              </h6>
+            </div>
+            <div class="col-3">
+              <input
+                formControlName="isActive"
+                type="checkbox"
+                id="is-Active"
+                name="is-Active"
+              />
+              <label class="ms-2" for="is-Active">
+                {{
+                  "dashboard.deposit-settings.active-option-label"
+                    | translate
+                }}
+              </label>
+            </div>
+          </div>
+            <div class="card px-3 py-2 mt-3 mb-4" [ngClass]="{ 'card-blur': !vehicleInsuranceDetails.controls[i].value.isActive }" >
+              <div class="row">
+                <div class="col-3">
+                  <label>{{
+                    "dashboard.deposit-settings.deposit-label" | translate
+                  }}</label>
+                  <app-text-input
+                    formControlName="depositAmount"
+                    [label]="'currency.ron' | translate"
+                    type="numeric"
+                    (change)="depositAmountChanged(i, $event)"
+                  ></app-text-input>
+                </div>
+                <div class="col-3">
+                  <label>{{
+                    "dashboard.deposit-settings.insurance-price-label" | translate
+                  }}</label>
+                  <app-text-input
+                    formControlName="insurancePrice"
+                    [label]="'currency.ron' | translate"
+                    type="numeric"
+                    (change)="insurancePriceChanged(i, $event)"
+                  ></app-text-input>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-4">
+      <button
+        class="btn btn-success mt-3 w-100"
+        type="submit"
+        [disabled]="!this.isFormReadyForSubmit()"
+      >
+        {{ "save-button" | translate }}
+      </button>
+      <ngx-toastr></ngx-toastr>
+    </div>
+  </div>
+</form>

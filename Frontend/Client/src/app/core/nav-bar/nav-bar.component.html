@@ -1,0 +1,168 @@
+<nav
+  class="navbar navbar-expand-lg d-flex flex-row shadow-sm navbar-light fixed-top border-bottom black-bg"
+>
+  <div class="container">
+    <a class="navbar-brand custom-style" href="">
+      <img
+        src="/assets/images/logo.png"
+        alt="logo"
+        routerLink="/"
+        routerLinkActive="router-link-active"
+        class="img-fluid max-height-50 cursor-pointer"
+      />
+    </a>
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse my-2 fs-5 align-items-center justify-content-between"
+      id="navbarNavDropdown">
+      <div class="col custom-style">
+        <ul class="navbar-nav">
+          <li class="nav-item mt-1 nav-bar-option-container">
+            <a class="p-3 text-white text-decoration-none"
+              routerLink="/"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }">
+              {{ "core.nav-bar.home" | translate }}
+            </a>
+          </li>
+          <li class="nav-item mt-1 nav-bar-option-container">
+            <a class="p-3 text-white text-decoration-none"
+              routerLink="/become-a-renter"
+              routerLinkActive="active">
+              {{ "core.nav-bar.become-a-renter" | translate }}
+            </a>
+          </li>
+          <!-- <li class="nav-item mt-1 nav-bar-option-container">
+            <a
+              class="p-3 text-white text-decoration-none"
+              routerLink="/manage-booking"
+              routerLinkActive="active"
+              >{{ "core.nav-bar.manage-booking" | translate }}</a
+            >
+          </li> -->
+        </ul>
+      </div>
+
+      <div class="custom-style mt-2 mb-2">
+        <ng-container *ngIf="(currentUser$ | async) === null">
+          <div class="nav-bar-option-btn-container">
+            <a routerLink="/register" routerLinkActive="active" class="btn btn-outline-secondary ms-2 me-2 nav-bar-option-text">{{"core.nav-bar.register" | translate}}</a>
+            <a routerLink="/login" routerLinkActive="active" class="btn btn-outline-secondary me-2 nav-bar-option-text">{{"core.nav-bar.log-in" | translate}}</a>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="currentUser$ | async">
+          <div class="nav-bar-option-btn-container">
+            <a
+              routerLink="/login"
+              routerLinkActive="active"
+              class="btn btn-outline-danger"
+              (click)="logout()"
+              >{{"core.nav-bar.log-out" | translate}}</a
+            >
+          </div>
+        </ng-container>
+        <div class="nav-item dropdown ms-2">
+          <a
+            class="nav-link dropdown-toggle dropdown-toggle-no-arrow mt-1 text-white text-decoration-none"
+            href="#"
+            id="languageSelector"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+          <img
+          class="cursor-pointer mb-1"
+          src="/assets/images/language-selector.png"
+          alt="language-selector-img"
+          style="height: 22px; width: auto"
+        />
+          </a>
+          <ul
+            class="dropdown-menu language-dropdown"
+            aria-labelledby="languageSelector"
+          >
+            <li class="d-flex cursor-pointer">
+              <a class="dropdown-item" (click)="selectLanguage('en','/assets/images/en-lang.png')"
+                ><span class="mt-1 me-3"
+                  ><img
+                    class="cursor-pointer"
+                    src="/assets/images/en-lang.png"
+                    alt="language-selector-img"
+                    style="height: 22px; width: auto"
+                  /> </span
+                >EN</a
+              >
+            </li>
+            <li class="d-flex cursor-pointer">
+              <a class="dropdown-item" (click)="selectLanguage('ro','/assets/images/ro-lang.png')"
+                ><span class="mt-1 me-3"
+                  ><img
+                    class="cursor-pointer"
+                    src="/assets/images/ro-lang.png"
+                    alt="language-selector-img"
+                    style="height: 22px; width: 44px"
+                  /> </span
+                >RO</a
+              >
+            </li>
+            <!-- <li class="d-flex cursor-pointer">
+              <a class="dropdown-item" (click)="selectLanguage('de')"
+                ><span class="mt-1 me-3"
+                  ><img
+                    class="cursor-pointer"
+                    src="/assets/images/de-lang.png"
+                    alt="language-selector-img"
+                    style="height: 22px; width: 44px"
+                  /> </span
+                >DE</a
+              >
+            </li>
+            <li class="d-flex cursor-pointer">
+              <a class="dropdown-item" (click)="selectLanguage('hu')"
+                ><span class="mt-1 me-3"
+                  ><img
+                    class="cursor-pointer"
+                    src="/assets/images/hu-lang.png"
+                    alt="language-selector-img"
+                    style="height: 22px; width: 44px"
+                  /> </span
+                >HUN</a
+              >
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <li class="nav-item dropdown me-4 mt-1"
+    style="border: 1px solid #00FF19;
+            border-radius: 12px;
+            padding: 5px;">
+    <a
+      class="nav-link dropdown-toggle px-2 p-0 text-white text-decoration-none"
+      href="#"
+      id="navbarDropdownMenuLink"
+      role="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      {{ "core.nav-bar.manage-booking" | translate }}
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</li> -->

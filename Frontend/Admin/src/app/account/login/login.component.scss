@@ -1,0 +1,14 @@
+.landing-page-container{
+  margin-top: 110px !important;
+  margin-bottom: 104px !important;
+}
+
+@media (max-width: 767px) {
+  .landing-page-container{
+    margin-top: 30px !important;
+  }
+}
+
+.invalid-text {
+  color: red;
+}

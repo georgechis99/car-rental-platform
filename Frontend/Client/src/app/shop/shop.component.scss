@@ -1,0 +1,228 @@
+.modal-dialog-bottom {
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+}
+
+.filter-title{
+  color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.underlined-button {
+  border: none;
+  background: none;
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #030303;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.custom-shadow{
+  box-shadow: 0px 20px 24px 0px #10182812 !important;
+}
+
+.top-black-background-container{
+  background: linear-gradient(to bottom, #000000 70%, #ffffff 0%, #ffffff 100%);
+  padding-top: 100px;
+  padding-left: 108px;
+  padding-right: 108px;
+  margin-top: -110px !important;
+}
+
+.shop-container{
+  margin-top: 40px;
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1320px;
+}
+
+.no-borders{
+  border: none !important;
+}
+
+.accordion-custom-title{
+  color: #000;
+  font-family: "Inter";
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.accordion-body{
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+
+.custom-accordion-border{
+}
+
+// CSS For custom green checkbox without tick in the middle.
+.checkbox-container input[type="checkbox"] {
+  margin-right: 20px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+width: 15px;
+height: 15px;
+border: 2px solid #ccc;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+margin-top: 5px;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+background-color: #019C41;
+border-color: #019C41;
+}
+
+.custom-checkbox label {
+display: inline-block;
+width: 24px;
+height: 24px;
+background-color: white;
+border: 2px solid #ccc;
+border-radius: 4px;
+}
+
+.custom-checkbox input[type="checkbox"] + label {
+visibility: hidden;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label {
+visibility: visible;
+}
+
+.checkbox-option-text{
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 26px;
+}
+// End of CSS for custom green checkbox without tick in the middle.
+
+
+@media only screen and (max-width: 575.98px) {
+  .custom-checkbox input[type="checkbox"] {
+    width: 10px;
+    height: 10px;
+    margin-top: 5px;
+  }
+  .checkbox-option-text{
+    font-size: 12px;
+    line-height: 26px;
+  }
+}
+
+
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .custom-checkbox input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    margin-top: 2px;
+  }
+  .checkbox-option-text{
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .custom-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 0px;
+  }
+  .checkbox-option-text{
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .custom-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+  }
+  .checkbox-option-text{
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .custom-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 4px;
+  }
+  .checkbox-option-text{
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width:991px){
+  .top-black-background-container{
+    background: linear-gradient(to bottom, #000000 60%, #ffffff 0%, #ffffff 100%);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .shop-container{
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .accordion-body{
+    font-size: 35px;
+    line-height: 37px;
+  }
+
+  .accordion-custom-title{
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .checkbox-option-text{
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+  }
+
+  .filter-title{
+    font-size: 35px;
+    line-height: 37px;
+    margin-bottom: 10px;
+  }
+
+}

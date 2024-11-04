@@ -1,0 +1,148 @@
+<div class="main-container" *ngIf="this.registerError == false && this.registerSuccess == false">
+    <div class="d-none d-lg-block">
+        <div class="row">
+            <div class="col-7 padding-right-100 align-content-column-center">
+                <div class="title">
+                    {{ "become-a-renter.title" | translate }}
+                </div>
+                <div class="description mt-3">
+                    {{"become-a-renter.description" | translate}}
+                </div>
+            </div>
+            <div class="col-5 padding-left-100">
+                <div class="slim-borders-information-container">
+                    <div class="personal-information-title">
+                        {{ "become-a-renter.personal-information.title" | translate }}
+                    </div>
+                    <div class="personal-information-description mt-4">
+                        {{ "become-a-renter.personal-information.description" | translate }}
+                    </div>
+                    <form class="mb-3" [formGroup]="PersonalInformationForm" (ngSubmit)="onBecomeARenterClick()">
+                        <div class="input-field-label mt-3">
+                            {{ "become-a-renter.personal-information.name" | translate }}   
+                        </div>
+                        <app-text-input
+                            class="input-field mt-2"
+                            formControlName="fullName"
+                            [label]="'Full Name'"
+                        ></app-text-input>
+
+                        <div class="input-field-label mt-3">
+                            {{ "become-a-renter.personal-information.email" | translate }}
+                        </div>
+                        <app-text-input
+                            class="input-field mt-2"
+                            formControlName="email"
+                            [label]="'Email Address'"
+                        ></app-text-input>
+                        <div class="input-field-label mt-3">
+                            {{ "become-a-renter.personal-information.phone" | translate }}
+                        </div>
+
+                        <app-text-input
+                            class="input-field mt-2"
+                            formControlName="phoneNumber"
+                            [label]="'Phone Number (+1 123456789)'"
+                            [type]="'tel'"
+                        ></app-text-input>
+                    </form>
+                </div>
+                <button 
+                    class="btn btn-success custom-button mt-3" 
+                    type="submit"
+                    [disabled]="PersonalInformationForm.invalid"
+                    (click)="onBecomeARenterClick()">
+                    {{ "become-a-renter.submit" | translate }}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="d-lg-none">
+        <div class="row align-content-column-center">
+            <div class="title">
+                {{ "become-a-renter.title" | translate }}
+            </div>
+            <div class="description mt-3">
+                {{"become-a-renter.description" | translate}}
+            </div>
+        </div>
+        <div class="row mt-5 align-content-column-center">
+            <div class="slim-borders-information-container">
+                <div class="personal-information-title">
+                    {{ "become-a-renter.personal-information.title" | translate }}
+                </div>
+                <div class="personal-information-description mt-4">
+                    {{ "become-a-renter.personal-information.description" | translate }}
+                </div>
+                <form class="mb-3" [formGroup]="PersonalInformationForm" (ngSubmit)="onBecomeARenterClick()">
+                    <div class="input-field-label mt-3 mb-3">
+                        {{ "become-a-renter.personal-information.name" | translate }}   
+                    </div>
+                    <app-text-input
+                        class="input-field mt-2"
+                        formControlName="fullName"
+                        [label]="'Full Name'"
+                    ></app-text-input>
+
+                    <div class="input-field-label mt-3 mb-3">
+                        {{ "become-a-renter.personal-information.email" | translate }}
+                    </div>
+                    <app-text-input
+                        class="input-field mt-2"
+                        formControlName="email"
+                        [label]="'Email Address'"
+                    ></app-text-input>
+                    <div class="input-field-label mt-3">
+                        {{ "become-a-renter.personal-information.phone" | translate }}
+                    </div>
+
+                    <app-text-input
+                        class="input-field mt-2 mb-3"
+                        formControlName="phoneNumber"
+                        [label]="'Phone Number (+1 123456789)'"
+                        [type]="'tel'"
+                    ></app-text-input>
+                </form>
+            </div>
+            <button 
+                class="btn btn-success custom-button mt-3" 
+                type="submit"
+                [disabled]="PersonalInformationForm.invalid"
+                (click)="onBecomeARenterClick()">
+                {{ "become-a-renter.submit" | translate }}
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="main-container" *ngIf="this.registerSuccess == true">
+    <div class="text-align-center">
+        <div class="title">
+            {{ "become-a-renter.success.title" | translate }}
+        </div>
+        <div class="after-registration-description mt-3">
+            {{"become-a-renter.success.description" | translate}}
+        </div>
+    </div>
+    <div class="text-align-center mt-5">
+        <button class="btn btn-success custom-button" (click)="onBackToHomeClick()">
+            {{ "become-a-renter.success.back-to-home" | translate }}
+        </button>
+    </div>
+</div>
+
+<div class="main-container" *ngIf="this.registerError == true">
+    <div class="text-align-center">
+        <div class="title">
+            {{ "become-a-renter.error.title" | translate }}
+        </div>
+        <div class="after-registration-description mt-3">
+            {{"become-a-renter.error.description" | translate}}
+        </div>
+    </div>
+    <div class="text-align-center mt-5">
+        <button class="btn btn-success custom-button" (click)="onRetrySubmissionClick()">
+            {{ "become-a-renter.retry-submission" | translate }}
+        </button>
+    </div>
+</div>

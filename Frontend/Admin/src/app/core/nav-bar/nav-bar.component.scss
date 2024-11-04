@@ -1,0 +1,53 @@
+.max-height-50 {
+  max-height: 50px;
+}
+
+.fixed-height-navbar {
+  height: 60px; /* Adjust the height as per your needs */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    box-shadow: none !important;
+  }
+
+  .max-height-responsive {
+    max-height: 30px;
+  }
+
+  #languageSelector {
+    margin-bottom: 20px;
+  }
+}
+
+.black-bg {
+  background-color: black !important;
+  border-bottom: none !important;
+}
+
+.container {
+  margin-inline: 100px !important;
+  max-width: 100% !important;
+}
+
+.dropdown-toggle-no-arrow::after {
+  display: none;
+}
+
+.img-22{
+  height: 22px;
+}
+
+.img-25{
+  height: 25px;
+}
+

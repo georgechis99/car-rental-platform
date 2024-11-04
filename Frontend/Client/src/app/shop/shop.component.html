@@ -1,0 +1,487 @@
+<!-- <div class="d-md-none sort-and-filter-mobile mb-3">
+  <div class="row bg-white border-bottom shadow-sm py-2">
+    <div class="col-4 clickable-col">
+      <button
+        class="btn btn-unstyled"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="me-2"
+          width="1.1em"
+          viewBox="0 0 24 24"
+          data-rtl-flip="true"
+        >
+          <path
+            d="M10.28 15.22a.75.75 0 0 1 0 1.06l-4.5 4.5a.78.78 0 0 1-.24.16.73.73 0 0 1-.58 0 .78.78 0 0 1-.24-.16l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3.75a.75.75 0 0 1 1.5 0v14.69l3.22-3.22a.75.75 0 0 1 1.06 0zm13.5-7.5l-4.5-4.5a.78.78 0 0 0-.28-.16.73.73 0 0 0-.58 0 .78.78 0 0 0-.24.16l-4.5 4.5a.75.75 0 1 0 1.06 1.06L18 5.56v14.69a.75.75 0 0 0 1.5 0V5.56l3.22 3.22a.75.75 0 0 0 1.06 0 .75.75 0 0 0 0-1.06z"
+          ></path>
+        </svg>
+        <span> {{ "shop.sort-by" | translate }} </span>
+      </button>
+    </div>
+    <div class="col-4 clickable-col">
+      <button class="btn btn-unstyled">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="me-2"
+          width="1.1em"
+          viewBox="0 0 24 24"
+          data-rtl-flip="true"
+        >
+          <path
+            d="M.75 4.5h16.34a3.5 3.5 0 1 0 0-1.5H.75a.75.75 0 0 0 0 1.5zM20.5 1.75a2 2 0 1 1-2 2 2 2 0 0 1 2-2zm2.75 17.75H9.46a3.5 3.5 0 0 0-6.83 0H.75a.75.75 0 0 0 0 1.5h1.88a3.5 3.5 0 0 0 6.83 0h13.79a.75.75 0 0 0 0-1.5zm-17.2 2.75a2 2 0 1 1 2-2 2 2 0 0 1-2 2zM23.25 11h-7.84a3.49 3.49 0 0 0-6.82 0H.75a.75.75 0 0 0 0 1.5h7.84a3.49 3.49 0 0 0 6.82 0h7.84a.75.75 0 0 0 0-1.5zM12 13.75a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"
+          ></path>
+        </svg>
+        <span> {{ "shop.filter" | translate }} </span>
+      </button>
+    </div>
+    <div class="col-4 clickable-col">
+      <button
+        class="btn btn-unstyled"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="me-2"
+          width="1.1em"
+          viewBox="0 0 24 24"
+          data-rtl-flip="true"
+        >
+          <path
+            d="M10.28 15.22a.75.75 0 0 1 0 1.06l-4.5 4.5a.78.78 0 0 1-.24.16.73.73 0 0 1-.58 0 .78.78 0 0 1-.24-.16l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3.75a.75.75 0 0 1 1.5 0v14.69l3.22-3.22a.75.75 0 0 1 1.06 0zm13.5-7.5l-4.5-4.5a.78.78 0 0 0-.28-.16.73.73 0 0 0-.58 0 .78.78 0 0 0-.24.16l-4.5 4.5a.75.75 0 1 0 1.06 1.06L18 5.56v14.69a.75.75 0 0 0 1.5 0V5.56l3.22 3.22a.75.75 0 0 0 1.06 0 .75.75 0 0 0 0-1.06z"
+          ></path>
+        </svg>
+        <span> Other </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          {{ "shop.sort-by" | translate }}
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios1"
+            value="option1"
+            checked
+          />
+          <label class="form-check-label" for="exampleRadios1">
+            {{ "shop.alphabetical" | translate }}
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="exampleRadios2">
+            {{ "shop.price-lowest-first" | translate }}
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios3"
+            value="option3"
+          />
+          <label class="form-check-label" for="exampleRadios3">
+            {{ "shop.price-highest-first" | translate }}
+          </label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success">Apply</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="top-black-background-container">
+  <div class="card custom-shadow no-borders">
+    <div class="card-body">
+      <app-search-summary
+        [vehicleParams]="vehicleParams"
+        (filterDealsSubmitted)="getVehiclesForQueryParams(true)"
+      ></app-search-summary>
+    </div>
+  </div>
+</div>
+
+<div class="shop-container">
+  <div class="row">
+    <section class="col-3 d-none d-lg-block" style="margin-top: 23px">
+      <div class="card shadow-sm my-3">
+        <div class="card-body my-2">
+          <div class="row mb-4">
+            <div class="col">
+              <div class="filter-title">{{ "shop.filter" | translate }}</div>
+            </div>
+            <div class="col" style="display: flex; justify-content: flex-end">
+              <button class="underlined-button" (click)="onReset()">
+                {{ "shop.reset-filters" | translate }}
+              </button>
+            </div>
+          </div>
+          <div class="row ms-2" style="width: 95%">
+            <hr />
+          </div>
+          <label
+            ><b>{{ "shop.sort-by" | translate }}</b></label
+          >
+          <select class="form-select mb-4" (change)="onSortSelected($event)" [(ngModel)]="this.vehicleParams.sort">
+            <option *ngFor="let sort of sortOptions" [value]="sort.value">
+              {{ sort.name }}
+            </option>
+          </select>
+
+          <div
+            class="filteringPossibilities"
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+            "
+          >
+            <div class="brands">
+              <label
+                ><b>{{ "shop.brand" | translate }}</b></label
+              >
+              <select
+                class="form-select mb-4"
+                (change)="onBrandSelected($event)"
+                [(ngModel)]="this.vehicleParams.brandId"
+              >
+                <option *ngFor="let brand of brands" [value]="brand.id">
+                  {{ brand.name }}
+                </option>
+              </select>
+            </div>
+
+            <div class="models">
+              <label
+                ><b>{{ "shop.model" | translate }}</b></label
+              >
+              <select
+                class="form-select mb-4"
+                (change)="onModelSelected($event)"
+                [(ngModel)]="this.vehicleParams.modelId"
+              >
+                <option *ngFor="let model of models" [value]="model.id">
+                  {{ model.name }}
+                </option>
+              </select>
+            </div>
+
+            <div class="prices" style="margin-bottom: 20px">
+              <label class="mb-1"
+                ><b>{{ "shop.filter.price" | translate }}</b></label
+              >
+              <div class="checkboxes" display="flex-row">
+                <div
+                  *ngFor="let priceRange of priceRanges"
+                  class="checkbox"
+                  (change)="onPriceRangeSelected($event)"
+                >
+                  <div class="checkbox-container" style="display: flex">
+                    <div class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        [(ngModel)]="priceRange.isChecked"
+                      />
+                    </div>
+                    <div class="checkbox-option-text">
+                      {{ priceRange.label }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="categories" style="margin-bottom: 20px">
+              <label class="mb-1"
+                ><b>{{ "shop.filter.category" | translate }}</b></label
+              >
+              <div class="checkboxes" display="flex-row">
+                <div
+                  *ngFor="let category of categories"
+                  class="checkbox"
+                  (change)="onCategorySelected($event)"
+                >
+                  <div class="checkbox-container" style="display: flex">
+                    <div class="custom-checkbox">
+                      <input type="checkbox" [(ngModel)]="category.isChecked" />
+                    </div>
+                    <div class="checkbox-option-text">
+                      {{ category.name }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="trasmissionTypes" style="margin-bottom: 20px">
+              <label class="mb-1"
+                ><b>{{ "shop.filter.transmission" | translate }}</b></label
+              >
+              <div class="checkboxes" display="flex-row">
+                <div
+                  *ngFor="let transmisionType of transmisionTypes"
+                  class="checkbox"
+                  (change)="onTransmissionTypeSelected($event)"
+                >
+                  <div class="checkbox-container" style="display: flex">
+                    <div class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        [(ngModel)]="transmisionType.isChecked"
+                      />
+                    </div>
+                    <div class="checkbox-option-text">
+                      {{ transmisionType.name }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="d-block d-lg-none">
+      <div class="accordion-item custom-accordion-border mb-3">
+        <h2 class="accordion-header mb-2" id="panelsStayOpen-headingFiltering">
+          <button
+            class="accordion-button collapsed accordion-custom-title"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseFiltering"
+            aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseFiltering"
+          >
+            <svg
+              class="me-3"
+              width="65"
+              height="65"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.27397 2.36601H1.0548C0.48738 2.36601 0.0273982 2.83054 0.0273982 3.40357C0.0273982 3.9766 0.48738 4.44114 1.0548 4.44114H9.27397C9.84139 4.44114 10.3014 3.9766 10.3014 3.40357C10.3014 2.83054 9.84139 2.36601 9.27397 2.36601Z"
+                fill="black"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.67123 12.5895H1.0548C0.48738 12.5895 0.0273982 12.1249 0.0273982 11.5519C0.0273982 10.9789 0.48738 10.5143 1.0548 10.5143H3.67123C4.171 9.10109 5.60526 8.25603 7.06942 8.51214C8.53359 8.76825 9.60287 10.0512 9.60287 11.5519C9.60287 13.0526 8.53359 14.3356 7.06942 14.5917C5.60526 14.8478 4.171 14.0027 3.67123 12.5895ZM6.53425 12.5618C7.08653 12.5618 7.53425 12.1097 7.53425 11.5519C7.53425 10.9942 7.08653 10.542 6.53425 10.542C6.26903 10.542 6.01468 10.6484 5.82714 10.8378C5.63961 11.0272 5.53425 11.2841 5.53425 11.5519C5.53425 12.1097 5.98196 12.5618 6.53425 12.5618Z"
+                fill="black"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M17.1096 4.3858C16.6417 5.50206 15.5698 6.23813 14.3699 6.26725V6.17041C12.7813 6.17655 11.4533 4.95214 11.315 3.35398C11.1767 1.75582 12.2743 0.317335 13.8398 0.0451234C15.4053 -0.227088 16.9161 0.757833 17.3151 2.31067C17.3742 2.30285 17.434 2.30285 17.4931 2.31067H22.9041C23.4715 2.31067 23.9315 2.77521 23.9315 3.34824C23.9315 3.92127 23.4715 4.3858 22.9041 4.3858H17.4247C17.32 4.39897 17.2142 4.39897 17.1096 4.3858ZM15.3749 3.08119C15.3506 2.53938 14.9069 2.1137 14.3699 2.11699V2.17233C14.0947 2.17548 13.833 2.29299 13.6464 2.49717C13.4598 2.70135 13.3647 2.97418 13.3836 3.2514C13.4498 3.78962 13.9251 4.17891 14.4603 4.13317C14.9954 4.08743 15.3992 3.62299 15.3749 3.08119Z"
+                fill="black"
+              />
+              <path
+                d="M9.27397 19.1054H1.05479C0.472247 19.1054 0 19.5823 0 20.1706C0 20.7589 0.472247 21.2358 1.05479 21.2358H9.27397C9.84138 21.2358 10.3014 20.7713 10.3014 20.1983C10.3014 19.6252 9.84138 19.1607 9.27397 19.1607V19.1054Z"
+                fill="black"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M17.6712 19.1054H22.9726V19.1607C23.54 19.1607 24 19.6252 24 20.1983C24 20.7713 23.54 21.2358 22.9726 21.2358H17.4931C16.8665 22.5811 15.3756 23.2799 13.9538 22.8948C12.5319 22.5098 11.5872 21.1515 11.7111 19.6701C11.8349 18.1887 12.9916 17.0095 14.4573 16.8707C15.923 16.7318 17.2767 17.6731 17.6712 19.1054ZM13.8198 20.3177C13.9789 20.6946 14.3478 20.9371 14.7534 20.9315C15.3004 20.9239 15.7398 20.474 15.7397 19.9216C15.7397 19.5119 15.4945 19.1428 15.1192 18.9873C14.7438 18.8318 14.3127 18.9208 14.0278 19.2125C13.7429 19.5042 13.6607 19.9408 13.8198 20.3177Z"
+                fill="black"
+              />
+              <path
+                d="M22.9726 10.5143H12.0137C11.4463 10.5143 10.9863 10.9789 10.9863 11.5519C10.9863 12.1249 11.4463 12.5895 12.0137 12.5895H22.9726C23.54 12.5895 24 12.1249 24 11.5519C24 10.9789 23.54 10.5143 22.9726 10.5143Z"
+                fill="black"
+              />
+            </svg>
+
+            {{ "shop.filter" | translate }}
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseFiltering"
+          class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingFiltering"
+        >
+          <div class="accordion-body">
+            <div class="filter-title">
+              <b>{{ "shop.sort-by" | translate }}</b>
+            </div>
+            <select class="form-select mb-4" (change)="onSortSelected($event)" [(ngModel)]="this.vehicleParams.sort">
+              <option *ngFor="let sort of sortOptions" [value]="sort.value">
+                {{ sort.name }}
+              </option>
+            </select>
+
+            <div
+              class="filteringPossibilities"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+              "
+            >
+              <div class="brands">
+                <div class="filter-title">
+                  <b>{{ "shop.brand" | translate }}</b>
+                </div>
+                <select
+                  class="form-select mb-4"
+                  (change)="onBrandSelected($event)"
+                  [(ngModel)]="this.vehicleParams.brandId"
+                >
+                  <option *ngFor="let brand of brands" [value]="brand.id">
+                    {{ brand.name }}
+                  </option>
+                </select>
+              </div>
+
+              <div class="models">
+                <div class="filter-title">
+                  <b>{{ "shop.model" | translate }}</b>
+                </div>
+                <select
+                  class="form-select mb-4"
+                  (change)="onModelSelected($event)"
+                  [(ngModel)]="this.vehicleParams.modelId"
+                >
+                  <option *ngFor="let model of models" [value]="model.id">
+                    {{ model.name }}
+                  </option>
+                </select>
+              </div>
+
+              <div class="prices" style="margin-bottom: 20px">
+                <div class="mb-1 filter-title">
+                  <b>{{ "shop.filter.price" | translate }}</b>
+                </div>
+                <div class="checkboxes" display="flex-row">
+                  <div
+                    *ngFor="let priceRange of priceRanges"
+                    class="checkbox"
+                    (change)="onPriceRangeSelected($event)"
+                  >
+                    <div class="checkbox-container" style="display: flex">
+                      <div class="custom-checkbox">
+                        <input
+                          type="checkbox"
+                          [(ngModel)]="priceRange.isChecked"
+                        />
+                      </div>
+                      <div class="checkbox-option-text">
+                        {{ priceRange.label }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="categories" style="margin-bottom: 20px">
+                <div class="mb-1 filter-title">
+                  <b>{{ "shop.filter.category" | translate }}</b>
+                </div>
+                <div class="checkboxes" display="flex-row">
+                  <div
+                    *ngFor="let category of categories"
+                    class="checkbox"
+                    (change)="onCategorySelected($event)"
+                  >
+                    <div class="checkbox-container" style="display: flex">
+                      <div class="custom-checkbox">
+                        <input
+                          type="checkbox"
+                          [(ngModel)]="category.isChecked"
+                        />
+                      </div>
+                      <div class="checkbox-option-text">
+                        {{ category.name }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="trasmissionTypes" style="margin-bottom: 20px">
+                <div class="mb-1 filter-title">
+                  <b>{{ "shop.filter.transmission" | translate }}</b>
+                </div>
+                <div class="checkboxes" display="flex-row">
+                  <div
+                    *ngFor="let transmisionType of transmisionTypes"
+                    class="checkbox"
+                    (change)="onTransmissionTypeSelected($event)"
+                  >
+                    <div class="checkbox-container" style="display: flex">
+                      <div class="custom-checkbox">
+                        <input
+                          type="checkbox"
+                          [(ngModel)]="transmisionType.isChecked"
+                        />
+                      </div>
+                      <div class="checkbox-option-text">
+                        {{ transmisionType.name }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="col-12 col-lg-9">
+      <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
+        <app-paging-header
+          [totalCount]="totalCount"
+          [cityName]="vehicleParams.pickupLocationName"
+        ></app-paging-header>
+      </div>
+
+      <div class="row flex-column g-3 mb-5">
+        <div class="col" *ngFor="let vehicle of vehicles">
+          <app-vehicle-item
+            [vehicle]="vehicle"
+            [vehicleParams]="vehicleParams"
+            [isSearchPage]="true"
+          ></app-vehicle-item>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,158 @@
+.small-text{
+  font-size: 14px;
+}
+
+.small-text-red{
+  font-size: 14px;
+  color: #212529;
+}
+
+
+.breakdown-price-text{
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #030303;
+}
+
+.breakdown-price{
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: right;
+  color:#1A202C;
+}
+
+.main-title{
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  color: #1A202C;
+}
+
+.main-description{
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal !important;
+  text-align: left;
+  color: #696969;
+}
+
+.total-price{
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1A202C;
+}
+
+// CSS For the Promo Code Input
+* {
+  box-sizing: border-box;
+}
+
+input {
+  background: #FFFFFF;
+  border-width: 2px;
+  border-color: #0000001A;
+  border-radius: 10px;
+  color: #696969;
+  padding: 20px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #696969;
+}
+
+button {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: right;
+  background: #FFFFFF;
+  border: 0;
+  border-radius: 7px;
+  color: #000000;
+  padding: 15px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.promo-code-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+// End CSS For the Promo Code Input
+
+
+@media (max-width: 991px){
+  .breakdown-price-text{
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .breakdown-price{
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .mobile-responsive-text-size{
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  input::placeholder{
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .total-price{
+    font-size: 35px;
+    line-height: 38px;
+  }
+
+  .delivery-fee-text{
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .small-text-red{
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .main-title{
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .main-description{
+    font-size: 35px;
+    line-height: 38px;
+  }
+}

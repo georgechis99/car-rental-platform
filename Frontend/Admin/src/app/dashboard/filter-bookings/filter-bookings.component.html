@@ -1,0 +1,20 @@
+<form [formGroup]="bookingsCalendarForm">
+  <div class="col-lg-9 col-md-12">
+    <div class="row">
+      <div class="col-6">
+        <label>{{ "dashboard.filter-bookings.pick-car" | translate }}</label>
+        <select class="form-select mb-4" formControlName="vehicleId" (change)="onSubmit()">
+          <option value="" hidden>
+            {{ "dashboard.filter-bookings.vrn" | translate }}
+          </option>
+          <option
+            *ngFor="let vrn of vehicleDetails"
+            [value]="vrn.value"
+          >
+            {{ vrn.name }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</form>

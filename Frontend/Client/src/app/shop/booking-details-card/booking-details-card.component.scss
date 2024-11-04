@@ -1,0 +1,50 @@
+.location-name{
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    color: #000000;
+}
+
+.location-datetime{
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    color: #696969;
+}
+
+.mobile-screens-visible{
+    display: none;
+}
+
+.mobile-screens-hidden{
+    display: block;
+}
+
+@media (max-width: 991px){
+
+    .mobile-responsive-image-size{
+        height: 100px !important;
+    }
+
+    .location-datetime{
+        font-size: 35px;
+        line-height: 37px;
+    }
+
+    .location-name{
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+    .mobile-screens-visible{
+        display: block;
+    }
+
+    .mobile-screens-hidden{
+        display: none;
+    }    
+}

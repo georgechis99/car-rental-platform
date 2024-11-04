@@ -1,0 +1,234 @@
+<h2 class="mb-2">{{ "dashboard.sidebar.price-filters" | translate }}</h2>
+<p class="col-9 mb-4">
+  {{ "dashboard.price-filters.sub-title" | translate }}
+</p>
+<div class="row mt-4">
+  <div class="col-4">
+    <label>{{ "dashboard.my-cars.pick-car" | translate }}</label>
+    <select class="form-select mb-4" (change)="onVehicleSelected($event)">
+      <option value="" hidden>
+        {{ "dashboard.my-cars.vrn" | translate }}
+      </option>
+      <option *ngFor="let vrn of vehicleDetails" [value]="vrn.value">
+        {{ vrn.name }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<form
+  [formGroup]="priceFiltersForm"
+  (ngSubmit)="onSubmit()"
+  [ngClass]="{ 'form-blur': this.isFormDisabled }"
+>
+  <div class="row mt-4">
+    <h5>{{ "dashboard.price-filters.details-subheader" | translate }}</h5>
+
+    <div class="card p-3 pt-0 ms-2 mt-3">
+      <div class="row mt-3">
+        <div class="col-3">
+          <label>{{
+            "dashboard.price-filters.base-price-per-day-label" | translate
+          }}</label>
+          <app-text-input
+            formControlName="pricePerDay"
+            [label]="'currency.ron' | translate"
+            [disabled]="priceFiltersForm.disabled"
+            type="numeric"
+            (change)="basePricePerDayChanged($event)"
+          ></app-text-input>
+        </div>
+        <div class="col-3">
+          <label>{{
+            "dashboard.price-filters.deposit-label" | translate
+          }}</label>
+          <app-text-input
+            formControlName="deposit"
+            [label]="'currency.ron' | translate"
+            [disabled]="priceFiltersForm.disabled"
+            (change)="depositChanged($event)"
+            type="numeric"
+          ></app-text-input>
+        </div>
+        <div class="col-3">
+          <label>{{
+            "dashboard.price-filters.100-km-extra-label" | translate
+          }}</label>
+          <app-text-input
+            formControlName="extraKm"
+            [label]="'currency.ron' | translate"
+            [disabled]="priceFiltersForm.disabled"
+            (change)="extraKmChanged($event)"
+            type="numeric"
+          ></app-text-input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <input
+            formControlName="canLeaveCountry"
+            type="checkbox"
+            id="can-leave-country"
+            name="can-leave-country"
+          />
+          <label class="ms-2" for="can-leave-country">
+            {{ "dashboard.price-filters.can-leave-country-label" | translate }}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <h5>{{ "dashboard.price-filters.price-period-subheader" | translate }}</h5>
+
+    <div class="row">
+      <div formArrayName="discounts">
+        <div *ngFor="let discount of discounts.controls; let i = index">
+          <div class="card px-3 py-2 mt-3" [formGroupName]="i">
+            <div class="row">
+              <div class="col-3">
+                <label>{{
+                  "dashboard.price-filters.starting-with-label" | translate
+                }}</label>
+                <select
+                  formControlName="intervalStartInDays"
+                  class="form-select mb-4"
+                  (change)="startingWithChanged(i, $event)"
+                >
+                  <option
+                    *ngFor="
+                      let day of calculateStartingWithDays(
+                        getSelectedDaysArray(),
+                        i
+                      )
+                    "
+                    [value]="day"
+                  >
+                    {{ day }} {{ "dashboard.price-filters.days" | translate }}
+                  </option>
+                </select>
+              </div>
+
+              <div class="col-3">
+                <label>{{
+                  "dashboard.price-filters.price-per-day-label" | translate
+                }}</label>
+                <app-text-input
+                  formControlName="pricePerDay"
+                  [label]="'currency.ron' | translate"
+                  type="numeric"
+                  (change)="pricePerDayChanged(i, $event)"
+                ></app-text-input>
+              </div>
+              <div class="col-3">
+                <label>{{
+                  "dashboard.price-filters.discount-label" | translate
+                }}</label>
+                <app-text-input
+                  formControlName="discountPercentage"
+                  [label]="'%'"
+                  type="integer"
+                  (change)="discountPercentageChanged(i, $event)"
+                ></app-text-input>
+              </div>
+              <div
+                class="col-3 mt-2 pe-4 d-flex justify-content-end align-items-center"
+              >
+                <button
+                  (click)="removeDiscount(i)"
+                  class="btn btn-outline-danger"
+                >
+                  {{ "dashboard.price-filters.delete-discount" | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-3">
+      <button (click)="addDiscount()" class="btn btn-success" type="button">
+        {{ "dashboard.price-filters.add-discount" | translate }}
+      </button>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <h5 class="mb-4">
+      {{ "dashboard.price-filters.price-season-subheader" | translate }}
+    </h5>
+    <div formArrayName="seasonDiscounts">
+      <table>
+        <tr>
+          <th class="fixed-width"></th>
+          <th *ngFor="let discount of discountsArray">
+            <ng-container
+              *ngIf="discount.intervalStartInDays != discount.intervalEndInDays"
+            >
+              {{ discount.intervalStartInDays }}-{{
+                discount.intervalEndInDays
+              }}
+            </ng-container>
+            <ng-container
+              *ngIf="discount.intervalStartInDays == discount.intervalEndInDays"
+            >
+              {{ discount.intervalStartInDays }}
+            </ng-container>
+
+            {{ "dashboard.price-filters.days" | translate }}
+          </th>
+        </tr>
+        <tr
+          *ngFor="let seasonDiscount of seasonDiscounts.controls; let i = index"
+        >
+          <td class="month-cell fixed-width" [formGroupName]="i">
+            <span class="month-label">{{
+              getMonthName(seasonDiscount.value.month)
+            }}</span>
+            <select
+              class="form-select"
+              (change)="seasonDiscountChanged(i, $event)"
+              formControlName="discountPercentage"
+            >
+              <option
+                *ngFor="let value of generateDiscountValues(seasonDiscount)"
+                [value]="value"
+              >
+                <ng-container *ngIf="value == 0; else elseTemplate">
+                  -
+                </ng-container>
+                <ng-template #elseTemplate> {{ value }}% </ng-template>
+              </option>
+            </select>
+          </td>
+          <td *ngFor="let discount of discountsArray">
+            {{
+              calculateDiscountedPrice(
+                selectedVehicle?.price,
+                discount.discountPercentage +
+                  seasonDiscount.value.discountPercentage
+              ).toFixed(1)
+            }}
+            RON
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-4">
+      <button
+        class="btn btn-success mt-3 w-100"
+        type="submit"
+        [disabled]="!this.isFormReadyForSubmit()"
+      >
+        {{ "save-button" | translate }}
+      </button>
+      <ngx-toastr></ngx-toastr>
+    </div>
+  </div>
+</form>

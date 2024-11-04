@@ -1,0 +1,829 @@
+<div class="top-bg-img-container">
+  <!-- <ng-container *ngIf="(currentUser$ | async) === null">
+    <h1>{{ "demo.greeting" | translate : { name: "guest" } }}</h1>
+  </ng-container>
+  <ng-container *ngIf="currentUser$ | async">
+    <h1>
+      {{ "demo.greeting" | translate : { name: (currentUser$ | async).email } }}
+    </h1>
+  </ng-container> -->
+
+  <!-- <p>{{ "demo.text" | translate }}</p> -->
+
+  <!-- For X-Small Screens -->
+  <div class="d-block d-sm-none dynamic-padding-left-108">
+    <div class="row">
+      <div class="col-7">
+        <span class="main-dashboard-title">{{
+          "home.main-text" | translate
+        }}</span>
+      </div>
+      <div class="col overflow-hidden">
+        <img
+          src="/assets/images/black-car.png"
+          alt="black-car"
+          class="top-car-img"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- For Small Screens -->
+  <div class="d-none d-sm-block d-md-none dynamic-padding-left-108">
+    <div class="row">
+      <div class="col-7">
+        <span class="main-dashboard-title">{{
+          "home.main-text" | translate
+        }}</span>
+      </div>
+      <div class="col overflow-hidden">
+        <img
+          src="/assets/images/black-car.png"
+          alt="black-car"
+          class="top-car-img"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- For Medium Screens -->
+  <div class="d-none d-md-block d-lg-none dynamic-padding-left-108">
+    <div class="row">
+      <div class="col-7">
+        <span class="main-dashboard-title">{{
+          "home.main-text" | translate
+        }}</span>
+      </div>
+      <div class="col overflow-hidden">
+        <img
+          src="/assets/images/black-car.png"
+          alt="black-car"
+          class="top-car-img"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- For Large Screens -->
+  <div class="d-none d-lg-block dynamic-padding-left-108">
+    <div class="row">
+      <div class="col-7">
+        <span class="main-dashboard-title">{{
+          "home.main-text" | translate
+        }}</span>
+      </div>
+      <div class="col overflow-hidden">
+        <img
+          src="/assets/images/black-car.png"
+          alt="black-car"
+          class="top-car-img"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-filter-deals-padding-x-axis filter-deals-margin-top">
+    <div class="card shadow">
+      <div class="card-body">
+        <app-filter-deals></app-filter-deals>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- For X-Small to XXLarge Screens -->
+<div class="row d-xxl-none how-it-works-container">
+  <div class="row">
+    <span class="main-heading-text-black">{{
+      "home.how-it-works-title" | translate
+    }}</span>
+  </div>
+  <div class="row mt-4">
+    <span class="body-text-medium" style="text-align: justify">{{
+      "home.how-it-works-text" | translate
+    }}</span>
+  </div>
+  <div class="row mt-5" style="max-height: 483px">
+    <img
+      src="/assets/images/how-it-works.jpg"
+      alt="how-it-works-img"
+      style="
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 24px;
+        object-fit: cover;
+        overflow: hidden;
+      "
+    />
+  </div>
+  <div class="row mt-5">
+    <div class="row">
+      <div class="row">
+        <span>
+          <img
+            class="me-4 mb-2"
+            src="/assets/images/search.png"
+            alt="search-img"
+            style="height: 18px; width: auto"
+          />
+          <span class="body-heading-bold">{{
+            "home.browse-and-select-title" | translate
+          }}</span>
+        </span>
+      </div>
+      <div class="row">
+        <span class="body-text-small" style="text-align: justify">{{
+          "home.browse-and-select-text" | translate
+        }}</span>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="row">
+        <span>
+          <img
+            class="me-4 mb-2"
+            src="/assets/images/calendar-checked.png"
+            alt="calendar-img"
+            style="height: 18px; width: auto"
+          />
+          <span class="body-heading-bold">{{
+            "home.book-and-confirm-title" | translate
+          }}</span>
+        </span>
+      </div>
+      <div class="row">
+        <span class="body-text-small" style="text-align: justify">{{
+          "home.book-and-confirm-text" | translate
+        }}</span>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="row">
+        <span>
+          <img
+            class="me-4 mb-2"
+            src="/assets/images/smile.png"
+            alt="smile-img"
+            style="height: 18px; width: auto"
+          />
+          <span class="body-heading-bold">{{
+            "home.enjoy-your-ride-title" | translate
+          }}</span>
+        </span>
+      </div>
+      <div class="row">
+        <span class="body-text-small" style="text-align: justify">{{
+          "home.enjoy-your-ride-text" | translate
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- For XXLarge to max Screens -->
+<div class="row d-none d-xxl-block how-it-works-container">
+  <div class="row">
+    <span class="main-heading-text-black">{{
+      "home.how-it-works-title" | translate
+    }}</span>
+  </div>
+  <div class="row mt-4">
+    <span class="body-text-medium" style="text-align: justify">{{
+      "home.how-it-works-text" | translate
+    }}</span>
+  </div>
+  <div class="row">
+    <div class="col-5 pt-5" style="display:flex; flex-direction: column; justify-content: center; align-items: center;">
+      <img
+        src="/assets/images/how-it-works.jpg"
+        alt="how-it-works-img"
+        style="height: 350px; width: 450px; border-radius: 24px"
+      />
+    </div>
+    <div class="col-7 mt-1" style="display:flex; flex-direction: column; justify-content: center; align-items: center;">
+      <div class="row" style="display:flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div class="row"> 
+          <div class="row">
+            <span>
+              <img
+                class="me-4 mb-2"
+                src="/assets/images/search.png"
+                alt="search-img"
+                style="height: 18px; width: auto"
+              />
+              <span class="body-heading-bold">{{
+                "home.browse-and-select-title" | translate
+              }}</span>
+            </span>
+          </div>
+          <div class="row">
+            <span class="body-text-small" style="text-align: justify">{{
+              "home.browse-and-select-text" | translate
+            }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row">
+            <span>
+              <img
+                class="me-4 mb-2"
+                src="/assets/images/calendar-checked.png"
+                alt="calendar-img"
+                style="height: 18px; width: auto"
+              />
+              <span class="body-heading-bold">{{
+                "home.book-and-confirm-title" | translate
+              }}</span>
+            </span>
+          </div>
+          <div class="row">
+            <span class="body-text-small" style="text-align: justify">{{
+              "home.book-and-confirm-text" | translate
+            }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row">
+            <span>
+              <img
+                class="me-4 mb-2"
+                src="/assets/images/smile.png"
+                alt="smile-img"
+                style="height: 18px; width: auto"
+              />
+              <span class="body-heading-bold">{{
+                "home.enjoy-your-ride-title" | translate
+              }}</span>
+            </span>
+          </div>
+          <div class="row">
+            <span class="body-text-small" style="text-align: justify">{{
+              "home.enjoy-your-ride-text" | translate
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- For X-Small to XXLarge Screens -->
+<div class="row d-xxl-none">
+  <div class="why-choose-us-container-black-bg">
+    <div class="padded-container row">
+      <div class="row pt-3">
+        <div class="row">
+          <span class="why-choose-us-title">{{
+            "home.why-choose-us-title" | translate
+          }}</span>
+        </div>
+        <div class="row mt-4">
+          <span class="body-text-medium-white" style="text-align: justify">{{
+            "home.why-choose-us-text" | translate
+          }}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row mt-5">
+          <div class="row mt-4">
+            <span>
+              <img
+                class="me-4 mb-2"
+                src="/assets/images/checked.png"
+                alt="checked-img"
+                style="height: 25px; width: auto"
+              />
+              <span class="body-heading-semi-bold-white">{{
+                "home.better-customer-support-heading" | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="row">
+            <span>
+              <img
+                class="me-4 mb-2"
+                src="/assets/images/checked.png"
+                alt="checked-img"
+                style="height: 25px; width: auto"
+              />
+              <span class="body-heading-semi-bold-white">{{
+                "home.best-price-guaranteed-heading" | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="row">
+            <span>
+              <img
+                class="me-4 mb-2"
+                src="/assets/images/checked.png"
+                alt="checked-img"
+                style="height: 25px; width: auto"
+              />
+              <span class="body-heading-semi-bold-white">{{
+                "home.easy-online-booking-heading" | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- For XXLarge to max Screens -->
+<div class="row mt-5 d-none d-xxl-block">
+  <div class="why-choose-us-container-black-bg">
+    <div class="padded-container row">
+      <div class="col-6 pt-5">
+        <div class="row">
+          <span class="why-choose-us-title">{{
+            "home.why-choose-us-title" | translate
+          }}</span>
+        </div>
+        <div class="row mt-4">
+          <div class="col-8">
+            <span class="body-text-medium-white" style="text-align: justify">{{
+              "home.why-choose-us-text" | translate
+            }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="row ms-5">
+          <div class="row mt-4">
+            <span>
+              <img
+                class="me-4 mb-2"
+                src="/assets/images/checked.png"
+                alt="checked-img"
+                style="height: 25px; width: auto"
+              />
+              <span class="body-heading-semi-bold-white">{{
+                "home.better-customer-support-heading" | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+        <div class="row mt-5 ms-5">
+          <div class="row">
+            <span>
+              <img
+                class="me-4 mb-2"
+                src="/assets/images/checked.png"
+                alt="checked-img"
+                style="height: 25px; width: auto"
+              />
+              <span class="body-heading-semi-bold-white">{{
+                "home.best-price-guaranteed-heading" | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+        <div class="row mt-5 ms-5">
+          <div class="row">
+            <span>
+              <img
+                class="me-4 mb-2"
+                src="/assets/images/checked.png"
+                alt="checked-img"
+                style="height: 25px; width: auto"
+              />
+              <span class="body-heading-semi-bold-white">{{
+                "home.easy-online-booking-heading" | translate
+              }}</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- For X-Small to XXLarge Screens -->
+<div class="d-xxl-none">
+  <div class="padded-container">
+    <div class="row">
+      <div class="row">
+        <span class="main-heading-text-black">{{
+          "home.want-to-become-a-renter-title" | translate
+        }}</span>
+      </div>
+      <div class="row mt-4">
+        <span class="body-text-medium" style="text-align: justify">{{
+          "home.want-to-become-a-renter-text" | translate
+        }}</span>
+      </div>
+      <div class="row mt-5">
+        <div class="me-4">
+          <div class="col">
+            <img
+              src="/assets/images/become-a-renter.jpg"
+              alt="become-a-renter-img"
+              style="
+                max-width: 100%;
+                max-height: 70%;
+                border-radius: 24px;
+                object-fit: cover;
+              "
+            />
+          </div>
+          <div class="row mt-5">
+            <div class="row">
+              <span>
+                <span class="body-heading-bold me-4"> 1 </span>
+                <span class="body-heading-bold">{{
+                  "home.get-in-touch-title" | translate
+                }}</span>
+              </span>
+            </div>
+            <div class="row">
+              <span
+                class="body-text-small"
+                style="margin-left: 43px; text-align: justify"
+                >{{ "home.get-in-touch-text" | translate }}</span
+              >
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="row">
+              <span>
+                <span class="body-heading-bold me-4"> 2 </span>
+                <span class="body-heading-bold">{{
+                  "home.set-price-and-schedule-title" | translate
+                }}</span>
+              </span>
+            </div>
+            <div class="row">
+              <span
+                class="body-text-small"
+                style="margin-left: 43px; text-align: justify"
+                >{{ "home.set-price-and-schedule-text" | translate }}</span
+              >
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="row">
+              <span>
+                <span class="body-heading-bold me-4"> 3 </span>
+                <span class="body-heading-bold">{{
+                  "home.get-customers-title" | translate
+                }}</span>
+              </span>
+            </div>
+            <div class="row">
+              <span
+                class="body-text-small"
+                style="margin-left: 43px; text-align: justify"
+                >{{ "home.get-customers-text" | translate }}</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="become-a-renter-button-container">
+      <button
+        class="btn btn-success become-a-renter-button"
+        type="submit"
+        (click)="showBecomeARenterPage()"
+      >
+        {{ "home.become-a-renter-button" | translate }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- For XXLarge to max Screens -->
+<div class="d-none d-xxl-block">
+  <div class="padded-container">
+    <div class="row">
+      <div class="row">
+        <span class="main-heading-text-black">{{
+          "home.want-to-become-a-renter-title" | translate
+        }}</span>
+      </div>
+      <div class="row mt-4">
+        <span class="body-text-medium" style="text-align: justify">{{
+          "home.want-to-become-a-renter-text" | translate
+        }}</span>
+      </div>
+      <div class="row mt-5">
+        <div class="col-6">
+          <div class="me-4">
+            <div class="row">
+              <div class="row">
+                <span>
+                  <span class="body-heading-bold me-4"> 1 </span>
+                  <span class="body-heading-bold">{{
+                    "home.get-in-touch-title" | translate
+                  }}</span>
+                </span>
+              </div>
+              <div class="row">
+                <span
+                  class="body-text-small"
+                  style="margin-left: 43px; text-align: justify"
+                  >{{ "home.get-in-touch-text" | translate }}</span
+                >
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="row">
+                <span>
+                  <span class="body-heading-bold me-4"> 2 </span>
+                  <span class="body-heading-bold">{{
+                    "home.set-price-and-schedule-title" | translate
+                  }}</span>
+                </span>
+              </div>
+              <div class="row">
+                <span
+                  class="body-text-small"
+                  style="margin-left: 43px; text-align: justify"
+                  >{{ "home.set-price-and-schedule-text" | translate }}</span
+                >
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="row">
+                <span>
+                  <span class="body-heading-bold me-4"> 3 </span>
+                  <span class="body-heading-bold">{{
+                    "home.get-customers-title" | translate
+                  }}</span>
+                </span>
+              </div>
+              <div class="row">
+                <span class="body-text-small" style="margin-left: 43px">{{
+                  "home.get-customers-text" | translate
+                }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-5 ms-3">
+          <img
+            src="/assets/images/become-a-renter.jpg"
+            alt="become-a-renter-img"
+            style="height: 300px; width: 500px; border-radius: 24px"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="become-a-renter-button-container">
+      <button
+        class="btn btn-success become-a-renter-button"
+        type="submit"
+        (click)="showBecomeARenterPage()"
+      >
+        {{ "home.become-a-renter-button" | translate }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="padded-container-faq">
+  <div class="row">
+    <span class="main-heading-text-black">{{
+      "home.faq.title" | translate
+    }}</span>
+  </div>
+
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item custom-accordion-border">
+      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+        <button
+          class="accordion-button collapsed accordion-custom-title"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseOne"
+          aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseOne"
+        >
+          {{ "home.faq.questions.1.title" | translate }}
+        </button>
+      </h2>
+      <div
+        id="panelsStayOpen-collapseOne"
+        class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingOne"
+      >
+        <div class="accordion-body">
+          {{ "home.faq.questions.1.text" | translate }}
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item custom-accordion-border">
+      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+        <button
+          class="accordion-button collapsed accordion-custom-title"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseTwo"
+          aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseTwo"
+        >
+          {{ "home.faq.questions.2.title" | translate }}
+        </button>
+      </h2>
+      <div
+        id="panelsStayOpen-collapseTwo"
+        class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingTwo"
+      >
+        <div class="accordion-body">
+          {{ "home.faq.questions.2.text" | translate }}
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item custom-accordion-border">
+      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+        <button
+          class="accordion-button collapsed accordion-custom-title"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseThree"
+          aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseThree"
+        >
+          {{ "home.faq.questions.3.title" | translate }}
+        </button>
+      </h2>
+      <div
+        id="panelsStayOpen-collapseThree"
+        class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingThree"
+      >
+        <div class="accordion-body">
+          {{ "home.faq.questions.3.text" | translate }}
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item custom-accordion-border">
+      <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+        <button
+          class="accordion-button collapsed accordion-custom-title"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseFour"
+          aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseFour"
+        >
+          {{ "home.faq.questions.4.title" | translate }}
+        </button>
+      </h2>
+      <div
+        id="panelsStayOpen-collapseFour"
+        class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingFour"
+      >
+        <div class="accordion-body">
+          {{ "home.faq.questions.4.text" | translate }}
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item custom-accordion-border">
+      <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+        <button
+          class="accordion-button collapsed accordion-custom-title"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseFive"
+          aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseFive"
+        >
+          {{ "home.faq.questions.5.title" | translate }}
+        </button>
+      </h2>
+      <div
+        id="panelsStayOpen-collapseFive"
+        class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingFive"
+      >
+        <div class="accordion-body">
+          {{ "home.faq.questions.5.text" | translate }}
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item custom-accordion-border">
+      <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+        <button
+          class="accordion-button collapsed accordion-custom-title"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseSix"
+          aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseSix"
+        >
+          {{ "home.faq.questions.6.title" | translate }}
+        </button>
+      </h2>
+      <div
+        id="panelsStayOpen-collapseSix"
+        class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingSix"
+      >
+        <div class="accordion-body">
+          {{ "home.faq.questions.6.text" | translate }}
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item custom-accordion-border">
+      <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+        <button
+          class="accordion-button collapsed accordion-custom-title"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseSeven"
+          aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseSeven"
+        >
+          {{ "home.faq.questions.7.title" | translate }}
+        </button>
+      </h2>
+      <div
+        id="panelsStayOpen-collapseSeven"
+        class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingSeven"
+      >
+        <div class="accordion-body">
+          {{ "home.faq.questions.7.text" | translate }}
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item custom-accordion-border">
+      <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+        <button
+          class="accordion-button collapsed accordion-custom-title"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseEight"
+          aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseEight"
+        >
+          {{ "home.faq.questions.8.title" | translate }}
+        </button>
+      </h2>
+      <div
+        id="panelsStayOpen-collapseEight"
+        class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingEight"
+      >
+        <div class="accordion-body">
+          {{ "home.faq.questions.8.text" | translate }}
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item custom-accordion-border">
+      <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+        <button
+          class="accordion-button collapsed accordion-custom-title"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseNine"
+          aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseNine"
+        >
+          {{ "home.faq.questions.9.title" | translate }}
+        </button>
+      </h2>
+      <div
+        id="panelsStayOpen-collapseNine"
+        class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingNine"
+      >
+        <div class="accordion-body">
+          {{ "home.faq.questions.9.text" | translate }}
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item custom-accordion-border">
+      <div class="accordion-header" id="panelsStayOpen-headingTen">
+        <button
+          class="accordion-button collapsed accordion-custom-title"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseTen"
+          aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseTen"
+        >
+          {{ "home.faq.questions.10.title" | translate }}
+        </button>
+      </div>
+      <div
+        id="panelsStayOpen-collapseTen"
+        class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingTen"
+      >
+        <div class="accordion-body">
+          {{ "home.faq.questions.10.text" | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="mobile-screens-hidden">
+  <div
+    class="row"
+    style="min-height: 80px; display: flex; justify-content: space-evenly"
+  >
+    <div class="col-5" style="text-align: center">
+      <div class="row">
+        <div class="mb-0 pt-3 location-name">
+          {{ vehicleParams.pickupLocationName }}
+        </div>
+      </div>
+      <div class="row">
+        <h6 class="mb-0 text-muted location-datetime">
+          {{ vehicleParams.pickupDate | localizedDate }}
+        </h6>
+      </div>
+    </div>
+    <div
+      class="col-2"
+      style="display: flex; justify-content: center; align-items: center"
+    >
+      <img
+        class="mobile-responsive-image-size"
+        src="/assets/images/up-down-arrow.png"
+        alt="search-img"
+        style="height: 45px; width: auto"
+      />
+    </div>
+    <div class="col-5" style="text-align: center">
+      <div class="row">
+        <div class="mb-0 pt-3 location-name">
+          {{ vehicleParams.dropoffLocationName }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-0 text-muted location-datetime">
+          {{ vehicleParams.dropoffDate | localizedDate }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mobile-screens-visible">
+  <div class="row" style="min-height: 80px; display:flex; justify-content: space-evenly;">
+    <div class="row mt-2" style="text-align: center;">
+      <div class="row">
+        <div class="mb-0 pt-3 location-name">
+          {{ vehicleParams.pickupLocationName }}
+        </div>
+      </div>
+      <div class="row">
+        <h6 class="mb-0 text-muted location-datetime">
+          {{ vehicleParams.pickupDate | localizedDate }}
+        </h6>
+      </div>
+    </div>
+    <div class="row mt-5 mb-5" style="display: flex; justify-content: center; align-items: center;">
+      <img
+        class="mobile-responsive-image-size"
+        src="/assets/images/up-down-arrow.png"
+        alt="search-img"
+        style="height: 45px; width: auto"
+      />
+    </div>
+    <div class="row mb-3" style="text-align: center;">
+      <div class="row">
+        <div class="mb-0 pt-3 location-name">
+          {{ vehicleParams.dropoffLocationName }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-0 text-muted location-datetime">
+          {{ vehicleParams.dropoffDate | localizedDate }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

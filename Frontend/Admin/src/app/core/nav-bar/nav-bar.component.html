@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-lg shadow fixed-top border-bottom fixed-height-navbar black-bg">
+  <div class="container-fluid mx-lg-3">
+    <a class="navbar-brand" href="">
+      <img
+        src="/assets/images/logo.png"
+        alt="logo"
+        routerLink="/"
+        routerLinkActive="router-link-active"
+        class="max-height-responsive max-height-50 cursor-pointer"
+      />
+    </a>
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse my-2 fs-5 align-items-center justify-content-between"
+      id="navbarNavDropdown"
+    >
+      <div class="ms-auto">
+        <div class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle dropdown-toggle-no-arrow me-4 text-white text-decoration-none"
+            href="#"
+            id="languageSelector"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              class="cursor-pointer mb-1"
+              src="/assets/images/language-selector.png"
+              alt="language-selector-img"
+              style="height: 22px; width: auto"
+            />
+          </a>
+          <ul
+            class="dropdown-menu language-dropdown"
+            aria-labelledby="languageSelector"
+          >
+            <li class="d-flex cursor-pointer">
+              <a class="dropdown-item" (click)="selectLanguage('en')"
+                ><span class="mt-1 me-3"
+                  ><img
+                    class="cursor-pointer"
+                    src="/assets/images/en-lang.png"
+                    alt="language-selector-img"
+                    style="height: 22px; width: auto"
+                  /> </span
+                >EN</a
+              >
+            </li>
+            <li class="d-flex cursor-pointer">
+              <a class="dropdown-item" (click)="selectLanguage('ro')"
+                ><span class="mt-1 me-3"
+                  ><img
+                    class="cursor-pointer"
+                    src="/assets/images/ro-lang.png"
+                    alt="language-selector-img"
+                    style="height: 22px; width: 44px"
+                  /> </span
+                >RO</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <ng-container *ngIf="currentUser$ | async">
+          <a
+            routerLink="/account/login"
+            class="btn btn-success"
+            (click)="logout()"
+          >
+            <img
+              class="cursor-pointer me-2"
+              src="/assets/images/logout.png"
+              style="height: 18px; width: auto"
+            />
+            {{ "core.nav-bar.logout" | translate }}</a
+          >
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,48 @@
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 0.5px solid rgb(65, 65, 65);
+}
+
+/* Optionally, remove border from the first row and first column if needed */
+tr th,
+tr td {
+  border-top: none;
+  border-left: none;
+  // border-right: none;
+}
+
+tr:last-child th,
+tr td:last-child,
+th:last-child {
+  border-right: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.form-blur {
+  filter: blur(2px); /* Apply the blur effect */
+  pointer-events: none; /* Disable click events on the blurred form */
+  opacity: 0.98; /* Optional: Reduce the opacity to make it more visually distinct */
+}
+
+
+.month-cell {
+  display: flex;
+  align-items: center;
+}
+
+.month-label {
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.fixed-width {
+  width: 155px; /* Set your desired width here */
+}
