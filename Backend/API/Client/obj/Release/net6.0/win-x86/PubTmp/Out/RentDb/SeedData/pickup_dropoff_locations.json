@@ -1,0 +1,230 @@
+﻿[
+  {
+    "Id": 1,
+    "LocationId": 1,
+    "VehicleId": 1,
+    "isPickup": true
+  },
+  {
+    "Id": 2,
+    "LocationId": 1,
+    "VehicleId": 1,
+    "isPickup": false
+  },
+  {
+    "Id": 3,
+    "LocationId": 4,
+    "VehicleId": 201,
+    "isPickup": true
+  },
+  {
+    "Id": 4,
+    "LocationId": 4,
+    "VehicleId": 201,
+    "isPickup": false
+  },
+  {
+    "Id": 5,
+    "LocationId": 7,
+    "VehicleId": 202,
+    "isPickup": true
+  },
+  {
+    "Id": 6,
+    "LocationId": 7,
+    "VehicleId": 202,
+    "isPickup": false
+  },
+  {
+    "Id": 7,
+    "LocationId": 10,
+    "VehicleId": 203,
+    "isPickup": true
+  },
+  {
+    "Id": 8,
+    "LocationId": 10,
+    "VehicleId": 203,
+    "isPickup": false
+  },
+  {
+    "Id": 9,
+    "LocationId": 13,
+    "VehicleId": 204,
+    "isPickup": true
+  },
+  {
+    "Id": 10,
+    "LocationId": 13,
+    "VehicleId": 204,
+    "isPickup": false
+  },
+  {
+    "Id": 11,
+    "LocationId": 16,
+    "VehicleId": 205,
+    "isPickup": true
+  },
+  {
+    "Id": 12,
+    "LocationId": 16,
+    "VehicleId": 205,
+    "isPickup": false
+  },
+  {
+    "Id": 13,
+    "LocationId": 19,
+    "VehicleId": 206,
+    "isPickup": true
+  },
+  {
+    "Id": 14,
+    "LocationId": 19,
+    "VehicleId": 206,
+    "isPickup": false
+  },
+  {
+    "Id": 15,
+    "LocationId": 22,
+    "VehicleId": 207,
+    "isPickup": true
+  },
+  {
+    "Id": 16,
+    "LocationId": 22,
+    "VehicleId": 207,
+    "isPickup": false
+  },
+  {
+    "Id": 17,
+    "LocationId": 25,
+    "VehicleId": 208,
+    "isPickup": true
+  },
+  {
+    "Id": 18,
+    "LocationId": 25,
+    "VehicleId": 208,
+    "isPickup": false
+  },
+  {
+    "Id": 19,
+    "LocationId": 28,
+    "VehicleId": 209,
+    "isPickup": true
+  },
+  {
+    "Id": 20,
+    "LocationId": 28,
+    "VehicleId": 209,
+    "isPickup": false
+  },
+  {
+    "Id": 21,
+    "LocationId": 31,
+    "VehicleId": 210,
+    "isPickup": true
+  },
+  {
+    "Id": 22,
+    "LocationId": 31,
+    "VehicleId": 210,
+    "isPickup": false
+  },
+  {
+    "Id": 23,
+    "LocationId": 34,
+    "VehicleId": 211,
+    "isPickup": true
+  },
+  {
+    "Id": 24,
+    "LocationId": 34,
+    "VehicleId": 211,
+    "isPickup": false
+  },
+  {
+    "Id": 25,
+    "LocationId": 37,
+    "VehicleId": 212,
+    "isPickup": true
+  },
+  {
+    "Id": 26,
+    "LocationId": 37,
+    "VehicleId": 212,
+    "isPickup": false
+  },
+  {
+    "Id": 27,
+    "LocationId": 40,
+    "VehicleId": 213,
+    "isPickup": true
+  },
+  {
+    "Id": 28,
+    "LocationId": 40,
+    "VehicleId": 213,
+    "isPickup": false
+  },
+  {
+    "Id": 29,
+    "LocationId": 43,
+    "VehicleId": 214,
+    "isPickup": true
+  },
+  {
+    "Id": 30,
+    "LocationId": 43,
+    "VehicleId": 214,
+    "isPickup": false
+  },
+  {
+    "Id": 31,
+    "LocationId": 46,
+    "VehicleId": 215,
+    "isPickup": true
+  },
+  {
+    "Id": 32,
+    "LocationId": 46,
+    "VehicleId": 215,
+    "isPickup": false
+  },
+  {
+    "Id": 33,
+    "LocationId": 49,
+    "VehicleId": 216,
+    "isPickup": true
+  },
+  {
+    "Id": 34,
+    "LocationId": 49,
+    "VehicleId": 216,
+    "isPickup": false
+  },
+  {
+    "Id": 35,
+    "LocationId": 52,
+    "VehicleId": 217,
+    "isPickup": true
+  },
+  {
+    "Id": 36,
+    "LocationId": 52,
+    "VehicleId": 217,
+    "isPickup": false
+  },
+  {
+    "Id": 37,
+    "LocationId": 55,
+    "VehicleId": 218,
+    "isPickup": true
+  },
+  {
+    "Id": 38,
+    "LocationId": 55,
+    "VehicleId": 218,
+    "isPickup": false
+  }
+]

@@ -1,0 +1,190 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Alfa Romeo"
+  },
+  {
+    "Id": 2,
+    "Name": "Aston Martin"
+  },
+  {
+    "Id": 3,
+    "Name": "Audi"
+  },
+  {
+    "Id": 4,
+    "Name": "Bentley"
+  },
+  {
+    "Id": 5,
+    "Name": "Bugatti"
+  },
+  {
+    "Id": 6,
+    "Name": "Chevrolet"
+  },
+  {
+    "Id": 7,
+    "Name": "Citroën"
+  },
+  {
+    "Id": 8,
+    "Name": "Dacia"
+  },
+  {
+    "Id": 9,
+    "Name": "Daewoo"
+  },
+  {
+    "Id": 10,
+    "Name": "Dodge"
+  },
+  {
+    "Id": 11,
+    "Name": "Ferrari"
+  },
+  {
+    "Id": 12,
+    "Name": "FIAT"
+  },
+  {
+    "Id": 13,
+    "Name": "Ford"
+  },
+  {
+    "Id": 14,
+    "Name": "Honda"
+  },
+  {
+    "Id": 15,
+    "Name": "Hyundai"
+  },
+  {
+    "Id": 16,
+    "Name": "Infiniti"
+  },
+  {
+    "Id": 17,
+    "Name": "Jaguar"
+  },
+  {
+    "Id": 18,
+    "Name": "Jeep"
+  },
+  {
+    "Id": 19,
+    "Name": "Kia"
+  },
+  {
+    "Id": 20,
+    "Name": "Lamborghini"
+  },
+  {
+    "Id": 21,
+    "Name": "Lancia"
+  },
+  {
+    "Id": 22,
+    "Name": "Land Rover"
+  },
+  {
+    "Id": 23,
+    "Name": "Lexus"
+  },
+  {
+    "Id": 24,
+    "Name": "Maserati"
+  },
+  {
+    "Id": 25,
+    "Name": "Mazda"
+  },
+  {
+    "Id": 26,
+    "Name": "McLaren"
+  },
+  {
+    "Id": 27,
+    "Name": "Mercedes-Benz"
+  },
+  {
+    "Id": 28,
+    "Name": "Mini"
+  },
+  {
+    "Id": 29,
+    "Name": "Mitsubishi"
+  },
+  {
+    "Id": 30,
+    "Name": "Nissan"
+  },
+  {
+    "Id": 31,
+    "Name": "Opel"
+  },
+  {
+    "Id": 32,
+    "Name": "Peugeot"
+  },
+  {
+    "Id": 33,
+    "Name": "Porsche"
+  },
+  {
+    "Id": 34,
+    "Name": "Range Rover"
+  },
+  {
+    "Id": 35,
+    "Name": "Renault"
+  },
+  {
+    "Id": 36,
+    "Name": "Rolls-Royce"
+  },
+  {
+    "Id": 37,
+    "Name": "SAAB"
+  },
+  {
+    "Id": 38,
+    "Name": "SEAT"
+  },
+  {
+    "Id": 39,
+    "Name": "Škoda"
+  },
+  {
+    "Id": 40,
+    "Name": "smart"
+  },
+  {
+    "Id": 41,
+    "Name": "SsangYong"
+  },
+  {
+    "Id": 42,
+    "Name": "Subaru"
+  },
+  {
+    "Id": 43,
+    "Name": "Suzuki"
+  },
+  {
+    "Id": 44,
+    "Name": "Toyota"
+  },
+  {
+    "Id": 45,
+    "Name": "Volkswagen"
+  },
+  {
+    "Id": 46,
+    "Name": "Volvo"
+  },
+  {
+    "Id": 47,
+    "Name": "BMW"
+  }
+]

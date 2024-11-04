@@ -1,0 +1,72 @@
+[
+  {
+    "Id": 1,
+    "VehicleId": 238,
+    "CategoryId": 7
+  },
+  {
+    "Id": 2,
+    "VehicleId": 239,
+    "CategoryId": 7
+  },
+  {
+    "Id": 3,
+    "VehicleId": 240,
+    "CategoryId": 5
+  },
+  {
+    "Id": 4,
+    "VehicleId": 241,
+    "CategoryId": 2
+  },
+  {
+    "Id": 5,
+    "VehicleId": 242,
+    "CategoryId": 5
+  },
+  {
+    "Id": 6,
+    "VehicleId": 243,
+    "CategoryId": 7
+  },
+  {
+    "Id": 7,
+    "VehicleId": 244,
+    "CategoryId": 7
+  },
+  {
+    "Id": 8,
+    "VehicleId": 245,
+    "CategoryId": 5
+  },
+  {
+    "Id": 9,
+    "VehicleId": 246,
+    "CategoryId": 1
+  },
+  {
+    "Id": 10,
+    "VehicleId": 247,
+    "CategoryId": 2
+  },
+  {
+    "Id": 11,
+    "VehicleId": 248,
+    "CategoryId": 1
+  },
+  {
+    "Id": 12,
+    "VehicleId": 249,
+    "CategoryId": 1
+  },
+  {
+    "Id": 13,
+    "VehicleId": 250,
+    "CategoryId": 7
+  },
+  {
+    "Id": 14,
+    "VehicleId": 251,
+    "CategoryId": 5
+  }
+]

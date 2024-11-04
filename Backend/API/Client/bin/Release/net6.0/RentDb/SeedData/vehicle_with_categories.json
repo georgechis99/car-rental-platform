@@ -1,0 +1,162 @@
+[
+  {
+    "Id": 1,
+    "VehicleId": 238,
+    "CategoryId": 7
+  },
+  {
+    "Id": 2,
+    "VehicleId": 239,
+    "CategoryId": 7
+  },
+  {
+    "Id": 3,
+    "VehicleId": 240,
+    "CategoryId": 5
+  },
+  {
+    "Id": 4,
+    "VehicleId": 241,
+    "CategoryId": 2
+  },
+  {
+    "Id": 5,
+    "VehicleId": 242,
+    "CategoryId": 5
+  },
+  {
+    "Id": 6,
+    "VehicleId": 243,
+    "CategoryId": 7
+  },
+  {
+    "Id": 7,
+    "VehicleId": 244,
+    "CategoryId": 7
+  },
+  {
+    "Id": 8,
+    "VehicleId": 245,
+    "CategoryId": 5
+  },
+  {
+    "Id": 9,
+    "VehicleId": 246,
+    "CategoryId": 1
+  },
+  {
+    "Id": 10,
+    "VehicleId": 247,
+    "CategoryId": 2
+  },
+  {
+    "Id": 11,
+    "VehicleId": 248,
+    "CategoryId": 1
+  },
+  {
+    "Id": 12,
+    "VehicleId": 249,
+    "CategoryId": 1
+  },
+  {
+    "Id": 13,
+    "VehicleId": 250,
+    "CategoryId": 7
+  },
+  {
+    "Id": 14,
+    "VehicleId": 251,
+    "CategoryId": 5
+  },
+  {
+    "Id": 15,
+    "VehicleId": 1,
+    "CategoryId": 6
+  },
+  {
+    "Id": 16,
+    "VehicleId": 2,
+    "CategoryId": 5
+  },
+  {
+    "Id": 17,
+    "VehicleId": 3,
+    "CategoryId": 2
+  },
+  {
+    "Id": 18,
+    "VehicleId": 4,
+    "CategoryId": 1
+  },
+  {
+    "Id": 19,
+    "VehicleId": 5,
+    "CategoryId": 4
+  },
+  {
+    "Id": 20,
+    "VehicleId": 6,
+    "CategoryId": 7
+  },
+  {
+    "Id": 21,
+    "VehicleId": 7,
+    "CategoryId": 3
+  },
+  {
+    "Id": 22,
+    "VehicleId": 8,
+    "CategoryId": 5
+  },
+  {
+    "Id": 23,
+    "VehicleId": 9,
+    "CategoryId": 6
+  },
+  {
+    "Id": 24,
+    "VehicleId": 10,
+    "CategoryId": 4
+  },
+  {
+    "Id": 25,
+    "VehicleId": 11,
+    "CategoryId": 1
+  },
+  {
+    "Id": 26,
+    "VehicleId": 12,
+    "CategoryId": 3
+  },
+  {
+    "Id": 27,
+    "VehicleId": 13,
+    "CategoryId": 2
+  },
+  {
+    "Id": 28,
+    "VehicleId": 14,
+    "CategoryId": 7
+  },
+  {
+    "Id": 29,
+    "VehicleId": 15,
+    "CategoryId": 5
+  },
+  {
+    "Id": 30,
+    "VehicleId": 16,
+    "CategoryId": 4
+  },
+  {
+    "Id": 31,
+    "VehicleId": 17,
+    "CategoryId": 1
+  },
+  {
+    "Id": 32,
+    "VehicleId": 18,
+    "CategoryId": 6
+  }
+]

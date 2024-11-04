@@ -1,0 +1,277 @@
+﻿[
+  {
+    "Id": 1,
+    "VehicleBrandId": 1,
+    "Name": "159"
+  },
+  {
+    "Id": 2,
+    "VehicleBrandId": 1,
+    "Name": "4C"
+  },
+  {
+    "Id": 3,
+    "VehicleBrandId": 1,
+    "Name": "4C Spider"
+  },
+  {
+    "Id": 4,
+    "VehicleBrandId": 1,
+    "Name": "8C Competizione"
+  },
+  {
+    "Id": 5,
+    "VehicleBrandId": 1,
+    "Name": "8C Spider"
+  },
+  {
+    "Id": 6,
+    "VehicleBrandId": 1,
+    "Name": "Giulia"
+  },
+  {
+    "Id": 7,
+    "VehicleBrandId": 1,
+    "Name": "Giulietta"
+  },
+  {
+    "Id": 8,
+    "VehicleBrandId": 1,
+    "Name": "MiTo"
+  },
+  {
+    "Id": 9,
+    "VehicleBrandId": 1,
+    "Name": "Stelvio"
+  },
+  {
+    "Id": 10,
+    "VehicleBrandId": 2,
+    "Name": "Cygnet"
+  },
+  {
+    "Id": 11,
+    "VehicleBrandId": 3,
+    "Name": "A1"
+  },
+  {
+    "Id": 12,
+    "VehicleBrandId": 3,
+    "Name": "A3"
+  },
+  {
+    "Id": 13,
+    "VehicleBrandId": 3,
+    "Name": "A3 Cabrio"
+  },
+  {
+    "Id": 14,
+    "VehicleBrandId": 3,
+    "Name": "A4"
+  },
+  {
+    "Id": 15,
+    "VehicleBrandId": 3,
+    "Name": "A5"
+  },
+  {
+    "Id": 16,
+    "VehicleBrandId": 3,
+    "Name": "A5 Cabrio"
+  },
+  {
+    "Id": 17,
+    "VehicleBrandId": 3,
+    "Name": "A6"
+  },
+  {
+    "Id": 18,
+    "VehicleBrandId": 3,
+    "Name": "A7"
+  },
+  {
+    "Id": 19,
+    "VehicleBrandId": 3,
+    "Name": "A8"
+  },
+  {
+    "Id": 20,
+    "VehicleBrandId": 3,
+    "Name": "Q2"
+  },
+  {
+    "Id": 21,
+    "VehicleBrandId": 3,
+    "Name": "Q3"
+  },
+  {
+    "Id": 22,
+    "VehicleBrandId": 3,
+    "Name": "Q3 Sportback"
+  },
+  {
+    "Id": 23,
+    "VehicleBrandId": 3,
+    "Name": "Q5"
+  },
+  {
+    "Id": 24,
+    "VehicleBrandId": 3,
+    "Name": "Q7"
+  },
+  {
+    "Id": 25,
+    "VehicleBrandId": 3,
+    "Name": "Q8"
+  },
+  {
+    "Id": 26,
+    "VehicleBrandId": 3,
+    "Name": "R8"
+  },
+  {
+    "Id": 27,
+    "VehicleBrandId": 3,
+    "Name": "S3"
+  },
+  {
+    "Id": 28,
+    "VehicleBrandId": 3,
+    "Name": "TT"
+  },
+  {
+    "Id": 29,
+    "VehicleBrandId": 3,
+    "Name": "TT Roadster"
+  },
+  {
+    "Id": 30,
+    "VehicleBrandId": 3,
+    "Name": "RS7"
+  },
+  {
+    "Id": 31,
+    "VehicleBrandId": 47,
+    "Name": "M4 Performance"
+  },
+  {
+    "Id": 32,
+    "VehicleBrandId": 47,
+    "Name": "1 Series"
+  },
+  {
+    "Id": 33,
+    "VehicleBrandId": 47,
+    "Name": "3 Series XDrive"
+  },
+  {
+    "Id": 34,
+    "VehicleBrandId": 8,
+    "Name": "Logan 2022"
+  },
+  {
+    "Id": 35,
+    "VehicleBrandId": 33,
+    "Name": "911 GT3 RS"
+  },
+  {
+    "Id": 101,
+    "VehicleBrandId": 1,
+    "Name": "Giulietta Quadrifoglio"
+  },
+  {
+    "Id": 102,
+    "VehicleBrandId": 2,
+    "Name": "Vantage"
+  },
+  {
+    "Id": 103,
+    "VehicleBrandId": 3,
+    "Name": "Q5 Sportback"
+  },
+  {
+    "Id": 104,
+    "VehicleBrandId": 4,
+    "Name": "Continental GT"
+  },
+  {
+    "Id": 105,
+    "VehicleBrandId": 5,
+    "Name": "Chiron"
+  },
+  {
+    "Id": 106,
+    "VehicleBrandId": 6,
+    "Name": "Camaro ZL1"
+  },
+  {
+    "Id": 107,
+    "VehicleBrandId": 7,
+    "Name": "C4 Cactus"
+  },
+  {
+    "Id": 108,
+    "VehicleBrandId": 8,
+    "Name": "Sandero Stepway"
+  },
+  {
+    "Id": 109,
+    "VehicleBrandId": 9,
+    "Name": "Matiz"
+  },
+  {
+    "Id": 110,
+    "VehicleBrandId": 10,
+    "Name": "Charger Hellcat"
+  },
+  {
+    "Id": 111,
+    "VehicleBrandId": 11,
+    "Name": "812 Superfast"
+  },
+  {
+    "Id": 112,
+    "VehicleBrandId": 12,
+    "Name": "500X"
+  },
+  {
+    "Id": 113,
+    "VehicleBrandId": 13,
+    "Name": "Mustang Mach-E"
+  },
+  {
+    "Id": 114,
+    "VehicleBrandId": 14,
+    "Name": "Civic Type R"
+  },
+  {
+    "Id": 115,
+    "VehicleBrandId": 15,
+    "Name": "Tucson"
+  },
+  {
+    "Id": 116,
+    "VehicleBrandId": 16,
+    "Name": "QX80"
+  },
+  {
+    "Id": 117,
+    "VehicleBrandId": 17,
+    "Name": "F-PACE"
+  },
+  {
+    "Id": 118,
+    "VehicleBrandId": 18,
+    "Name": "Wrangler Rubicon"
+  },
+  {
+    "Id": 119,
+    "VehicleBrandId": 19,
+    "Name": "Sorento"
+  },
+  {
+    "Id": 120,
+    "VehicleBrandId": 20,
+    "Name": "Huracán"
+  }
+]

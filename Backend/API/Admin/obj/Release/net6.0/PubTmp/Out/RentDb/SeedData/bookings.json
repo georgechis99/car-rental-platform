@@ -1,0 +1,24 @@
+﻿[
+  {
+    "Id": 1,
+    "UserEmail": "george.chis2014@gmail.com",
+    "PickupDate": "2023-08-15T00:00:00.000Z",
+    "DropoffDate": "2023-08-19T00:00:00.000Z",
+    "PickupLocationId": 1,
+    "DropoffLocationId": 2,
+    "IsGuest": false,
+    "IsApproved": false,
+    "VehicleInsuranceDetailId": 2
+  },
+  {
+    "Id": 2,
+    "UserEmail": "george.chis2014@gmail.com",
+    "PickupDate": "2023-08-21T00:00:00.000Z",
+    "DropoffDate": "2023-08-29T00:00:00.000Z",
+    "PickupLocationId": 1,
+    "DropoffLocationId": 2,
+    "IsGuest": false,
+    "IsApproved": true,
+    "VehicleInsuranceDetailId": 3
+  }
+]

@@ -1,0 +1,267 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Cluj Avram Iancu International Airport (CLJ)",
+    "Address": "Cluj-Napoca, Cluj, Romania"
+  },
+  {
+    "Id": 2,
+    "Name": "Cluj Arena",
+    "Address": "Cluj-Napoca, Cluj, Romania"
+  },
+  {
+    "Id": 3,
+    "Name": "Piata Mica",
+    "Address": "Satu-Mare, Satu-Mare, Romania"
+  },
+  {
+    "Id": 4,
+    "Name": "Bucharest Henri Coanda International Airport (OTP)",
+    "Address": "Otopeni, Ilfov, Romania"
+  },
+  {
+    "Id": 5,
+    "Name": "Timisoara Traian Vuia International Airport (TSR)",
+    "Address": "Timisoara, Timis, Romania"
+  },
+  {
+    "Id": 6,
+    "Name": "Iasi International Airport (IAS)",
+    "Address": "Iasi, Iasi, Romania"
+  },
+  {
+    "Id": 7,
+    "Name": "Sibiu International Airport (SBZ)",
+    "Address": "Sibiu, Sibiu, Romania"
+  },
+  {
+    "Id": 8,
+    "Name": "Constanta Mihail Kogalniceanu International Airport (CND)",
+    "Address": "Mihail Kogalniceanu, Constanta, Romania"
+  },
+  {
+    "Id": 9,
+    "Name": "Brasov Council Square (Piata Sfatului)",
+    "Address": "Brasov, Brasov, Romania"
+  },
+  {
+    "Id": 10,
+    "Name": "Oradea International Airport (OMR)",
+    "Address": "Oradea, Bihor, Romania"
+  },
+  {
+    "Id": 11,
+    "Name": "Targu Mures International Airport (TGM)",
+    "Address": "Targu Mures, Mures, Romania"
+  },
+  {
+    "Id": 12,
+    "Name": "Cluj-Napoca Central Train Station",
+    "Address": "Cluj-Napoca, Cluj, Romania"
+  },
+  {
+    "Id": 13,
+    "Name": "Bucharest City Center (University Square)",
+    "Address": "Bucharest, Bucharest, Romania"
+  },
+  {
+    "Id": 16,
+    "Name": "Bran Castle",
+    "Address": "Bran, Brasov, Romania"
+  },
+  {
+    "Id": 17,
+    "Name": "Sighisoara Citadel",
+    "Address": "Sighisoara, Mures, Romania"
+  },
+  {
+    "Id": 18,
+    "Name": "Peles Castle",
+    "Address": "Sinaia, Prahova, Romania"
+  },
+  {
+    "Id": 19,
+    "Name": "Mamaia Beach",
+    "Address": "Constanta, Constanta, Romania"
+  },
+  {
+    "Id": 20,
+    "Name": "Palace of the Parliament",
+    "Address": "Bucharest, Bucharest, Romania"
+  },
+  {
+    "Id": 21,
+    "Name": "Voronet Monastery",
+    "Address": "Gura Humorului, Suceava, Romania"
+  },
+  {
+    "Id": 22,
+    "Name": "Rasnov Citadel",
+    "Address": "Rasnov, Brasov, Romania"
+  },
+  {
+    "Id": 23,
+    "Name": "Corvin Castle",
+    "Address": "Hunedoara, Hunedoara, Romania"
+  },
+  {
+    "Id": 24,
+    "Name": "Bigar Waterfall",
+    "Address": "Bozovici, Caras-Severin, Romania"
+  },
+  {
+    "Id": 25,
+    "Name": "Danube Delta",
+    "Address": "Tulcea, Tulcea, Romania"
+  },
+  {
+    "Id": 26,
+    "Name": "Targu Jiu Sculptural Ensemble",
+    "Address": "Targu Jiu, Gorj, Romania"
+  },
+  {
+    "Id": 27,
+    "Name": "Turda Salt Mine",
+    "Address": "Turda, Cluj, Romania"
+  },
+  {
+    "Id": 28,
+    "Name": "Alba Carolina Fortress",
+    "Address": "Alba Iulia, Alba, Romania"
+  },
+  {
+    "Id": 29,
+    "Name": "Bicaz Gorges",
+    "Address": "Bicaz, Neamt, Romania"
+  },
+  {
+    "Id": 30,
+    "Name": "Sibiu Old Town",
+    "Address": "Sibiu, Sibiu, Romania"
+  },
+  {
+    "Id": 31,
+    "Name": "Vama Veche Beach",
+    "Address": "Vama Veche, Constanta, Romania"
+  },
+  {
+    "Id": 32,
+    "Name": "Salina Turda",
+    "Address": "Turda, Cluj, Romania"
+  },
+  {
+    "Id": 33,
+    "Name": "Retezat National Park",
+    "Address": "Hateg, Hunedoara, Romania"
+  },
+  {
+    "Id": 34,
+    "Name": "Merry Cemetery",
+    "Address": "Sapanta, Maramures, Romania"
+  },
+  {
+    "Id": 35,
+    "Name": "Rasnov Fortress",
+    "Address": "Rasnov, Brasov, Romania"
+  },
+  {
+    "Id": 36,
+    "Name": "Palas Mall",
+    "Address": "Iasi, Iasi, Romania"
+  },
+  {
+    "Id": 37,
+    "Name": "Sarmizegetusa Regia",
+    "Address": "Orastie, Hunedoara, Romania"
+  },
+  {
+    "Id": 38,
+    "Name": "Sinaia Monastery",
+    "Address": "Sinaia, Prahova, Romania"
+  },
+  {
+    "Id": 39,
+    "Name": "Museum of the Romanian Peasant",
+    "Address": "Bucharest, Bucharest, Romania"
+  },
+  {
+    "Id": 40,
+    "Name": "Poiana Brasov Ski Resort",
+    "Address": "Brasov, Brasov, Romania"
+  },
+  {
+    "Id": 41,
+    "Name": "Timisoara Union Square",
+    "Address": "Timisoara, Timis, Romania"
+  },
+  {
+    "Id": 42,
+    "Name": "Bear's Cave",
+    "Address": "Chiscau, Bihor, Romania"
+  },
+  {
+    "Id": 43,
+    "Name": "Palas Iasi",
+    "Address": "Iasi, Iasi, Romania"
+  },
+  {
+    "Id": 44,
+    "Name": "Red Lake",
+    "Address": "Lacu Rosu, Harghita, Romania"
+  },
+  {
+    "Id": 45,
+    "Name": "Danube Delta Biosphere Reserve",
+    "Address": "Tulcea, Tulcea, Romania"
+  },
+  {
+    "Id": 46,
+    "Name": "Bucegi Mountains",
+    "Address": "Sinaia, Prahova, Romania"
+  },
+  {
+    "Id": 47,
+    "Name": "Bistrita Monastery",
+    "Address": "Bistrita, Bistrita-Nasaud, Romania"
+  },
+  {
+    "Id": 48,
+    "Name": "Devil's Lake (Lacul Rosu)",
+    "Address": "Lacu Rosu, Harghita, Romania"
+  },
+  {
+    "Id": 49,
+    "Name": "Moldovita Monastery",
+    "Address": "Moldovita, Suceava, Romania"
+  },
+  {
+    "Id": 50,
+    "Name": "Danube Gorges",
+    "Address": "Orsova, Mehedinti, Romania"
+  },
+  {
+    "Id": 51,
+    "Name": "Cozia Monastery",
+    "Address": "Calimanesti, Valcea, Romania"
+  },
+  {
+    "Id": 52,
+    "Name": "Tismana Monastery",
+    "Address": "Tismana, Gorj, Romania"
+  },
+  {
+    "Id": 53,
+    "Name": "Cheile Nerei-Beusnita National Park",
+    "Address": "Semenic, Caras-Severin, Romania"
+  },
+  {
+    "Id": 54,
+    "Name": "Sarmizegetusa Ulpia Traiana",
+    "Address": "Sarmizegetusa, Hunedoara, Romania"
+  },
+  {
+    "Id": 55,
+    "Name": "Danube River Cruise (Port of Tulcea)",
+    "Address": "Tulcea, Tulcea, Romania"
+  }
+]

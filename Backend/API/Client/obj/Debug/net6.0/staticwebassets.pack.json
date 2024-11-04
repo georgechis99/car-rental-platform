@@ -1,0 +1,157 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/alfa-romeo-giulia.png",
+      "PackagePath": "staticwebassets/images/vehicles/alfa-romeo-giulia.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/alfa-romeo-giulietta-quadrifoglio.png",
+      "PackagePath": "staticwebassets/images/vehicles/alfa-romeo-giulietta-quadrifoglio.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/alfa-romeo-giulietta.png",
+      "PackagePath": "staticwebassets/images/vehicles/alfa-romeo-giulietta.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/aston-martin-vantage.png",
+      "PackagePath": "staticwebassets/images/vehicles/aston-martin-vantage.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/audi-a1.png",
+      "PackagePath": "staticwebassets/images/vehicles/audi-a1.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/audi-a4.png",
+      "PackagePath": "staticwebassets/images/vehicles/audi-a4.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/audi-a5.png",
+      "PackagePath": "staticwebassets/images/vehicles/audi-a5.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/audi-a8.png",
+      "PackagePath": "staticwebassets/images/vehicles/audi-a8.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/audi-q5-sportback.png",
+      "PackagePath": "staticwebassets/images/vehicles/audi-q5-sportback.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/audi-q5.png",
+      "PackagePath": "staticwebassets/images/vehicles/audi-q5.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/audi-rs7.png",
+      "PackagePath": "staticwebassets/images/vehicles/audi-rs7.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/bentley-continental-gt.png",
+      "PackagePath": "staticwebassets/images/vehicles/bentley-continental-gt.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/bmw-m4-performance.png",
+      "PackagePath": "staticwebassets/images/vehicles/bmw-m4-performance.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/bmw-series-1.png",
+      "PackagePath": "staticwebassets/images/vehicles/bmw-series-1.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/bmw-series-3-xdrive.png",
+      "PackagePath": "staticwebassets/images/vehicles/bmw-series-3-xdrive.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/bugatti-chiron.png",
+      "PackagePath": "staticwebassets/images/vehicles/bugatti-chiron.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/chevrolet-camaro-zl1.png",
+      "PackagePath": "staticwebassets/images/vehicles/chevrolet-camaro-zl1.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/citroen-c4-cactus.png",
+      "PackagePath": "staticwebassets/images/vehicles/citroen-c4-cactus.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/dacia-logan-2022.png",
+      "PackagePath": "staticwebassets/images/vehicles/dacia-logan-2022.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/dacia-sandero-stepway.png",
+      "PackagePath": "staticwebassets/images/vehicles/dacia-sandero-stepway.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/daewoo-matiz.png",
+      "PackagePath": "staticwebassets/images/vehicles/daewoo-matiz.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/dodge-charger-hellcat.png",
+      "PackagePath": "staticwebassets/images/vehicles/dodge-charger-hellcat.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/ferrari-812-superfast.png",
+      "PackagePath": "staticwebassets/images/vehicles/ferrari-812-superfast.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/fiat-500x.png",
+      "PackagePath": "staticwebassets/images/vehicles/fiat-500x.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/ford-mustang-mach-e.png",
+      "PackagePath": "staticwebassets/images/vehicles/ford-mustang-mach-e.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/honda-civic-type-r.png",
+      "PackagePath": "staticwebassets/images/vehicles/honda-civic-type-r.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/hyundai-tucson.png",
+      "PackagePath": "staticwebassets/images/vehicles/hyundai-tucson.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/infiniti-qx80.png",
+      "PackagePath": "staticwebassets/images/vehicles/infiniti-qx80.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/jaguar-f-pace.png",
+      "PackagePath": "staticwebassets/images/vehicles/jaguar-f-pace.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/jeep-wrangler-rubicon.png",
+      "PackagePath": "staticwebassets/images/vehicles/jeep-wrangler-rubicon.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/jeep-wrangler.png",
+      "PackagePath": "staticwebassets/images/vehicles/jeep-wrangler.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/kia-sorento.png",
+      "PackagePath": "staticwebassets/images/vehicles/kia-sorento.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/lamborghini-huracan.png",
+      "PackagePath": "staticwebassets/images/vehicles/lamborghini-huracan.png"
+    },
+    {
+      "Id": "/Users/George.Chis/Downloads/appz/RentACar/Backend/API/Client/wwwroot/images/vehicles/porsche-911-gt3-rs.png",
+      "PackagePath": "staticwebassets/images/vehicles/porsche-911-gt3-rs.png"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.build.Client.props",
+      "PackagePath": "build\\Client.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.Client.props",
+      "PackagePath": "buildMultiTargeting\\Client.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.Client.props",
+      "PackagePath": "buildTransitive\\Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

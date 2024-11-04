@@ -1,0 +1,23 @@
+﻿[
+  {
+    "Id": 1,
+    "VehicleId": 1,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 200
+  },
+  {
+    "Id": 2,
+    "VehicleId": 1,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 50,
+    "DepositAmount": 150
+  },
+  {
+    "Id": 3,
+    "VehicleId": 1,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 70,
+    "DepositAmount": 100
+  }
+]

@@ -1,0 +1,14 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "NoInsurance"
+  },
+  {
+    "Id": 2,
+    "Name": "LimitedInsurance"
+  },
+  {
+    "Id": 3,
+    "Name": "FullInsurance"
+  }
+]

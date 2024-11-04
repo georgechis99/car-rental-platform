@@ -1,0 +1,434 @@
+﻿[
+  {
+    "Id": 2,
+    "VehicleId": 1,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 50,
+    "DepositAmount": 150,
+    "IsActive": true
+  },
+  {
+    "Id": 3,
+    "VehicleId": 1,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 70,
+    "DepositAmount": 100,
+    "IsActive": true
+  },
+  {
+    "Id": 5,
+    "VehicleId": 2,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 50,
+    "DepositAmount": 150,
+    "IsActive": true
+  },
+  {
+    "Id": 6,
+    "VehicleId": 2,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 70,
+    "DepositAmount": 100,
+    "IsActive": true
+  },
+  {
+    "Id": 8,
+    "VehicleId": 3,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 50,
+    "DepositAmount": 150,
+    "IsActive": true
+  },
+  {
+    "Id": 9,
+    "VehicleId": 3,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 70,
+    "DepositAmount": 100,
+    "IsActive": true
+  },
+  {
+    "Id": 11,
+    "VehicleId": 4,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 50,
+    "DepositAmount": 150,
+    "IsActive": true
+  },
+  {
+    "Id": 12,
+    "VehicleId": 4,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 70,
+    "DepositAmount": 100,
+    "IsActive": true
+  },
+  {
+    "Id": 14,
+    "VehicleId": 5,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 50,
+    "DepositAmount": 150,
+    "IsActive": true
+  },
+  {
+    "Id": 15,
+    "VehicleId": 5,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 70,
+    "DepositAmount": 100,
+    "IsActive": true
+  },
+  {
+    "Id": 20,
+    "VehicleId": 6,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 60,
+    "DepositAmount": 180,
+    "IsActive": true
+  },
+  {
+    "Id": 21,
+    "VehicleId": 6,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 90,
+    "DepositAmount": 120,
+    "IsActive": true
+  },
+  {
+    "Id": 23,
+    "VehicleId": 7,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 40,
+    "DepositAmount": 160,
+    "IsActive": true
+  },
+  {
+    "Id": 24,
+    "VehicleId": 7,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 80,
+    "DepositAmount": 140,
+    "IsActive": true
+  },
+  {
+    "Id": 29,
+    "VehicleId": 8,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 70,
+    "DepositAmount": 210,
+    "IsActive": true
+  },
+  {
+    "Id": 30,
+    "VehicleId": 8,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 110,
+    "DepositAmount": 160,
+    "IsActive": true
+  },
+  {
+    "Id": 32,
+    "VehicleId": 9,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 90,
+    "DepositAmount": 250,
+    "IsActive": true
+  },
+  {
+    "Id": 33,
+    "VehicleId": 9,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 130,
+    "DepositAmount": 180,
+    "IsActive": true
+  },
+  {
+    "Id": 35,
+    "VehicleId": 10,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 80,
+    "DepositAmount": 220,
+    "IsActive": true
+  },
+  {
+    "Id": 36,
+    "VehicleId": 10,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 120,
+    "DepositAmount": 150,
+    "IsActive": true
+  },
+  {
+    "Id": 38,
+    "VehicleId": 11,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 60,
+    "DepositAmount": 180,
+    "IsActive": true
+  },
+  {
+    "Id": 39,
+    "VehicleId": 11,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 100,
+    "DepositAmount": 120,
+    "IsActive": true
+  },
+  {
+    "Id": 41,
+    "VehicleId": 12,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 50,
+    "DepositAmount": 150,
+    "IsActive": true
+  },
+  {
+    "Id": 42,
+    "VehicleId": 12,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 90,
+    "DepositAmount": 100,
+    "IsActive": true
+  },
+  {
+    "Id": 44,
+    "VehicleId": 13,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 70,
+    "DepositAmount": 210,
+    "IsActive": true
+  },
+  {
+    "Id": 45,
+    "VehicleId": 13,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 110,
+    "DepositAmount": 160,
+    "IsActive": true
+  },
+  {
+    "Id": 47,
+    "VehicleId": 14,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 90,
+    "DepositAmount": 250,
+    "IsActive": true
+  },
+  {
+    "Id": 48,
+    "VehicleId": 14,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 130,
+    "DepositAmount": 180,
+    "IsActive": true
+  },
+  {
+    "Id": 50,
+    "VehicleId": 15,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 80,
+    "DepositAmount": 220,
+    "IsActive": true
+  },
+  {
+    "Id": 51,
+    "VehicleId": 15,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 120,
+    "DepositAmount": 150,
+    "IsActive": true
+  },
+  {
+    "Id": 53,
+    "VehicleId": 16,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 60,
+    "DepositAmount": 180,
+    "IsActive": true
+  },
+  {
+    "Id": 54,
+    "VehicleId": 16,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 100,
+    "DepositAmount": 120,
+    "IsActive": true
+  },
+  {
+    "Id": 56,
+    "VehicleId": 17,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 50,
+    "DepositAmount": 150,
+    "IsActive": true
+  },
+  {
+    "Id": 57,
+    "VehicleId": 17,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 90,
+    "DepositAmount": 100,
+    "IsActive": true
+  },
+  {
+    "Id": 59,
+    "VehicleId": 18,
+    "InsuranceTypeId": 2,
+    "InsurancePrice": 70,
+    "DepositAmount": 210,
+    "IsActive": true
+  },
+  {
+    "Id": 60,
+    "VehicleId": 18,
+    "InsuranceTypeId": 3,
+    "InsurancePrice": 110,
+    "DepositAmount": 160,
+    "IsActive": true
+  },
+  {
+    "Id": 61,
+    "VehicleId": 1,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 62,
+    "VehicleId": 2,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 63,
+    "VehicleId": 3,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 64,
+    "VehicleId": 4,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 65,
+    "VehicleId": 5,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 66,
+    "VehicleId": 6,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 67,
+    "VehicleId": 7,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 68,
+    "VehicleId": 8,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 69,
+    "VehicleId": 9,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 70,
+    "VehicleId": 10,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 71,
+    "VehicleId": 11,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 72,
+    "VehicleId": 12,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 73,
+    "VehicleId": 13,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 74,
+    "VehicleId": 14,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 75,
+    "VehicleId": 15,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 76,
+    "VehicleId": 16,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 77,
+    "VehicleId": 17,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  },
+  {
+    "Id": 78,
+    "VehicleId": 18,
+    "InsuranceTypeId": 1,
+    "InsurancePrice": 0,
+    "DepositAmount": 300,
+    "IsActive": true
+  }
+]

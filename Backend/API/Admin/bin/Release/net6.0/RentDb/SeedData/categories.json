@@ -1,0 +1,37 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Small",
+    "PictureUrl": "assets/images/vehicle_categories/category-small.png"
+  },
+  {
+    "Id": 2,
+    "Name": "Medium",
+    "PictureUrl": "assets/images/vehicle_categories/category-medium.png"
+  },
+  {
+    "Id": 3,
+    "Name": "Large",
+    "PictureUrl": "assets/images/vehicle_categories/category-large.png"
+  },
+  {
+    "Id": 4,
+    "Name": "Estate",
+    "PictureUrl": "assets/images/vehicle_categories/category-estate.png"
+  },
+  {
+    "Id": 5,
+    "Name": "Premium",
+    "PictureUrl": "assets/images/vehicle_categories/category-premium.png"
+  },
+  {
+    "Id": 6,
+    "Name": "People carriers",
+    "PictureUrl": "assets/images/vehicle_categories/category-people-carriers.png"
+  },
+  {
+    "Id": 7,
+    "Name": "SUVs",
+    "PictureUrl": "assets/images/vehicle_categories/category-suvs.png"
+  }
+]

@@ -1,0 +1,47 @@
+﻿[
+  {
+    "Id": 1,
+    "VehicleId": 1,
+    "DiscountType": 1,
+    "IntervalStartInDays": 3,
+    "IntervalEndInDays": 5,
+    "DiscountPercentage": 10
+  },
+  {
+    "Id": 2,
+    "VehicleId": 1,
+    "DiscountType": 1,
+    "IntervalStartInDays": 6,
+    "IntervalEndInDays": 9,
+    "DiscountPercentage": 15
+  },
+  {
+    "Id": 3,
+    "VehicleId": 1,
+    "DiscountType": 1,
+    "IntervalStartInDays": 10,
+    "IntervalEndInDays": 15,
+    "DiscountPercentage": 25
+  },
+  {
+    "Id": 4,
+    "VehicleId": 1,
+    "DiscountType": 2,
+    "Month": 11,
+    "DiscountPercentage": 15
+  },
+  {
+    "Id": 5,
+    "VehicleId": 1,
+    "DiscountType": 2,
+    "Month": 12,
+    "DiscountPercentage": 5
+  },
+  {
+    "Id": 6,
+    "VehicleId": 1,
+    "DiscountType": 2,
+    "Month": 1,
+    "DiscountPercentage": -30
+  }
+]

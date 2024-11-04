@@ -1,0 +1,32 @@
+﻿[
+  {
+    "Id": 1,
+    "LowValue": 0,
+    "HighValue": 100
+  },
+  {
+    "Id": 2,
+    "LowValue": 100,
+    "HighValue": 300
+  },
+  {
+    "Id": 3,
+    "LowValue": 300,
+    "HighValue": 500
+  },
+  {
+    "Id": 4,
+    "LowValue": 500,
+    "HighValue": 1000
+  },
+  {
+    "Id": 5,
+    "LowValue": 1000,
+    "HighValue": 2500
+  },
+  {
+    "Id": 6,
+    "LowValue": 2500,
+    "HighValue": 2500
+  }
+]

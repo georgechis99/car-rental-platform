@@ -1,0 +1,29 @@
+﻿[
+  {
+    "Id": 1,
+    "UserEmail": "george.chis2014@gmail.com",
+    "PickupDate": "2023-06-18T00:00:00.000Z",
+    "DropoffDate": "2023-06-25T00:00:00.000Z",
+    "PickupLocationId": 1,
+    "DropoffLocationId": 2,
+    "IsGuest": false
+  },
+  {
+    "Id": 2,
+    "UserEmail": "george.chis2014@gmail.com",
+    "PickupDate": "2023-06-28T00:00:00.000Z",
+    "DropoffDate": "2023-07-07T00:00:00.000Z",
+    "PickupLocationId": 1,
+    "DropoffLocationId": 2,
+    "IsGuest": false
+  },
+  {
+    "Id": 5,
+    "UserEmail": "guest@example.com",
+    "PickupDate": "2023-07-10T00:00:00.000Z",
+    "DropoffDate": "2023-07-15T00:00:00.000Z",
+    "PickupLocationId": 1,
+    "DropoffLocationId": 2,
+    "IsGuest": true
+  }
+]
